@@ -1,0 +1,61 @@
+{
+    "sniadanie": {
+        "owsianki" : [],
+
+        "platki": []
+    },
+
+    "2sniadanie": {
+        "koktajle": [
+            {
+                "title": "Koktajl z masła orzechowego, banana i siemienia lnianego",
+                "calories": "299 kcal",
+                "ingredients": [
+                    "Mleko 79 g (0,4 szkl.)" ,
+                    "Jogurt naturalny 86 g (0,6 opak. po 150 g)" ,
+                    "Banan 86 g (0,5 średniej szt.)" ,
+                    "Masło orzechowe 100% 14 g (niecała łyżka)" ,
+                    "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 7 g (1,4 łyżeczki)"
+                ],
+                "recipe": [
+                    "Banana obierz i podziel na mniejsze kawałki",
+                    "Wszystkie składniki umieść w pojemniku blendera",
+                    "Zmiksuj na gładki koktajl"
+                ]
+            }
+        ],
+
+        "smoothie": []
+    },
+
+    "obiad": {
+        "kasza": [],
+
+        "ziemniaki": [],
+
+        "ryż": [],
+
+        "makaron": [],
+
+        "ryba": [],
+
+        "vegeMakaron": [],
+
+        "vegeInne": []
+    },
+
+    "podwieczorek": {
+        "naleśnikiRacuchy": [],
+
+        "naSłodko": [],
+
+        "naSlono": []
+    },
+
+    "kolacja": {
+        "kanapki": [],
+
+        "tostyZapiekanki": [],
+        "inne": []
+    }
+}
