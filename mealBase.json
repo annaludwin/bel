@@ -1,60 +1,285 @@
 {
     "sniadanie": {
-        "owsianki" : [],
-
+        "owsianki": [],
         "platki": []
     },
-
     "2sniadanie": {
         "koktajle": [
             {
                 "title": "Koktajl z masła orzechowego, banana i siemienia lnianego",
                 "calories": "299 kcal",
                 "ingredients": [
-                    "Mleko 79 g (0,4 szkl.)" ,
-                    "Jogurt naturalny 86 g (0,6 opak. po 150 g)" ,
-                    "Banan 86 g (0,5 średniej szt.)" ,
-                    "Masło orzechowe 100% 14 g (niecała łyżka)" ,
+                    "Mleko 79 g (0,4 szkl.) ,",
+                    "Jogurt naturalny 86 g (0,6 opak. po 150 g) ,",
+                    "Banan 86 g (0,5 średniej szt.) ,",
+                    "Masło orzechowe 100% 14 g (niecała łyżka) ,",
                     "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 7 g (1,4 łyżeczki)"
                 ],
-                "recipe": [
+                "reciepe": [
                     "Banana obierz i podziel na mniejsze kawałki",
                     "Wszystkie składniki umieść w pojemniku blendera",
                     "Zmiksuj na gładki koktajl"
                 ]
+            },
+            {
+                "title": "Koktajl z gruszką i miodem",
+                "calories": "376 kcal",
+                "ingredients": [
+                    "Gruszka 170 g (1 średnia szt.) ,",
+                    "Mleko 220 g (1 szkl.) ,",
+                    "Miód pszczeli 10 g (2 łyżeczki) ,",
+                    "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 10 g (2 łyżeczki) ,",
+                    "Jabłko 170 g (1 średnia szt.)"
+                ],
+                "reciepe": [
+                    "Składniki przełóż do wysokiego naczynia, następnie zmiksuj je na gładką masę. Jeśli wolisz rzadszą konsystencje możesz dolać wody."
+                ]
+            },
+            {
+                "title": "Koktajl z buraka i owoców +orzechy",
+                "calories": "592 kcal",
+                "ingredients": [
+                    "Burak 100 g ,",
+                    "Banan 120 g (0,6 średniej szt.) ,",
+                    "Gruszka 340 g (2 średnie szt.) ,",
+                    "Woda 440 g (2 szkl.) ,",
+                    "Orzechy 40 g"
+                ],
+                "reciepe": [
+                    "Buraka obierz. Usuń z gruszki gniazdo nasienne",
+                    "Zmiksuj buraka, gruszkę, banana i wodę",
+                    "Wraz z koktajlem spożyj orzechy"
+                ]
+            },
+            {
+                "title": "Koktajl mleczny z bananem i awokado",
+                "calories": "287 kcal",
+                "ingredients": [
+                    "Awokado 70 g (½ szt.) ,",
+                    "Banan 60 g (0,3 średniej szt.) ,",
+                    "Mleko 220 g (1 szkl.)"
+                ],
+                "reciepe": [
+                    "Wyjmij miąższ z awokado, banana pokrój w kostkę",
+                    "Wszystkie składniki zmiksuj na koktajl"
+                ]
+            },
+            {
+                "title": "Pudding bananowo-kawowy",
+                "calories": "193 kcal",
+                "ingredients": [
+                    "Banan 150 g (0,8 średniej szt.) ,",
+                    "Woda 50 g (0,2 szkl.) ,",
+                    "Mleko 100 g (0,5 szkl.) ,",
+                    "Przyprawy 2 g (1 szczypta)"
+                ],
+                "reciepe": [
+                    "Woda = napar z kawy",
+                    "Zaparz małą kawę",
+                    "Zmiksuj kawę z bananem, mlekiem i cynamonem"
+                ]
+            },
+            {
+                "title": "Koktajl gruszkowo-szpinakowy z migdałami",
+                "calories": "530 kcal",
+                "ingredients": [
+                    "Mleko 170 g (0,8 szkl.) ,",
+                    "Szpinak świeży lub mrożony 40 g ,",
+                    "Banan 185 g (1 średnia szt.) ,",
+                    "Gruszka 170 g (1 średnia szt.) ,",
+                    "Migdały 30 g (2 łyżki) ,",
+                    "Cytryna 5 g (0,1 szt.)"
+                ],
+                "reciepe": [
+                    "Zmiksuj sok z cytryny, banana, mleko, szpinak i gruszkę",
+                    "Posyp posiekanymi migdałami",
+                    "Schłodź przed podaniem"
+                ]
+            },
+            {
+                "title": "Koktajl szarlotkowy z rodzynkami",
+                "calories": "300 kcal",
+                "ingredients": [
+                    "Mleko 145 g (0,7 szkl.) ,",
+                    "Banan 122 g (0,7 średniej szt.) ,",
+                    "Jabłko 112 g (0,7 średniej szt.) ,",
+                    "Rodzynki 19 g (1,3 łyżki) ,",
+                    "Przyprawy 1 g (0,7 szczypt)"
+                ],
+                "reciepe": [
+                    "Banana możesz wcześniej zamrozić, uprzednio krojąc w plastry, ale nie jest to konieczne",
+                    "Jabłka obierz ze skórki i pozbaw gniazd nasiennych",
+                    "wszystkie składniki zmiksuj na gładki koktajl",
+                    "Opcjonalnie dodaj cynamon i sproszkowaną wanilię"
+                ]
+            },
+            {
+                "title": "Koktajl jagodowo-bananowy",
+                "calories": "327 kcal",
+                "ingredients": [
+                    "Banan 185 g (1 średnia szt.) ,",
+                    "Jagody 90 g (2 garści) ,",
+                    "Mleko 220 g (1 szkl.)"
+                ],
+                "reciepe": [
+                    "Zmiksuj na gładki koktajl"
+                ]
+            },
+            {
+                "title": "Koktajl z banana i kiwi z natką pietruszki",
+                "calories": "300 kcal",
+                "ingredients": [
+                    "Banan 185 g (1 średnia szt.) ,",
+                    "Kiwi 220 g (2 szt.) ,",
+                    "Natka pietruszki, świeża lub suszona 6 g (3 łyżeczki)"
+                ],
+                "reciepe": [
+                    "Banana i kiwi pokrój na mniejsze kawałki",
+                    "Dodaj posiekaną natkę pietruszki",
+                    "Zmiksuj całość"
+                ]
+            },
+            {
+                "title": "Koktajl bananowy z kakao i otrębami",
+                "calories": "324 kcal",
+                "ingredients": [
+                    "Kefir naturalny 220 g (1 szkl.) ,",
+                    "Banan 170 g (0,9 średniej szt.) ,",
+                    "Kakao 10 g (2 łyżeczki) ,",
+                    "Otręby 4 g (1 łyżka)"
+                ],
+                "reciepe": [
+                    "Zmiksuj na gładki koktajl"
+                ]
+            },
+            {
+                "title": "Koktajl banan-cukinia-jabłko-kiwi-szpinak-cytryna",
+                "calories": "298 kcal",
+                "ingredients": [
+                    "Banan 160 g (0,9 średniej szt.) ,",
+                    "Szpinak świeży lub mrożony 60 g ,",
+                    "Jabłko 100 g (0,6 średniej szt.) ,",
+                    "Kiwi 110 g (1 szt.) ,",
+                    "Cytryna 48 g (0,6 szt.) ,",
+                    "Cukinia 80 g (0,3 szt.)"
+                ],
+                "reciepe": [
+                    "Zmiksuj na gładki koktajl"
+                ]
+            },
+            {
+                "title": "Kakaowy koktajl bananowy",
+                "calories": "300 kcal",
+                "ingredients": [
+                    "Maślanka naturalna 220 g (1 szkl.) ,",
+                    "Banan 185 g (1 średnia szt.) ,",
+                    "Kakao 10 g (2 łyżeczki) ,",
+                    "Przyprawy 2 g (1 szczypta)"
+                ],
+                "reciepe": [
+                    "Zmiksuj na gładki koktajl"
+                ]
+            },
+            {
+                "title": "Koktajl czekoladowy z gruszką",
+                "calories": "377 kcal",
+                "ingredients": [
+                    "Kakao 10 g (2 łyżeczki) ,",
+                    "Mleko 220 g (1 szkl.) ,",
+                    "Gruszka 340 g (2 średnie szt.) ,",
+                    "Orzechy 6 g"
+                ],
+                "reciepe": [
+                    "Gruszkę pokrój w krostkę i wrzuć doi miski z pozostałymi składnikami",
+                    "Całość zblenduj, wysypując na wierzch ulubione orzechy"
+                ]
+            },
+            {
+                "title": "Koktajl jaglano-owocowy",
+                "calories": "377 kcal",
+                "ingredients": [
+                    "Jogurt naturalny 150 g (1 opak. po 150 g) ,",
+                    "Banan 185 g (1 średnia szt.) ,",
+                    "Mandarynka 60 g (1 szt.) ,",
+                    "Kasza 26 g (2 łyżki)"
+                ],
+                "reciepe": [
+                    "Kaszę przepłucz zimną i gorącą wodą, a następnie ugotuj",
+                    "Zblenduj wszystkie składniki"
+                ]
+            },
+            {
+                "title": "Koktajl z ananasem, awokado i siemieniem lnianym",
+                "calories": "477 kcal",
+                "ingredients": [
+                    "Ananas świeży lub z puszki 30 g (1 plaster) ,",
+                    "Awokado 140 g (1 szt.) ,",
+                    "Mleko 220 g (1 szkl.) ,",
+                    "Jabłko 170 g (1 średnia szt.) ,",
+                    "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 5 g (1 łyżeczka) ,",
+                    "Woda 220 g (1 szkl.)"
+                ],
+                "reciepe": [
+                    "Zmiksuj na gładki koktajl"
+                ]
+            },
+            {
+                "title": "Koktajl gruszkowy z cynamonem",
+                "calories": "203 kcal",
+                "ingredients": [
+                    "Kefir naturalny 220 g (1 szkl.) ,",
+                    "Gruszka 170 g (1 średnia szt.) ,",
+                    "Przyprawy 2 g (1 szczypta)"
+                ],
+                "reciepe": [
+                    "Zmiksuj na gładki koktajl"
+                ]
+            },
+            {
+                "title": "Zielony bananowo-truskawkowy shake",
+                "calories": "270 kcal",
+                "ingredients": [
+                    "Banan 185 g (1 średnia szt.) ,",
+                    "Truskawki świeże lub mrożone 100 g ,",
+                    "Szpinak świeży lub mrożony 70 g ,",
+                    "Mleko 110 g (½ szkl.)"
+                ],
+                "reciepe": [
+                    "Zmiksuj wszystkie składniki",
+                    "Schłodź przed podaniem lub dodaj pokruszony lód"
+                ]
+            },
+            {
+                "title": "Milkshake truskawkowy",
+                "calories": "184 kcal",
+                "ingredients": [
+                    "Truskawki świeże lub mrożone 200 g (10 ) ,",
+                    "Mleko 220 g (1 szkl.) ,",
+                    "Miód pszczeli 5 g (1 łyżeczka)"
+                ],
+                "reciepe": [
+                    "Zmiksuj na gładki koktajl"
+                ]
             }
         ],
-
         "smoothie": []
     },
-
     "obiad": {
         "kasza": [],
-
         "ziemniaki": [],
-
         "ryż": [],
-
         "makaron": [],
-
         "ryba": [],
-
         "vegeMakaron": [],
-
         "vegeInne": []
     },
-
     "podwieczorek": {
         "naleśnikiRacuchy": [],
-
         "naSłodko": [],
-
         "naSlono": []
     },
-
     "kolacja": {
         "kanapki": [],
-
         "tostyZapiekanki": [],
         "inne": []
     }

@@ -31529,6 +31529,23 @@ console.log(caloriesArray)
 console.log(ingredientsArray)
 console.log(reciepeArray)
 
+// tworzenie obiektu z przepisami
+const allMeals = [];
+
+for (i=0; i<titleArray.length; i++) {
+    const meal = {};
+
+    meal.title = titleArray[i];
+    meal.calories = caloriesArray[i]
+    meal.ingredients = ingredientsArray[i]
+    meal.reciepe = reciepeArray[i]
+
+    allMeals.push(meal)
+}
+
+console.log(JSON.stringify(allMeals));
+
+
 // funkcja
 
     function putElementsToArray(selector, arrayName){
@@ -31538,7 +31555,7 @@ console.log(reciepeArray)
         nodeList.forEach(function(item){
 
             if(item.nodeName === "UL" || item.nodeName === "OL"){
-                arrayName.push(item.innerText.split())
+                arrayName.push(item.innerText.split('\n'))
 
             } else {
                 if(item.innerText !== ''){
