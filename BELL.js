@@ -9,6 +9,10 @@ const sectionTueFri = document.getElementById("tueFri");
 const editModal = document.getElementById("modal");
 const closeModalButton = document.querySelector("#modal button");
 const recipeList = document.querySelector(".stack .list");
+const displayTitle = document.querySelector(".display h3");
+const displayCalories = document.querySelector(".display p");
+const displayIngrediensList = document.querySelector(".display ul");
+const displayRecipeList = document.querySelector(".display ol");
 
 //tworzę tablice z nazwami kategorii odpowiednimi dla posiłku
 const sniadanieCategoriesBase = Object.keys(mealBase.sniadanie);
@@ -34,15 +38,59 @@ recipeList.addEventListener("click", loadRecipeContent)
 
 // FUNCTIONS
 
+function makeList(dataBase, listElement){
+    const elementsListArray = [];
+
+    // tworze element listy
+    dataBase.forEach(function(item){
+        const listItem = `<li>${item}</li>`
+        elementsListArray.push(listItem)
+    })
+    const listToInsert = elementsListArray.join("")
+
+    // przypisuje element listy
+    listElement.innerHTML = listToInsert
+}
 
 function loadRecipeContent(e){
-    console.log(e.target.textContent);
+    // podkategoria
+    const subcategory = e.target.closest(".stack").querySelector("select").value;
 
+    // posiłek
+    const subcategoryElement = e.target.closest(".stack").querySelector("select")
+    const mealName = subcategoryElement.options[subcategoryElement.selectedIndex].dataset.category
 
+    // nazwa przepisu
+    const title = e.target.textContent
+    console.log(title);
 
+   // ściezka do podkategorii
+   const reciepesArray = mealBase[mealName][subcategory]
+   console.log(reciepesArray);
 
+   // uzupełnianie przepisu
+   reciepesArray.forEach(function(item){
+    if(item.title === title){
+        // obiekt z wybranym przepisem
+        const receipe = item
+
+        // tytuł
+        displayTitle.textContent = receipe.title
+
+        // kalorie
+        displayCalories.textContent = receipe.calories
+
+        // lista składników
+            makeList(receipe.ingredients, displayIngrediensList)
+
+        // sposób przygotowania
+            makeList(receipe.reciepe, displayRecipeList)
+    }
+
+   })
     e.preventDefault
 }
+
 
 function loadRecipeTitleList(e){
 
@@ -93,8 +141,7 @@ function openMealEditor(e){
         // ładuje kategorię produktów odpowiednią do posiłku, ustawiam listę w dropdownie kategorii
         if(mealName === "śniadanie"){
             addCategoryList(sniadanieCategoriesBase, "sniadanie")
-        }
-        else if(mealName === "drugie śniadanie"){
+        } else if(mealName === "drugie śniadanie"){
             addCategoryList(drugieSniadanieCategoriesBase, "drugieSniadanie")
         } else if(mealName === "obiad"){
             addCategoryList(obiadCategoriesBase, "obiad")
@@ -104,7 +151,6 @@ function openMealEditor(e){
             addCategoryList(kolacjaCategoriesBase, "kolacja")
         }
     }
-
 }
 
 function addCategoryList(mealCategoriesBase, dbtype){
