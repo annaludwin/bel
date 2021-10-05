@@ -14,8 +14,7 @@ const displayTitle = document.querySelector(".display h3");
 const displayCalories = document.querySelector(".display p");
 const displayIngrediensList = document.querySelector(".display ul");
 const displayRecipeList = document.querySelector(".display ol");
-const saveButton = document.querySelector(".success")
-
+const saveButton = document.querySelector(".success");
 
 //tworzę tablice z nazwami kategorii odpowiednimi dla posiłku
 const sniadanieCategoriesBase = Object.keys(mealBase.sniadanie);
@@ -38,9 +37,71 @@ closeModalButton.addEventListener("click", closeModalMenu)
 mealCategoriesList.addEventListener("click", loadRecipeTitleList)
 // ładowanie przepisów
 recipeList.addEventListener("click", loadRecipeContent)
+// zapisywanie przepisu
+saveButton.addEventListener("click", saveRecipe)
 
 
 // FUNCTIONS
+
+function saveRecipe(e){
+
+    // pobierz elementy do wyświetlenia i pomagające zlokalizować gdzie to wstawic
+
+        // dzień
+        const subcategoryElement = e.target.closest(".content").querySelector(".columns #categories")
+        const dayName = subcategoryElement.options[subcategoryElement.selectedIndex].dataset.day
+
+        // podkategoria
+        const subcategory = e.target.closest(".content").querySelector(".columns #categories").value
+
+        // posiłek
+        const heading = e.target.closest(".content").querySelector(".navigation h3").textContent
+        const mealName = heading.substring(6)
+
+        // nazwa przepisu
+        const title = e.target.closest(".content").querySelector(".display h3").textContent
+
+        // składniki
+            // pobieram HTML collection
+            const ingredientsList = e.target.closest(".content").querySelector(".display ul")
+            // tworzę z tego tablicę, by móc policzyc ile jest składników
+            const numberOfIngriedients = Array.from(ingredientsList.children)
+
+            // pobieram teksty z li i wrzucam je w tagi. Całość dorzucam do tablicy i łączę w jeden string, który będzie można umieścić w innerHTML
+            const ingredientsArray = []
+
+            for(let i=0; i<numberOfIngriedients.length; i++){
+                const element = "<li>"+ingredientsList.children[i].innerHTML+"</li>"
+                ingredientsArray.push(element)
+            }
+
+            const ingredients = ingredientsArray.join("")
+
+        // czyszczę okna
+        clearPreviewWindow()
+
+    // znajduję dzień i posiłek i wpisuję do niego dane
+
+    document.querySelectorAll("h3").forEach(function(dayCard){
+        if(dayCard.textContent === dayName){
+            dayCard.nextElementSibling.querySelectorAll(".meal-card h4").forEach(function(mealCard){
+
+                if(mealCard.textContent === mealName){
+                    mealCard.innerHTML = `<h4>${mealName}</h4><p class="title">${title}</p><h5>Składniki</h5><ul>${ingredients}</ul>`
+                }
+            })
+        }
+    })
+
+    // close modal
+    closeModalMenu()
+}
+
+function clearPreviewWindow(){
+    // czyszcze podgląd przepisu z innej kategorii (jeśli był)
+    displaySection.style.display = "none";
+    saveButton.style.display = "none";
+}
 
 function makeList(dataBase, listElement){
     const elementsListArray = [];
@@ -67,11 +128,9 @@ function loadRecipeContent(e){
 
     // nazwa przepisu
     const title = e.target.textContent
-    console.log(title);
 
    // ściezka do podkategorii
    const reciepesArray = mealBase[mealName][subcategory]
-   console.log(reciepesArray);
 
    // uzupełnianie przepisu
    reciepesArray.forEach(function(item){
@@ -99,12 +158,7 @@ function loadRecipeContent(e){
     e.preventDefault
 }
 
-
 function loadRecipeTitleList(e){
-
-    // czyszcze podgląd przepisu z innej kategorii (jeśli był)
-    displaySection.style.display = "none";
-    saveButton.style.display = "none";
 
     // podkategoria
     const subcategory = e.target.value
@@ -125,6 +179,8 @@ function loadRecipeTitleList(e){
     })
     const reciepeTitleToAdd = recipeTitleArray.join("")
     recipeList.innerHTML =  `${reciepeTitleToAdd}`
+
+    clearPreviewWindow()
 }
 
 function goToSection(e){
@@ -141,7 +197,15 @@ function goToSection(e){
 };
 
 function openMealEditor(e){
+
     if (e.target.classList.contains("edit")){
+
+        // czyszcze listę przepisów
+        recipeList.innerHTML = "";
+
+        // pobiera nazwę dnia (potem dodaje ją do elementu listy jako dataset)
+        const dayName = e.target.closest(".day-panel").querySelector("h3").textContent
+
         // otwiera modal
         editModal.style.display = "flex";
 
@@ -152,26 +216,27 @@ function openMealEditor(e){
 
         // ładuje kategorię produktów odpowiednią do posiłku, ustawiam listę w dropdownie kategorii
         if(mealName === "śniadanie"){
-            addCategoryList(sniadanieCategoriesBase, "sniadanie")
+            addCategoryList(sniadanieCategoriesBase, "sniadanie", dayName)
         } else if(mealName === "drugie śniadanie"){
-            addCategoryList(drugieSniadanieCategoriesBase, "drugieSniadanie")
+            addCategoryList(drugieSniadanieCategoriesBase, "drugieSniadanie", dayName)
         } else if(mealName === "obiad"){
-            addCategoryList(obiadCategoriesBase, "obiad")
+            addCategoryList(obiadCategoriesBase, "obiad", dayName)
         } else if(mealName === "podwieczorek"){
-            addCategoryList(podwieczorekCategoriesBase, "podwieczorek")
+            addCategoryList(podwieczorekCategoriesBase, "podwieczorek", dayName)
         } else if(mealName === "kolacja"){
-            addCategoryList(kolacjaCategoriesBase, "kolacja")
+            addCategoryList(kolacjaCategoriesBase, "kolacja", dayName)
         }
     }
 }
 
-function addCategoryList(mealCategoriesBase, dbtype){
+function addCategoryList(mealCategoriesBase, dbtype, day){
 
     const categoryListArray = ["<option selected disabled>Wybierz kategorię posiłku</option>"]
 
     for(let i=0; i<mealCategoriesBase.length; i++){
 
-        const categories = `<option value="${mealCategoriesBase[i]}" data-category="${dbtype}">${mealCategoriesBase[i]}</option>`
+        // w elemencie listy zaszyte jest w dataset też jaki to posiłek i jaki dzień
+        const categories = `<option value="${mealCategoriesBase[i]}" data-category="${dbtype}" data-day="${day}">${mealCategoriesBase[i]}</option>`
 
         categoryListArray.push(categories)
     }
