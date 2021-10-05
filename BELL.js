@@ -9,10 +9,13 @@ const sectionTueFri = document.getElementById("tueFri");
 const editModal = document.getElementById("modal");
 const closeModalButton = document.querySelector("#modal button");
 const recipeList = document.querySelector(".stack .list");
+const displaySection = document.querySelector(".display")
 const displayTitle = document.querySelector(".display h3");
 const displayCalories = document.querySelector(".display p");
 const displayIngrediensList = document.querySelector(".display ul");
 const displayRecipeList = document.querySelector(".display ol");
+const saveButton = document.querySelector(".success")
+
 
 //tworzę tablice z nazwami kategorii odpowiednimi dla posiłku
 const sniadanieCategoriesBase = Object.keys(mealBase.sniadanie);
@@ -36,6 +39,7 @@ mealCategoriesList.addEventListener("click", loadRecipeTitleList)
 // ładowanie przepisów
 recipeList.addEventListener("click", loadRecipeContent)
 
+
 // FUNCTIONS
 
 function makeList(dataBase, listElement){
@@ -53,6 +57,7 @@ function makeList(dataBase, listElement){
 }
 
 function loadRecipeContent(e){
+
     // podkategoria
     const subcategory = e.target.closest(".stack").querySelector("select").value;
 
@@ -87,12 +92,19 @@ function loadRecipeContent(e){
             makeList(receipe.reciepe, displayRecipeList)
     }
 
+    // pokazuję sekcję z przepisem
+    displaySection.style.display = "block";
+    saveButton.style.display = "block";
    })
     e.preventDefault
 }
 
 
 function loadRecipeTitleList(e){
+
+    // czyszcze podgląd przepisu z innej kategorii (jeśli był)
+    displaySection.style.display = "none";
+    saveButton.style.display = "none";
 
     // podkategoria
     const subcategory = e.target.value
