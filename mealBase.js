@@ -1,9 +1,9 @@
-{
+export default {
     "sniadanie": {
         "owsianki": [],
-        "platki": []
+        "płatki": []
     },
-    "2sniadanie": {
+    "drugieSniadanie": {
         "koktajle": [
             {
                 "title": "Koktajl z masła orzechowego, banana i siemienia lnianego",
@@ -270,17 +270,17 @@
         "ryż": [],
         "makaron": [],
         "ryba": [],
-        "vegeMakaron": [],
-        "vegeInne": []
+        "vege makaron": [],
+        "vege inne": []
     },
     "podwieczorek": {
-        "naleśnikiRacuchy": [],
-        "naSłodko": [],
-        "naSlono": []
+        "naleśniki i racuchy": [],
+        "na słodko": [],
+        "na słono": []
     },
     "kolacja": {
         "kanapki": [],
-        "tostyZapiekanki": [],
+        "tosty i zapiekanki": [],
         "inne": []
     }
 }
