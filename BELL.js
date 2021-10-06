@@ -81,13 +81,13 @@ function saveRecipe(e){
         clearPreviewWindow()
 
     // znajduję dzień i posiłek i wpisuję do niego dane
-
     document.querySelectorAll("h3").forEach(function(dayCard){
         if(dayCard.textContent === dayName){
             dayCard.nextElementSibling.querySelectorAll(".meal-card h4").forEach(function(mealCard){
 
                 if(mealCard.textContent === mealName){
-                    mealCard.innerHTML = `<h4>${mealName}</h4><p class="title">${title}</p><h5>Składniki</h5><ul>${ingredients}</ul>`
+                    const div = mealCard.parentElement.querySelector("div")
+                    div.innerHTML = `<p class="title">${title}</p><h5>Składniki</h5><ul>${ingredients}</ul>`
                 }
             })
         }
@@ -211,7 +211,10 @@ function openMealEditor(e){
 
         // modyfikuje jego nagłówek
         const mealHeading = editModal.querySelector("h3")
-        const mealName = e.target.parentElement.firstElementChild.textContent
+        const mealName = e.target.parentElement.querySelector("h4").textContent
+        // !!!!!!!!!!!!!!!!!!!TU BUG
+        console.log(mealName)
+
         mealHeading.textContent = `Dodaj ${mealName}`
 
         // ładuje kategorię produktów odpowiednią do posiłku, ustawiam listę w dropdownie kategorii
