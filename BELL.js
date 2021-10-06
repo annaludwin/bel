@@ -77,9 +77,6 @@ function saveRecipe(e){
 
             const ingredients = ingredientsArray.join("")
 
-        // czyszczę okna
-        clearPreviewWindow()
-
     // znajduję dzień i posiłek i wpisuję do niego dane
     document.querySelectorAll("h3").forEach(function(dayCard){
         if(dayCard.textContent === dayName){
@@ -212,8 +209,6 @@ function openMealEditor(e){
         // modyfikuje jego nagłówek
         const mealHeading = editModal.querySelector("h3")
         const mealName = e.target.parentElement.querySelector("h4").textContent
-        // !!!!!!!!!!!!!!!!!!!TU BUG
-        console.log(mealName)
 
         mealHeading.textContent = `Dodaj ${mealName}`
 
