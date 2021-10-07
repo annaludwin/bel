@@ -39,6 +39,16 @@ button:active {
 button.success {
   background-color: var(--bel-green);
 }
+/*
+button.more {
+  background-color: var(--bel-green);
+  ;
+}
+
+button.less {
+  background-color: var(--bel-green);
+  ;
+} */
 
 nav {
   display: flex;
@@ -230,7 +240,7 @@ label.input-group strong {
   border-radius: 1em;
   overflow: auto;
   padding: 1em;
-  
+
 }
 
 .modal .display h3 {
@@ -255,7 +265,7 @@ label.input-group strong {
 
 .modal .list button {
   justify-content: flex-start;
-} 
+}
 
 .modal .button-rail {
   display: flex;

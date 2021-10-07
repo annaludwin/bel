@@ -1,3 +1,10 @@
+// DO ZROBIENIA
+/*
+    PRZYCISK DODAJ DODATEK
+    LISTA ZAKUPÓW
+*/
+
+
 import mealBase from "./mealBase.js";
 
 const satMonButton = document.getElementById("satMonButton");
@@ -39,9 +46,30 @@ mealCategoriesList.addEventListener("click", loadRecipeTitleList)
 recipeList.addEventListener("click", loadRecipeContent)
 // zapisywanie przepisu
 saveButton.addEventListener("click", saveRecipe)
+// wgrywanie wykonania do menu głownego
+document.addEventListener("click", loadMore)
+
 
 
 // FUNCTIONS
+
+function loadMore(e){
+
+    if(e.target.classList.value === "more"){
+
+        const divRecipe = e.target.closest(".meal-card").querySelector("div.recipe")
+
+        divRecipe.style.display = "block"
+        e.target.textContent = "mniej"
+        e.target.classList = "less"
+    } else if (e.target.classList.value === "less"){
+        const divRecipe = e.target.closest(".meal-card").querySelector("div.recipe")
+
+        divRecipe.style.display = "none"
+        e.target.textContent = "więcej"
+        e.target.classList = "more"
+    }
+}
 
 function saveRecipe(e){
 
@@ -62,20 +90,19 @@ function saveRecipe(e){
         const title = e.target.closest(".content").querySelector(".display h3").textContent
 
         // składniki
-            // pobieram HTML collection
+            // pobieram ul ze składnikami
             const ingredientsList = e.target.closest(".content").querySelector(".display ul")
-            // tworzę z tego tablicę, by móc policzyc ile jest składników
-            const numberOfIngriedients = Array.from(ingredientsList.children)
 
-            // pobieram teksty z li i wrzucam je w tagi. Całość dorzucam do tablicy i łączę w jeden string, który będzie można umieścić w innerHTML
-            const ingredientsArray = []
+            // zamieniam ją w stringa do umieszczenia w innerHTML
+            const ingredients = createListToInnerHTML(ingredientsList)
 
-            for(let i=0; i<numberOfIngriedients.length; i++){
-                const element = "<li>"+ingredientsList.children[i].innerHTML+"</li>"
-                ingredientsArray.push(element)
-            }
+        // przepis
 
-            const ingredients = ingredientsArray.join("")
+            // pobieram ol z przepisem
+            const recipeSteps = e.target.closest(".content").querySelector(".display ol")
+
+            // zamieniam ją w stringa do umieszczenia w innerHTML
+            const receipeSteps = createListToInnerHTML(recipeSteps)
 
     // znajduję dzień i posiłek i wpisuję do niego dane
     document.querySelectorAll("h3").forEach(function(dayCard){
@@ -83,15 +110,43 @@ function saveRecipe(e){
             dayCard.nextElementSibling.querySelectorAll(".meal-card h4").forEach(function(mealCard){
 
                 if(mealCard.textContent === mealName){
-                    const div = mealCard.parentElement.querySelector("div")
-                    div.innerHTML = `<p class="title">${title}</p><h5>Składniki</h5><ul>${ingredients}</ul>`
+                    const divContent = mealCard.parentElement.querySelector("div.content")
+                    divContent.innerHTML = `<p class="title" data-sub="${subcategory}">${title}</p><h5>Składniki</h5><ul>${ingredients}</ul>`
+
+                    const divRecipe = mealCard.parentElement.querySelector("div.recipe")
+                    divRecipe.innerHTML = `<h5>Przepis</h5><ol>${receipeSteps}</ol>`
+
+                    // zmieniam widoczność guzika "more" dla tej karty
+                    const moreButton = mealCard.parentElement.querySelector(".more")
+                    moreButton.style.display = "flex"
+                    moreButton.textContent = "więcej"
                 }
             })
         }
     })
 
+    // czyszczenie podglądu
+    clearPreviewWindow()
+
     // close modal
     closeModalMenu()
+}
+
+function createListToInnerHTML(myHTMLCollection){
+
+    // tworzę z HTML Collection tablicę, by móc policzyc ile jest elementów
+    const numberOfElements = Array.from(myHTMLCollection.children)
+
+    // pobieram teksty z li i wrzucam je w tagi. Całość dorzucam do tablicy i łączę w jeden string, który będzie można umieścić w innerHTML
+    const elementsArray = []
+
+    for(let i=0; i<numberOfElements.length; i++){
+        const element = "<li>"+myHTMLCollection.children[i].innerHTML+"</li>"
+        elementsArray.push(element)
+    }
+
+    const elementString = elementsArray.join("")
+    return elementString
 }
 
 function clearPreviewWindow(){
@@ -247,4 +302,5 @@ function addCategoryList(mealCategoriesBase, dbtype, day){
 
 function closeModalMenu(e){
     editModal.style.display = "none";
+    clearPreviewWindow()
 }
