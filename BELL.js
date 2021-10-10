@@ -1,8 +1,6 @@
 // DO ZROBIENIA
 /*
-    załącznik dodatku widoczny tylko przy pierwszym uzyciu
     edycja dodatku
-    zmiana dodatku by otwierał się przy posiłku
     LISTA ZAKUPÓW
 */
 
@@ -344,8 +342,7 @@ function clearPreviewWindow(){
 function closeModalMenu(e){
     modal.style.display = "none";
     clearPreviewWindow()
-    additionAttachment.style.display = "none"
-
+    additionAttachment.innerHTML = ""
 }
 
 // additional modal
