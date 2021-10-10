@@ -56,7 +56,7 @@ mealCategoriesList.addEventListener("click", loadRecipeTitleList)
 recipeList.addEventListener("click", loadRecipeContent)
 // zapisywanie przepisu
 saveButton.addEventListener("click", saveRecipe)
-// wgrywanie wykonania do menu głownego
+// wgrywanie wykonania do menu głownego oraz dodatku
 document.addEventListener("click", loadMore)
 // otwieranie okna dla dodatków
 additionButton.addEventListener("click", openAdditionEditor)
@@ -89,17 +89,17 @@ function goToSection(e){
 function loadMore(e){
 
     if(e.target.classList.value === "more"){
-        const divRecipe = e.target.closest(".meal-card").querySelector("div.recipe")
+        const divRecipe = e.target.previousElementSibling
 
         divRecipe.style.display = "block"
         e.target.textContent = "mniej"
-        e.target.classList = "less"
+        e.target.className = "less"
     } else if (e.target.classList.value === "less"){
-        const divRecipe = e.target.closest(".meal-card").querySelector("div.recipe")
+        const divRecipe = e.target.previousElementSibling
 
         divRecipe.style.display = "none"
         e.target.textContent = "więcej"
-        e.target.classList = "more"
+        e.target.className = "more"
     }
 }
 
@@ -155,6 +155,13 @@ function copyReceipe(e){
         const receipeSteps = createListToInnerHTML(recipeSteps)
 
         return [title, ingredients, receipeSteps]
+}
+
+function addReceipeToMainCard(section, title, ingredients, receipeSteps, subcategory){
+    const divContent = section.querySelector("div.content")
+    divContent.innerHTML = `<p class="title" data-sub="${subcategory}">${title}</p><h5>Składniki</h5><ul>${ingredients}</ul>`
+    const divRecipe = section.querySelector("div.recipe")
+    divRecipe.innerHTML = `<h5>Przepis</h5><ol>${receipeSteps}</ol>`
 }
 
 // main modal
@@ -307,11 +314,9 @@ function saveRecipe(e){
             mealCategoriesList.forEach(function(mealCard){
 
                 if(mealCard.textContent === mealName){
-                    const divContent = mealCard.parentElement.querySelector("div.content")
-                    divContent.innerHTML = `<p class="title" data-sub="${subcategory}">${title}</p><h5>Składniki</h5><ul>${ingredients}</ul>`
+                    const section = mealCard.parentElement
 
-                    const divRecipe = mealCard.parentElement.querySelector("div.recipe")
-                    divRecipe.innerHTML = `<h5>Przepis</h5><ol>${receipeSteps}</ol>`
+                    addReceipeToMainCard(section, title, ingredients, receipeSteps, subcategory)
 
                     // zmieniam widoczność guzika "more" dla tej karty
                     const moreButton = mealCard.parentElement.querySelector(".more")
@@ -417,6 +422,10 @@ function saveAddition(e){
 
         const dayName = subcategoryElement.options[subcategoryElement.selectedIndex].dataset.day
 
+        // nazwa posiłku
+        const mealHeader = e.target.closest("#modal").querySelector(".content .navigation h3").textContent
+        const mealName = mealHeader.substr(6)
+
         // pobieram przepis
         let receipeData = copyReceipe(e);
         let title = receipeData[0];
@@ -429,36 +438,36 @@ function saveAddition(e){
     // dodaje załacznik na głównym modalu
     additionAttachment.innerHTML = `<div style="display: flex">Dodatek: ${title}</div>`
 
-    // włącza karte dodatek i uzupełnia ją dla odpowiedniego dnia
-    const mealCard = document.querySelectorAll("h3")
+    // włącza karte dodatek i uzupełnia ją dla odpowiedniego dnia i posiłku
 
-    mealCard.forEach(function(dayCard){
-        if(dayCard.textContent === dayName){
-            const mealCategoriesList = dayCard.closest(".day-panel").querySelectorAll(".meal-list .meal-card h4")
-            console.log(dayName)
+        // szukam dnia do którego ma byc dodany dodatek
+        const dayCards = document.querySelectorAll("h3")
 
-            mealCategoriesList.forEach(function(mealCard){
-                if(mealCard.textContent === "dodatek"){
-                    // wyświetla meal-card "dodatek"
-                    const addition = mealCard.parentElement
-                    addition.style.display = "block"
-                    const recipeContent = addition.querySelector("div.content")
+        dayCards.forEach(function(dayCard){
+            if(dayCard.textContent === dayName){
 
-                    // umieszcza przepis
+                // szukam posiłku do którego ma być dodany dodatek
+                const mealCardsList = dayCard.nextElementSibling.querySelectorAll("h4")
+                console.log(mealCardsList)
 
-                    recipeContent.innerHTML = `<p class="title">${title}</p><h5>Składniki</h5><ul>${ingredients}</ul>`
+                mealCardsList.forEach(function(mealCard){
+                    if(mealCard.textContent === mealName){
+                        // wyświetla sekcję z dodatkiem
+                        const addition = mealCard.parentElement.querySelector(".addition")
+                        addition.style.display = "block"
+                        const subcategory = "none"
 
-                    const divRecipe = addition.querySelector("div.recipe")
-                    divRecipe.innerHTML = `<h5>Przepis</h5><ol>${receipeSteps}</ol>`
+                        // umieszcza przepis
+                        addReceipeToMainCard(addition, title, ingredients, receipeSteps, subcategory)
 
-                    // zmieniam widoczność guzika "more" dla tej karty
-                    const moreButton = mealCard.parentElement.querySelector(".more")
-                    moreButton.style.display = "flex"
-                    moreButton.textContent = "więcej"
-                }
-            })
-        }
-    })
+                        // zmieniam widoczność guzika "more" dla tej karty
+                        const moreButton = addition.querySelector(".more")
+                        moreButton.style.display = "flex"
+                        moreButton.textContent = "więcej"
+                    }
+                })
+            }
+        })
 }
 
 function editAdditionCard(e){
