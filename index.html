@@ -40,11 +40,19 @@
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
-        <div class="meal-card">
+<div class="meal-card">
           <h4>obiad</h4>
           <div class="content"></div>
           <div class="recipe"; style="display: none;"></div>
           <button class="edit">📋</button>
+          <button class="more"; style="display:none;">(...)</button>
+        </div>
+
+        <div class="meal-card"; style="display: none;">
+          <h4>dodatek</h4>
+          <div class="content"></div>
+          <div class="recipe"; style="display: none;"></div>
+          <button class="edit2">📋</button>
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
@@ -87,11 +95,19 @@
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
-        <div class="meal-card">
+<div class="meal-card">
           <h4>obiad</h4>
           <div class="content"></div>
           <div class="recipe"; style="display: none;"></div>
           <button class="edit">📋</button>
+          <button class="more"; style="display:none;">(...)</button>
+        </div>
+
+        <div class="meal-card"; style="display: none;">
+          <h4>dodatek</h4>
+          <div class="content"></div>
+          <div class="recipe"; style="display: none;"></div>
+          <button class="edit2">📋</button>
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
@@ -134,11 +150,19 @@
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
-        <div class="meal-card">
+<div class="meal-card">
           <h4>obiad</h4>
           <div class="content"></div>
           <div class="recipe"; style="display: none;"></div>
           <button class="edit">📋</button>
+          <button class="more"; style="display:none;">(...)</button>
+        </div>
+
+        <div class="meal-card"; style="display: none;">
+          <h4>dodatek</h4>
+          <div class="content"></div>
+          <div class="recipe"; style="display: none;"></div>
+          <button class="edit2">📋</button>
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
@@ -184,11 +208,19 @@
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
-        <div class="meal-card">
+<div class="meal-card">
           <h4>obiad</h4>
           <div class="content"></div>
           <div class="recipe"; style="display: none;"></div>
           <button class="edit">📋</button>
+          <button class="more"; style="display:none;">(...)</button>
+        </div>
+
+        <div class="meal-card"; style="display: none;">
+          <h4>dodatek</h4>
+          <div class="content"></div>
+          <div class="recipe"; style="display: none;"></div>
+          <button class="edit2">📋</button>
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
@@ -230,11 +262,19 @@
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
-        <div class="meal-card">
+<div class="meal-card">
           <h4>obiad</h4>
           <div class="content"></div>
           <div class="recipe"; style="display: none;"></div>
           <button class="edit">📋</button>
+          <button class="more"; style="display:none;">(...)</button>
+        </div>
+
+        <div class="meal-card"; style="display: none;">
+          <h4>dodatek</h4>
+          <div class="content"></div>
+          <div class="recipe"; style="display: none;"></div>
+          <button class="edit2">📋</button>
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
@@ -277,11 +317,19 @@
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
-        <div class="meal-card">
+<div class="meal-card">
           <h4>obiad</h4>
           <div class="content"></div>
           <div class="recipe"; style="display: none;"></div>
           <button class="edit">📋</button>
+          <button class="more"; style="display:none;">(...)</button>
+        </div>
+
+        <div class="meal-card"; style="display: none;">
+          <h4>dodatek</h4>
+          <div class="content"></div>
+          <div class="recipe"; style="display: none;"></div>
+          <button class="edit2">📋</button>
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
@@ -324,11 +372,19 @@
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
-        <div class="meal-card">
+<div class="meal-card">
           <h4>obiad</h4>
           <div class="content"></div>
           <div class="recipe"; style="display: none;"></div>
           <button class="edit">📋</button>
+          <button class="more"; style="display:none;">(...)</button>
+        </div>
+
+        <div class="meal-card"; style="display: none;">
+          <h4>dodatek</h4>
+          <div class="content"></div>
+          <div class="recipe"; style="display: none;"></div>
+          <button class="edit2">📋</button>
           <button class="more"; style="display:none;">(...)</button>
         </div>
 
@@ -357,22 +413,19 @@
     <div class="content">
 
       <div class="navigation">
-        <h3>Dodaj obiad</h3> <button>✖</button>
+        <h3></h3> <button>✖</button>
       </div>
 
       <div class="columns">
         <div class="stack">
           <select id="categories">
             <option selected disabled>Wybierz kategorię posiłku</option>
-            <!-- <option value="koktajle">Koktajle</option>
-            <option value="płatki">Płatki</option>
-            <option value="zupy">Zupy</option> -->
           </select>
           <div class="list"></div>
         </div>
 
         <div class="stack">
-          <div class="display"; style="display: none;">
+          <div id="disp1"; class="display"; style="display: none;">
             <h3>Tytuł przepisu</h3>
             <p>Kalorie: </p>
             <hr>
@@ -384,14 +437,51 @@
             <ol>
             </ol>
           </div>
+          <div class="additionList"></div>
 
           <div class="button-rail">
+            <button class="success2"; style="display: none;">dodaj dodatek</button>
             <button class="success"; style="display: none;">ZAPISZ</button>
           </div>
         </div>
 
       </div>
-    </div>
+  </div>
+
+  <div id="addModal"; class="modal"; style="display: none;">
+    <div class="content">
+
+      <div class="navigation">
+        <h3>Dodatki</h3> <button>✖</button>
+      </div>
+
+      <div class="columns">
+        <div class="stack">
+          <div class="list"></div>
+        </div>
+
+
+        <div class="stack">
+          <div id="disp2"; class="display"; style="display: block;">
+            <h3>Tytuł przepisu</h3>
+            <hr>
+            <h4>Składniki</h4>
+            <ul>
+            </ul>
+            <br>
+            <h4>Przygotowanie</h4>
+            <ol>
+            </ol>
+          </div>
+
+          <div class="button-rail">
+            <button class="success3"; style="display: none;">ZAPISZ</button>
+          </div>
+        </div>
+
+      </div>
+  </div>
+
 <!-- type module sprawia że mogę importowac pliki do mojego BELL -->
   <script src="BELL.js" type="module"></script>
 </body>

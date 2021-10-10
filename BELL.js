@@ -1,9 +1,10 @@
 // DO ZROBIENIA
 /*
-    PRZYCISK DODAJ DODATEK
+    załącznik dodatku widoczny tylko przy pierwszym uzyciu
+    edycja dodatku
+    zmiana dodatku by otwierał się przy posiłku
     LISTA ZAKUPÓW
 */
-
 
 import mealBase from "./mealBase.js";
 
@@ -13,15 +14,22 @@ const editButtonsList = document.querySelectorAll(".edit")
 const mealCategoriesList = document.getElementById("categories");
 const sectionSatMon = document.getElementById("satMon");
 const sectionTueFri = document.getElementById("tueFri");
-const editModal = document.getElementById("modal");
+const modal = document.getElementById("modal");
+const additionalModal = document.getElementById("addModal");
 const closeModalButton = document.querySelector("#modal button");
-const recipeList = document.querySelector(".stack .list");
-const displaySection = document.querySelector(".display")
-const displayTitle = document.querySelector(".display h3");
-const displayCalories = document.querySelector(".display p");
-const displayIngrediensList = document.querySelector(".display ul");
-const displayRecipeList = document.querySelector(".display ol");
+const closeAddModalButton = document.querySelector("#addModal button");
+const recipeList = document.querySelector("#modal .content .columns .stack .list");
+const additionList = document.querySelector("#addModal .content .columns .stack .list");
+const displaySection = document.querySelector("#disp1")
+const displayAddSection = document.querySelector("#disp2")
+const displayTitle = document.querySelector("#disp1 h3");
+const displayCalories = document.querySelector("#disp1 p");
+const displayIngrediensList = document.querySelector("#disp1 ul");
+const displayRecipeList = document.querySelector("#disp1 ol");
+const additionAttachment = document.querySelector(".additionList");
 const saveButton = document.querySelector(".success");
+const additionButton = document.querySelector(".success2");
+const saveAddButton = document.querySelector(".success3");
 
 //tworzę tablice z nazwami kategorii odpowiednimi dla posiłku
 const sniadanieCategoriesBase = Object.keys(mealBase.sniadanie);
@@ -40,6 +48,8 @@ tueFriButton.addEventListener("click", goToSection);
 document.addEventListener("click", openMealEditor)
 // zamykanie edycji
 closeModalButton.addEventListener("click", closeModalMenu)
+// zamykanie edycji dodatków
+closeAddModalButton.addEventListener("click", closeAddModalMenu)
 // ładowanie tytułów przepisów
 mealCategoriesList.addEventListener("click", loadRecipeTitleList)
 // ładowanie przepisów
@@ -48,15 +58,37 @@ recipeList.addEventListener("click", loadRecipeContent)
 saveButton.addEventListener("click", saveRecipe)
 // wgrywanie wykonania do menu głownego
 document.addEventListener("click", loadMore)
+// otwieranie okna dla dodatków
+additionButton.addEventListener("click", openAdditionEditor)
+// ładuję podgląd dodatków
+additionList.addEventListener("click", loadAdditionsContent)
+// zapisuje dodatek
+saveAddButton.addEventListener("click", saveAddition)
+// edycja dodatku
+document.addEventListener("click", editAdditionCard)
 
 
 
 // FUNCTIONS
 
+// main page
+
+function goToSection(e){
+    if(e.target === satMonButton){
+        sectionSatMon.style.display = "grid";
+        sectionTueFri.style.display = "none";
+        modal.style.display = "none";
+    } else if (e.target === tueFriButton) {
+        sectionSatMon.style.display = "none";
+        sectionTueFri.style.display = "grid";
+        modal.style.display = "none";
+    }
+    e.preventDefault
+};
+
 function loadMore(e){
 
     if(e.target.classList.value === "more"){
-
         const divRecipe = e.target.closest(".meal-card").querySelector("div.recipe")
 
         divRecipe.style.display = "block"
@@ -71,65 +103,20 @@ function loadMore(e){
     }
 }
 
-function saveRecipe(e){
+// modals helpers
 
-    // pobierz elementy do wyświetlenia i pomagające zlokalizować gdzie to wstawic
+function makeList(dataBase, listElement){
+    const elementsListArray = [];
 
-        // dzień
-        const subcategoryElement = e.target.closest(".content").querySelector(".columns #categories")
-        const dayName = subcategoryElement.options[subcategoryElement.selectedIndex].dataset.day
-
-        // podkategoria
-        const subcategory = e.target.closest(".content").querySelector(".columns #categories").value
-
-        // posiłek
-        const heading = e.target.closest(".content").querySelector(".navigation h3").textContent
-        const mealName = heading.substring(6)
-
-        // nazwa przepisu
-        const title = e.target.closest(".content").querySelector(".display h3").textContent
-
-        // składniki
-            // pobieram ul ze składnikami
-            const ingredientsList = e.target.closest(".content").querySelector(".display ul")
-
-            // zamieniam ją w stringa do umieszczenia w innerHTML
-            const ingredients = createListToInnerHTML(ingredientsList)
-
-        // przepis
-
-            // pobieram ol z przepisem
-            const recipeSteps = e.target.closest(".content").querySelector(".display ol")
-
-            // zamieniam ją w stringa do umieszczenia w innerHTML
-            const receipeSteps = createListToInnerHTML(recipeSteps)
-
-    // znajduję dzień i posiłek i wpisuję do niego dane
-    document.querySelectorAll("h3").forEach(function(dayCard){
-        if(dayCard.textContent === dayName){
-            dayCard.nextElementSibling.querySelectorAll(".meal-card h4").forEach(function(mealCard){
-
-                if(mealCard.textContent === mealName){
-                    const divContent = mealCard.parentElement.querySelector("div.content")
-                    divContent.innerHTML = `<p class="title" data-sub="${subcategory}">${title}</p><h5>Składniki</h5><ul>${ingredients}</ul>`
-
-                    const divRecipe = mealCard.parentElement.querySelector("div.recipe")
-                    divRecipe.innerHTML = `<h5>Przepis</h5><ol>${receipeSteps}</ol>`
-
-                    // zmieniam widoczność guzika "more" dla tej karty
-                    const moreButton = mealCard.parentElement.querySelector(".more")
-                    moreButton.style.display = "flex"
-                    moreButton.textContent = "więcej"
-                }
-            })
-        }
+    // tworze element listy
+    dataBase.forEach(function(item){
+        const listItem = `<li>${item}</li>`
+        elementsListArray.push(listItem)
     })
+    const listToInsert = elementsListArray.join("")
 
-    // czyszczenie podglądu
-    clearPreviewWindow()
-
-    // close modal
-    closeModalMenu()
+    // przypisuje element listy
+    listElement.innerHTML = listToInsert
 }
 
 function createListToInnerHTML(myHTMLCollection){
@@ -149,24 +136,104 @@ function createListToInnerHTML(myHTMLCollection){
     return elementString
 }
 
-function clearPreviewWindow(){
-    // czyszcze podgląd przepisu z innej kategorii (jeśli był)
-    displaySection.style.display = "none";
-    saveButton.style.display = "none";
+function copyReceipe(e){
+    // nazwa przepisu
+        const title = e.target.closest(".content").querySelector(".display h3").textContent
+
+    // składniki
+        // pobieram ul ze składnikami
+        const ingredientsList = e.target.closest(".content").querySelector(".display ul")
+
+        // zamieniam ją w stringa do umieszczenia w innerHTML
+        const ingredients = createListToInnerHTML(ingredientsList)
+
+    // przepis
+        // pobieram ol z przepisem
+        const recipeSteps = e.target.closest(".content").querySelector(".display ol")
+
+        // zamieniam ją w stringa do umieszczenia w innerHTML
+        const receipeSteps = createListToInnerHTML(recipeSteps)
+
+        return [title, ingredients, receipeSteps]
 }
 
-function makeList(dataBase, listElement){
-    const elementsListArray = [];
+// main modal
 
-    // tworze element listy
-    dataBase.forEach(function(item){
-        const listItem = `<li>${item}</li>`
-        elementsListArray.push(listItem)
+function openMealEditor(e){
+
+    if (e.target.classList.contains("edit")){
+
+        // czyszcze listę przepisów
+        recipeList.innerHTML = "";
+
+        // pobiera nazwę dnia (potem dodaje ją do elementu listy jako dataset)
+        const dayName = e.target.closest(".day-panel").querySelector("h3").textContent
+
+        // otwiera modal
+        modal.style.display = "flex";
+
+        // modyfikuje jego nagłówek
+        const mealHeading = modal.querySelector("h3")
+        const mealName = e.target.parentElement.querySelector("h4").textContent
+
+        mealHeading.textContent = `Dodaj ${mealName}`
+
+        // ładuje kategorię produktów odpowiednią do posiłku, ustawiam listę w dropdownie kategorii
+        if(mealName === "śniadanie"){
+            addCategoryList(sniadanieCategoriesBase, "sniadanie", dayName)
+        } else if(mealName === "drugie śniadanie"){
+            addCategoryList(drugieSniadanieCategoriesBase, "drugieSniadanie", dayName)
+        } else if(mealName === "obiad"){
+            addCategoryList(obiadCategoriesBase, "obiad", dayName)
+        } else if(mealName === "podwieczorek"){
+            addCategoryList(podwieczorekCategoriesBase, "podwieczorek", dayName)
+        } else if(mealName === "kolacja"){
+            addCategoryList(kolacjaCategoriesBase, "kolacja", dayName)
+        }
+    }
+}
+
+function addCategoryList(mealCategoriesBase, dbtype, day){
+
+    const categoryListArray = ["<option selected disabled>Wybierz kategorię posiłku</option>"]
+
+    for(let i=0; i<mealCategoriesBase.length; i++){
+
+        // w elemencie listy zaszyte jest w dataset też jaki to posiłek i jaki dzień
+        const categories = `<option value="${mealCategoriesBase[i]}" data-category="${dbtype}" data-day="${day}">${mealCategoriesBase[i]}</option>`
+
+        categoryListArray.push(categories)
+    }
+
+    let categoryItem = categoryListArray.join("")
+
+    mealCategoriesList.innerHTML = categoryItem
+    return mealCategoriesList
+}
+
+function loadRecipeTitleList(e){
+
+    // podkategoria
+    const subcategory = e.target.value
+
+    // posilek
+    const mealName = e.target.options[e.target.selectedIndex].dataset.category
+
+    // ściezka do podkategorii
+    const reciepeArray = mealBase[mealName][subcategory]
+
+    // pobieram tytuł i przypisuję go do elementu listy
+    const recipeTitleArray = [];
+
+    reciepeArray.forEach(function(item){
+        const title = item.title;
+        const recipeTitle = `<button>${title}</button>`
+        recipeTitleArray.push(recipeTitle)
     })
-    const listToInsert = elementsListArray.join("")
+    const reciepeTitleToAdd = recipeTitleArray.join("")
+    recipeList.innerHTML =  `${reciepeTitleToAdd}`
 
-    // przypisuje element listy
-    listElement.innerHTML = listToInsert
+    clearPreviewWindow()
 }
 
 function loadRecipeContent(e){
@@ -206,101 +273,226 @@ function loadRecipeContent(e){
     // pokazuję sekcję z przepisem
     displaySection.style.display = "block";
     saveButton.style.display = "block";
+    additionButton.style.display = "block";
    })
     e.preventDefault
 }
 
-function loadRecipeTitleList(e){
+function saveRecipe(e){
 
-    // podkategoria
-    const subcategory = e.target.value
+    // pobierz elementy do wyświetlenia i pomagające zlokalizować gdzie to wstawic
 
-    // posilek
-    const mealName = e.target.options[e.target.selectedIndex].dataset.category
+        // dzień
+        const subcategoryElement = e.target.closest(".content").querySelector(".columns #categories")
+        const dayName = subcategoryElement.options[subcategoryElement.selectedIndex].dataset.day
 
-    // ściezka do podkategorii
-    const reciepeArray = mealBase[mealName][subcategory]
+        // podkategoria
+        const subcategory = e.target.closest(".content").querySelector(".columns #categories").value
 
-    // pobieram tytuł i przypisuję go do elementu listy
-    const recipeTitleArray = [];
+        // posiłek
+        const heading = e.target.closest(".content").querySelector(".navigation h3").textContent
+        const mealName = heading.substring(6)
 
-    reciepeArray.forEach(function(item){
-        const title = item.title;
-        const recipeTitle = `<button>${title}</button>`
-        recipeTitleArray.push(recipeTitle)
-    })
-    const reciepeTitleToAdd = recipeTitleArray.join("")
-    recipeList.innerHTML =  `${reciepeTitleToAdd}`
+        // pobieram przepis
+        let receipeData = copyReceipe(e);
+        let title = receipeData[0];
+        let ingredients = receipeData[1];
+        let receipeSteps = receipeData[2];
 
-    clearPreviewWindow()
-}
+    // znajduję dzień i posiłek i wpisuję do niego dane
+    document.querySelectorAll("h3").forEach(function(dayCard){
+        if(dayCard.textContent === dayName){
 
-function goToSection(e){
-    if(e.target === satMonButton){
-        sectionSatMon.style.display = "grid";
-        sectionTueFri.style.display = "none";
-        editModal.style.display = "none";
-    } else if (e.target === tueFriButton) {
-        sectionSatMon.style.display = "none";
-        sectionTueFri.style.display = "grid";
-        editModal.style.display = "none";
-    }
-    e.preventDefault
-};
+            const mealCategoriesList = dayCard.nextElementSibling.querySelectorAll(".meal-card h4")
+            mealCategoriesList.forEach(function(mealCard){
 
-function openMealEditor(e){
+                if(mealCard.textContent === mealName){
+                    const divContent = mealCard.parentElement.querySelector("div.content")
+                    divContent.innerHTML = `<p class="title" data-sub="${subcategory}">${title}</p><h5>Składniki</h5><ul>${ingredients}</ul>`
 
-    if (e.target.classList.contains("edit")){
+                    const divRecipe = mealCard.parentElement.querySelector("div.recipe")
+                    divRecipe.innerHTML = `<h5>Przepis</h5><ol>${receipeSteps}</ol>`
 
-        // czyszcze listę przepisów
-        recipeList.innerHTML = "";
-
-        // pobiera nazwę dnia (potem dodaje ją do elementu listy jako dataset)
-        const dayName = e.target.closest(".day-panel").querySelector("h3").textContent
-
-        // otwiera modal
-        editModal.style.display = "flex";
-
-        // modyfikuje jego nagłówek
-        const mealHeading = editModal.querySelector("h3")
-        const mealName = e.target.parentElement.querySelector("h4").textContent
-
-        mealHeading.textContent = `Dodaj ${mealName}`
-
-        // ładuje kategorię produktów odpowiednią do posiłku, ustawiam listę w dropdownie kategorii
-        if(mealName === "śniadanie"){
-            addCategoryList(sniadanieCategoriesBase, "sniadanie", dayName)
-        } else if(mealName === "drugie śniadanie"){
-            addCategoryList(drugieSniadanieCategoriesBase, "drugieSniadanie", dayName)
-        } else if(mealName === "obiad"){
-            addCategoryList(obiadCategoriesBase, "obiad", dayName)
-        } else if(mealName === "podwieczorek"){
-            addCategoryList(podwieczorekCategoriesBase, "podwieczorek", dayName)
-        } else if(mealName === "kolacja"){
-            addCategoryList(kolacjaCategoriesBase, "kolacja", dayName)
+                    // zmieniam widoczność guzika "more" dla tej karty
+                    const moreButton = mealCard.parentElement.querySelector(".more")
+                    moreButton.style.display = "flex"
+                    moreButton.textContent = "więcej"
+                }
+            })
         }
-    }
+    })
+
+    // czyszczenie podglądu
+    clearPreviewWindow()
+
+    // zamykanie okna edycji
+    closeModalMenu()
 }
 
-function addCategoryList(mealCategoriesBase, dbtype, day){
-
-    const categoryListArray = ["<option selected disabled>Wybierz kategorię posiłku</option>"]
-
-    for(let i=0; i<mealCategoriesBase.length; i++){
-
-        // w elemencie listy zaszyte jest w dataset też jaki to posiłek i jaki dzień
-        const categories = `<option value="${mealCategoriesBase[i]}" data-category="${dbtype}" data-day="${day}">${mealCategoriesBase[i]}</option>`
-
-        categoryListArray.push(categories)
-    }
-
-    let categoryItem = categoryListArray.join("")
-
-    mealCategoriesList.innerHTML = categoryItem
-    return mealCategoriesList
+function clearPreviewWindow(){
+    // czyszcze podgląd przepisu z innej kategorii (jeśli był)
+    displaySection.style.display = "none";
+    saveButton.style.display = "none";
+    additionButton.style.display = "none";
 }
 
 function closeModalMenu(e){
-    editModal.style.display = "none";
+    modal.style.display = "none";
     clearPreviewWindow()
+    additionAttachment.style.display = "none"
+
+}
+
+// additional modal
+
+function openAdditionEditor(e){
+
+    if (e.target.classList.contains("success2")){
+
+        // otwieram modal
+        additionalModal.style.display = "flex";
+
+        // tablica z przepisami
+        const additionalArray = mealBase.dodatki
+
+        // pobieram tytuły dodatków i przypisuje je do elementu listy
+        const additionTitleArray = [];
+
+        additionalArray.forEach(function(item){
+            const title = item.title;
+            const elementList = `<button>${title}</button>`
+            additionTitleArray.push(elementList)
+        })
+        const additionTitleToAdd = additionTitleArray.join("")
+
+        additionList.innerHTML =  `${additionTitleToAdd}`
+
+        clearAdditionalPreviewWindow()
+    }
+}
+
+function loadAdditionsContent(e){
+
+    // zmienne lokalne (nadpisują globalne)
+    const displayTitle = document.querySelector("#disp2 h3");
+    const displayCalories = document.querySelector("#disp2 p");
+    const displayIngrediensList = document.querySelector("#disp2 ul");
+    const displayRecipeList = document.querySelector("#disp2 ol");
+
+    // nazwa przepisu
+    const title = e.target.textContent
+
+    // ściezka do przepisu
+    const additionsArray = mealBase.dodatki
+
+    // uzupełnianie przepisu
+    additionsArray.forEach(function(item){
+        if(item.title === title){
+            // obiekt z wybranym przepisem
+            const receipe = item
+
+            // tytuł
+            displayTitle.textContent = receipe.title
+
+            // lista składników
+            makeList(receipe.ingredients, displayIngrediensList)
+
+            // sposób przygotowania
+            makeList(receipe.reciepe, displayRecipeList)
+        }
+
+        // pokazuję sekcję z przepisem i guzik zapisz
+        displayAddSection.style.display = "block";
+        saveAddButton.style.display = "block";
+    })
+    e.preventDefault
+}
+
+function saveAddition(e){
+
+    // pobieram dane
+
+        // dzień
+        const subcategoryElement = e.target.closest("body").querySelector(".columns #categories")
+
+        const dayName = subcategoryElement.options[subcategoryElement.selectedIndex].dataset.day
+
+        // pobieram przepis
+        let receipeData = copyReceipe(e);
+        let title = receipeData[0];
+        let ingredients = receipeData[1];
+        let receipeSteps = receipeData[2];
+
+    // zamyka dodatkowy baner
+    closeAddModalMenu()
+
+    // dodaje załacznik na głównym modalu
+    additionAttachment.innerHTML = `<div style="display: flex">Dodatek: ${title}</div>`
+
+    // włącza karte dodatek i uzupełnia ją dla odpowiedniego dnia
+    const mealCard = document.querySelectorAll("h3")
+
+    mealCard.forEach(function(dayCard){
+        if(dayCard.textContent === dayName){
+            const mealCategoriesList = dayCard.closest(".day-panel").querySelectorAll(".meal-list .meal-card h4")
+            console.log(dayName)
+
+            mealCategoriesList.forEach(function(mealCard){
+                if(mealCard.textContent === "dodatek"){
+                    // wyświetla meal-card "dodatek"
+                    const addition = mealCard.parentElement
+                    addition.style.display = "block"
+                    const recipeContent = addition.querySelector("div.content")
+
+                    // umieszcza przepis
+
+                    recipeContent.innerHTML = `<p class="title">${title}</p><h5>Składniki</h5><ul>${ingredients}</ul>`
+
+                    const divRecipe = addition.querySelector("div.recipe")
+                    divRecipe.innerHTML = `<h5>Przepis</h5><ol>${receipeSteps}</ol>`
+
+                    // zmieniam widoczność guzika "more" dla tej karty
+                    const moreButton = mealCard.parentElement.querySelector(".more")
+                    moreButton.style.display = "flex"
+                    moreButton.textContent = "więcej"
+                }
+            })
+        }
+    })
+}
+
+function editAdditionCard(e){
+    if(e.target.classList.contains("edit2")){
+        // otwieram modal
+        additionalModal.style.display = "flex";
+
+        // tablica z przepisami
+        const additionalArray = mealBase.dodatki
+
+        // pobieram tytuły dodatków i przypisuje je do elementu listy
+        const additionTitleArray = [];
+
+        additionalArray.forEach(function(item){
+            const title = item.title;
+            const elementList = `<button>${title}</button>`
+            additionTitleArray.push(elementList)
+        })
+        const additionTitleToAdd = additionTitleArray.join("")
+
+        additionList.innerHTML =  `${additionTitleToAdd}`
+
+        clearAdditionalPreviewWindow()
+
+    }
+}
+
+function clearAdditionalPreviewWindow(){
+    // czyszcze podgląd przepisu z innej kategorii (jeśli był)
+    displayAddSection.style.display = "none";
+    saveAddButton.style.display = "none";
+}
+
+function closeAddModalMenu(e){
+    additionalModal.style.display = "none";
+    clearAdditionalPreviewWindow()
 }

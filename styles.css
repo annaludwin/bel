@@ -39,6 +39,11 @@ button:active {
 button.success {
   background-color: var(--bel-green);
 }
+
+button.success2 {
+  background-color: var(--bel-yellow);
+}
+
 /*
 button.more {
   background-color: var(--bel-green);
@@ -138,6 +143,18 @@ section.day-panel .meal-list > * + * {
 }
 
 .meal-card button.edit:hover {
+  background-color: var(--bel-green);
+}
+
+.meal-card button.edit2 {
+  top: 0px;
+  right: 0px;
+  padding: 0.8em;
+  position: absolute;
+  border-radius: 0 0.4em;
+}
+
+.meal-card button.edit2:hover {
   background-color: var(--bel-green);
 }
 
