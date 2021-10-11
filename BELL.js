@@ -1,6 +1,6 @@
 // DO ZROBIENIA
 /*
-    edycja dodatku
+    edycja dodatku - guzik edycji dodatku nakłada mi sie z guzikiem edycji posiłku
     LISTA ZAKUPÓW
 */
 
@@ -64,7 +64,6 @@ additionList.addEventListener("click", loadAdditionsContent)
 saveAddButton.addEventListener("click", saveAddition)
 // edycja dodatku
 document.addEventListener("click", editAdditionCard)
-
 
 
 // FUNCTIONS
@@ -415,12 +414,12 @@ function saveAddition(e){
     // pobieram dane
 
         // dzień
-        const subcategoryElement = e.target.closest("body").querySelector(".columns #categories")
+        const subcategoryElement = e.target.closest("body").querySelector("#modal .columns #categories")
 
         const dayName = subcategoryElement.options[subcategoryElement.selectedIndex].dataset.day
 
         // nazwa posiłku
-        const mealHeader = e.target.closest("#modal").querySelector(".content .navigation h3").textContent
+        const mealHeader = e.target.closest("body").querySelector("#modal .content .navigation h3").textContent
         const mealName = mealHeader.substr(6)
 
         // pobieram przepis
@@ -445,12 +444,12 @@ function saveAddition(e){
 
                 // szukam posiłku do którego ma być dodany dodatek
                 const mealCardsList = dayCard.nextElementSibling.querySelectorAll("h4")
-                console.log(mealCardsList)
 
                 mealCardsList.forEach(function(mealCard){
                     if(mealCard.textContent === mealName){
                         // wyświetla sekcję z dodatkiem
                         const addition = mealCard.parentElement.querySelector(".addition")
+
                         addition.style.display = "block"
                         const subcategory = "none"
 
@@ -469,6 +468,8 @@ function saveAddition(e){
 
 function editAdditionCard(e){
     if(e.target.classList.contains("edit2")){
+
+        console.log(additionalModal)
         // otwieram modal
         additionalModal.style.display = "flex";
 

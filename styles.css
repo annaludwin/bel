@@ -150,7 +150,7 @@ section.day-panel .meal-list > * + * {
   top: 0px;
   right: 0px;
   padding: 0.8em;
-  position: absolute;
+  position: down;
   border-radius: 0 0.4em;
 }
 
