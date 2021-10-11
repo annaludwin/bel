@@ -1,7 +1,8 @@
 // DO ZROBIENIA
 /*
     edycja dodatku - guzik edycji dodatku nakłada mi sie z guzikiem edycji posiłku
-    LISTA ZAKUPÓW
+    LISTA ZAKUPÓW - nie działa dla drugiej sekcji
+    Lista zakupów - zrobić wyświetlanie w dodatkowym menu u góry
 */
 
 import mealBase from "./mealBase.js";
@@ -28,6 +29,9 @@ const additionAttachment = document.querySelector(".additionList");
 const saveButton = document.querySelector(".success");
 const additionButton = document.querySelector(".success2");
 const saveAddButton = document.querySelector(".success3");
+const doListButton = document.querySelector(".shop");
+const shoppingListSatMon = document.getElementById("shoppingListSatMon");
+const shoppingListTueFri = document.getElementById("shoppingListTueFri");
 
 //tworzę tablice z nazwami kategorii odpowiednimi dla posiłku
 const sniadanieCategoriesBase = Object.keys(mealBase.sniadanie);
@@ -64,21 +68,61 @@ additionList.addEventListener("click", loadAdditionsContent)
 saveAddButton.addEventListener("click", saveAddition)
 // edycja dodatku
 document.addEventListener("click", editAdditionCard)
+// stworzenie listy zakupów
+document.addEventListener("click", doShoppingList)
 
 
 // FUNCTIONS
 
 // main page
+function doShoppingList(e){
+    if(e.target.className === "shop"){
+        // wyciągam wszystkie składniki z kart i zapisuje je do tablicy
+        const itemsNodes = e.target.closest(".screen").querySelectorAll("ul li")
+
+        const itemsArray = []
+
+        itemsNodes.forEach(function(itemsElement){
+            // umieszczam w tablicy wszystkie składniki oprócz przypraw
+            if((itemsElement.textContent.includes("Przyprawy")) || (itemsElement.textContent.includes("PASTA:") )|| (itemsElement.textContent.includes("POZOSTAŁE"))){
+                console.log("Te elementy nie są dodawane do listy zakupów")
+            } else {
+                const item = itemsElement.textContent
+                itemsArray.push(item)
+            }
+        })
+
+        // segreguję tablicę alfabetycznie
+        const sortedItemsArray = itemsArray.sort()
+
+        // tworzę string z całości do dodania w innerHTML
+        const elementsArray = []
+
+        for(let i=0; i<sortedItemsArray.length; i++){
+            const element = `<div><input type="checkbox"><label> ${sortedItemsArray[i]}</label></div>`
+            elementsArray.push(element)
+        }
+
+        const elementString = elementsArray.join("")
+
+        // dodaję checkboxy do listy zakupów
+        e.target.closest("section").querySelector("div.meal-card").innerHTML = elementString
+    }
+}
 
 function goToSection(e){
     if(e.target === satMonButton){
         sectionSatMon.style.display = "grid";
         sectionTueFri.style.display = "none";
         modal.style.display = "none";
+        shoppingListSatMon.style.display = "grid";
+        shoppingListTueFri.style.display = "none";
     } else if (e.target === tueFriButton) {
         sectionSatMon.style.display = "none";
         sectionTueFri.style.display = "grid";
         modal.style.display = "none";
+        shoppingListSatMon.style.display = "none";
+        shoppingListTueFri.style.display = "grid";
     }
     e.preventDefault
 };
@@ -167,8 +211,9 @@ function openMealEditor(e){
 
     if (e.target.classList.contains("edit")){
 
-        // czyszcze listę przepisów
+        // czyszcze listę przepisów i załącznik dodatku
         recipeList.innerHTML = "";
+        additionAttachment.innerHTML = "";
 
         // pobiera nazwę dnia (potem dodaje ją do elementu listy jako dataset)
         const dayName = e.target.closest(".day-panel").querySelector("h3").textContent
@@ -341,7 +386,6 @@ function clearPreviewWindow(){
 function closeModalMenu(e){
     modal.style.display = "none";
     clearPreviewWindow()
-    additionAttachment.innerHTML = ""
 }
 
 // additional modal
@@ -469,7 +513,6 @@ function saveAddition(e){
 function editAdditionCard(e){
     if(e.target.classList.contains("edit2")){
 
-        console.log(additionalModal)
         // otwieram modal
         additionalModal.style.display = "flex";
 

@@ -262,22 +262,31 @@
       </div>
     </section>
 
-    <section class="day-panel">
+    <section id="shoppingListSatMon"; class="day-panel">
       <h3 class="shoppingList">Lista zakupów</h3>
+      <h4 class="shoppingList">sobota-poniedziałek</h4>
+
+      <button class="shop"; style="display:flex;">stwórz listę zakupów</button>
+      </br>
       <div class="meal-card">
         <div>
-          <input type="checkbox" name="xxxx">
-          <label>produkt1</label>
+          <input type="checkbox">
+          <label>Produkt 1</label>
         </div>
         <div>
-          <input type="checkbox" name="xxxx">
-          <label>produkt2</label>
+          <input type="checkbox">
+          <label>Produkt 2</label>
         </div>
+        <div>
+          <input type="checkbox">
+          <label>...</label>
+        </div>
+      </div>
     </section>
 
   </div>
 
-  <div id="tueFri"; class="screen">
+  <div id="tueFri"; class="screen"; style="display: none;">
 
     <section class="day-panel">
       <h3>WTOREK</h3>
@@ -603,7 +612,30 @@
       </div>
     </section>
 
+    <section id="shoppingListTueFri"; class="day-panel"; style="display: none;">
+      <h3 class="shoppingList">Lista zakupów</h3>
+      <h4 class="shoppingList">wtorek-piątek</h4>
+
+      <button class="shop"; style="display:flex;">stwórz listę zakupów</button>
+      </br>
+      <div class="meal-card">
+        <div>
+          <input type="checkbox">
+          <label>Produkt 1</label>
+        </div>
+        <div>
+          <input type="checkbox">
+          <label>Produkt 2</label>
+        </div>
+        <div>
+          <input type="checkbox">
+          <label>...</label>
+        </div>
+      </div>
+    </section>
+
   </div>
+
 
   <div id="modal"; class="modal"; style="display: none;">
     <div class="content">
