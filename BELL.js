@@ -31,6 +31,8 @@ const additionButton = document.querySelector(".success2");
 const saveAddButton = document.querySelector(".success3");
 const shoppingListSatMon = document.getElementById("shoppingListSatMon");
 const shoppingListTueFri = document.getElementById("shoppingListTueFri");
+const hideButtonSatMon = document.querySelector("div.hide")
+const hideButtonTueFri = document.querySelector("div.hide")
 
 //tworzę tablice z nazwami kategorii odpowiednimi dla posiłku
 const sniadanieCategoriesBase = Object.keys(mealBase.sniadanie);
@@ -70,9 +72,11 @@ document.addEventListener("click", editAdditionCard)
 // stworzenie listy zakupów
 document.addEventListener("click", doShoppingList)
 // zaznaczeni checkboxow w liście zakupów
-shoppingListSatMon.addEventListener('change', checkListItem)
-shoppingListTueFri.addEventListener('change', checkListItem)
-
+shoppingListSatMon.addEventListener("change", checkListItem)
+shoppingListTueFri.addEventListener("change", checkListItem)
+// ukrywanie zaznaczonych checkboxów
+hideButtonSatMon.addEventListener("click", hideSelected)
+hideButtonTueFri.addEventListener("click", hideSelected)
 
 // FUNCTIONS
 
@@ -157,6 +161,14 @@ function checkListItem(e) {
   }
 };
 
+function hideSelected(e) {
+  if(e.target === "input"){
+    console.log("mamy to")
+  } else {
+    console.log("jeszcze nie")
+
+  }
+}
 // modals helpers
 
 function makeList(dataBase, listElement) {
