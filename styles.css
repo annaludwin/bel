@@ -6,10 +6,13 @@
   /* Colors */
 
   --bel-green      :#35b446;
+  --bel-gray       :#c7c7c7;
   --bel-gray-text  :#5d5d5d;
   --bel-lite-gray  :#f3f3f3;
   --bel-yellow     :#fcf060;
   --bel-orange     :#ff9a44;
+  --bel-brown      :#725f33;
+
 
   /* Shadows */
 
@@ -18,9 +21,15 @@
 
 html, body {
   width: 100%;
-  height: 100%;
-  background-color:var(--nel-lite-gray);
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  background-color:var(--bel-lite-gray);
 }
+
+/* h1::first-letter, h2::first-letter, h3::first-letter, h4::first-letter {
+  text-transform: uppercase;
+}  */
 
 button {
   border-radius: 0.3em;
@@ -44,12 +53,19 @@ button.success2 {
   background-color: var(--bel-yellow);
 }
 
-/*
-button.more {
+button.success3 {
   background-color: var(--bel-green);
-  ;
 }
 
+
+button.more,
+button.less {
+  background-color: var(--bel-lite-gray);
+  margin-top: 1em;
+  font-size: 0.9em;
+
+}
+/*
 button.less {
   background-color: var(--bel-green);
   ;
@@ -67,22 +83,42 @@ nav {
 
 div.screen {
   width: 100%;
-  display: grid;
-  grid-gap: 2em;
+  display: flex;
+  flex-wrap: wrap;
   margin-top: 2em;
   padding: 1em 2em;
-  grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+  align-items: flex-start;
 }
 
-section.day-panel  {
+div.screen > * {
+  margin-right: 2em;
+  margin-bottom: 2em;
+
+}
+
+section.day-panel {
   padding: 1em;
+  flex-basis: 300px;
   border-radius: 1em;
   background-color:#f6f6f6;
   box-shadow: var(--bel-box-shadow)
 }
 
+section.day-panel.dark {
+  background-color: var(--bel-brown);
+}
+
+section.day-panel.dark h3,
+section.day-panel.dark h4 {
+  color: white;
+}
+
 section h3 {
   margin-bottom: 1em;
+}
+
+section h4 {
+  margin-bottom: 0.8em;
 }
 
 section.day-panel .meal-list > * + * {
@@ -120,6 +156,7 @@ section.day-panel .meal-list > * + * {
   color: var(--bel-gray-text);
 }
 
+.meal-card ol,
 .meal-card ul {
   margin: 0;
   font-size: 0.9em;
@@ -127,6 +164,10 @@ section.day-panel .meal-list > * + * {
   line-height: 1.5em;
   padding: 0 1em 0 1.5em;
   color: var(--bel-gray-text);
+}
+
+.meal-card ol {
+  list-style: decimal;
 }
 
 .meal-card ul > li > div {
@@ -164,7 +205,7 @@ section.day-panel .meal-list > * + * {
   background-image: linear-gradient(60deg, #96deda 0%, #50c9c3 100%);
 }
 
-.bg-bliss{
+.bg-bliss {
   background-image:linear-gradient(200deg,var(--bel-yellow) 0%, var(--bel-orange) 100%);
 }
 
@@ -177,6 +218,28 @@ section.day-panel .meal-list > * + * {
   margin-top: 1em;
 }
 
+.stack.--gap-0 > * + * {
+  margin-top: 0;
+}
+
+.rail {
+  display: flex;
+}
+
+.rail > * + * {
+  margin-left: 1em;
+}
+
+.rail.--spread {
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.no-margin {
+  margin: 0;
+}
+
 
 /* Form */
 
@@ -187,6 +250,10 @@ label.input-group {
 
 label.input-group strong {
   font-size: 0.9em;
+}
+
+label.cross{
+  text-decoration: line-through;
 }
 
 /* Modal */
@@ -212,11 +279,12 @@ label.input-group strong {
 }
 
 .modal .navigation {
-  display: flex;
   width: 100%;
-  padding: 0.5em;
-  background-color: white;
+  display: flex;
+  align-items: center;
+  padding: 0.4em 0.8em;
   justify-content: space-between;
+  background-color: var(--bel-orange);
 }
 
 .modal .content {
@@ -224,10 +292,10 @@ label.input-group strong {
   width: 80vw;
   height: 80vh;
   display: flex;
-  flex-direction: column;
-  padding: 1em 1.5em 1.5em;
-  border-radius: 1em;
+  overflow: hidden;
   position: absolute;
+  border-radius: 1em;
+  flex-direction: column;
   background-color: white;
   box-shadow: var(--bel-box-shadow);
 }
@@ -235,13 +303,14 @@ label.input-group strong {
 .modal select {
   padding: 0.5em;
   min-width: 15rem;
-  border: 2px solid var(--bel-orange) ;
+  border: none;
+  border-bottom: 2px solid var(--bel-orange);
 }
 
 .modal .columns {
   gap: 2em;
-  display: grid;
   height: 100%;
+  display: grid;
   grid-template-columns: 20rem 1fr;
 }
 
@@ -251,9 +320,13 @@ label.input-group strong {
   margin-bottom: -5em;
 }
 
+.modal .columns > div:first-child {
+  background-color: var(--bel-lite-gray);
+  border-right: 2px solid var(--bel-orange);
+}
+
 
 .modal .display {
-  background-color: #eee;
   border-radius: 1em;
   overflow: auto;
   padding: 1em;
@@ -264,6 +337,7 @@ label.input-group strong {
   margin-top: 0.5em;
 }
 
+.modal .display ol,
 .modal .display ul {
   margin: 0;
   padding-left: 1.5em;
@@ -276,16 +350,15 @@ label.input-group strong {
   flex-direction: column;
 }
 
-.modal .list > * + * {
-  margin-top: 0.2em;
-}
-
 .modal .list button {
+  text-align: left;
   justify-content: flex-start;
+  border-bottom: 1px solid var(--bel-gray);
 }
 
 .modal .button-rail {
   display: flex;
+  padding: 0 1em;
   justify-content: flex-end;
 }
 
