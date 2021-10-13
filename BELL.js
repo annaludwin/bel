@@ -1,8 +1,7 @@
 // DO ZROBIENIA
 /*
-    edycja dodatku - guzik edycji dodatku nakłada mi sie z guzikiem edycji posiłku
-    LISTA ZAKUPÓW - nie działa dla drugiej sekcji
     Lista zakupów - zrobić wyświetlanie w dodatkowym menu u góry
+    zapisywanie do LS
 */
 
 import mealBase from "./mealBase.js";
@@ -31,8 +30,8 @@ const additionButton = document.querySelector(".success2");
 const saveAddButton = document.querySelector(".success3");
 const shoppingListSatMon = document.getElementById("shoppingListSatMon");
 const shoppingListTueFri = document.getElementById("shoppingListTueFri");
-const hideButtonSatMon = document.querySelector("div.hide")
-const hideButtonTueFri = document.querySelector("div.hide")
+const hideButtonSatMon = document.querySelector("#shoppingListSatMon div.hide input")
+const hideButtonTueFri = document.querySelector("#shoppingListTueFri div.hide input")
 
 //tworzę tablice z nazwami kategorii odpowiednimi dla posiłku
 const sniadanieCategoriesBase = Object.keys(mealBase.sniadanie);
@@ -72,8 +71,8 @@ document.addEventListener("click", editAdditionCard)
 // stworzenie listy zakupów
 document.addEventListener("click", doShoppingList)
 // zaznaczeni checkboxow w liście zakupów
-shoppingListSatMon.addEventListener("change", checkListItem)
-shoppingListTueFri.addEventListener("change", checkListItem)
+shoppingListSatMon.querySelector(".list").addEventListener("change", checkListItem)
+shoppingListTueFri.querySelector(".list").addEventListener("change", checkListItem)
 // ukrywanie zaznaczonych checkboxów
 hideButtonSatMon.addEventListener("click", hideSelected)
 hideButtonTueFri.addEventListener("click", hideSelected)
@@ -154,7 +153,11 @@ function loadMore(e) {
 }
 
 function checkListItem(e) {
-  if (e.target.checked) {
+  const hideCheckbox = e.target.closest("section").querySelector(".hide input")
+  if (e.target.checked && !hideCheckbox.checked) {
+    e.target.nextElementSibling.className = "cross"
+  } else if(e.target.checked && hideCheckbox.checked) {
+    e.target.parentElement.style.display = "none"
     e.target.nextElementSibling.className = "cross"
   } else {
     e.target.nextElementSibling.className = ""
@@ -162,13 +165,26 @@ function checkListItem(e) {
 };
 
 function hideSelected(e) {
-  if(e.target === "input"){
-    console.log("mamy to")
-  } else {
-    console.log("jeszcze nie")
 
-  }
+  // cała lista produktów
+  const itemList = e.target.closest("section").querySelectorAll(".list div")
+
+  // wybieram te co są zaznaczone
+  itemList.forEach(function(item){
+
+    const checkbox = item.querySelector("input")
+
+    // ukrywam je i pokazuję
+    if(e.target.checked && checkbox.checked){
+      item.style.display = "none"
+    } else if (!e.target.checked){
+      item.style.display = "block"
+      console.log(item)
+      item.className = "cross"
+    }
+  })
 }
+
 // modals helpers
 
 function makeList(dataBase, listElement) {
