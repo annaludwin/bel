@@ -1,4 +1,4 @@
-export default {
+const mealBase = {
     "sniadanie": {
         "owsianki": [
 
