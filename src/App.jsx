@@ -1,11 +1,7 @@
-import { useState } from 'react'
 import './reset.css'
 import './styles.css'
 import './mealBase'
 import mealBase from "./mealBase";
-
-const NavigationButton = ({elementId, msg}) => <button id={elementId} className={"navigation"}>{msg}</button>
-
 
 const daysSatMon = ["Sobota", "Niedziela", "Poniedziałek"]
 const daysTueFri = ["Wtorek", "Środa", "Czwartek", "Piątek"]
@@ -54,7 +50,7 @@ const MealContent = ({mealArray}) => {
     </div>
 }
 
-const MealRecipe = ({mealArray, children}) => {
+const MealRecipe = ({mealArray}) => {
 return <div className="recipe">
     <h5>Przepis</h5>
     <ol>{
