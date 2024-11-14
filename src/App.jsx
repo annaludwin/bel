@@ -1,42 +1,18 @@
 import { useState } from 'react'
 import './reset.css'
 import './styles.css'
+import './mealBase'
+import mealBase from "./mealBase";
+
 const NavigationButton = ({elementId, msg}) => <button id={elementId} className={"navigation"}>{msg}</button>
 
-const days = ["Poniedziałek", "Wtorek", "Środa", "Czwartek", "Piątek", "Sobota", "Niedziela"]
+
+const daysSatMon = ["Sobota", "Niedziela", "Poniedziałek"]
+const daysTueFri = ["Wtorek", "Środa", "Czwartek", "Piątek"]
 const meals = ["Śniadanie", "Drugie śniadanie", "Obiad", "Podwieczorek", "Kolacja"]
-const koktajl = {"sniadanie": [
+const addition = mealBase.dodatki[8]
+const mainCourse = mealBase.sniadanie.owsianki[1]
 
-    {
-        "title": "Koktajl z masła orzechowego, banana i siemienia lnianego",
-        "calories": "299 kcal",
-        "ingredients": [
-            "Mleko 79 g (0,4 szkl.),",
-            "Jogurt naturalny 86 g (0,6 opak. po 150 g),",
-            "Banan 86 g (0,5 średniej szt.),",
-            "Masło orzechowe 100% 14 g (niecała łyżka),",
-            "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 7 g (1,4 łyżeczki)"
-        ],
-        "reciepe": [
-            "Banana obierz i podziel na mniejsze kawałki",
-            "Wszystkie składniki umieść w pojemniku blendera",
-            "Zmiksuj na gładki koktajl"
-        ]
-    }
-]}
-
-const salatka =
-    {
-        "title": "Sałatka pomidorowo-paprykowa",
-        "calories": "dodatek",
-        "ingredients": [
-            "Pomidor 130 g (1 średnia szt.),",
-            "Papryka 120 g (½ szt.),",
-            "Szczypiorek świeży lub suszony 2 g (1 szczypta)"],
-        "reciepe": [
-            "Pokrój pomidora i paprykę",
-            "Polej sosem winegret i posyp posiekanym szczypiorkiem"]
-    }
 
 const DayPannel = ({dayName, children}) => {
     return <section className="day-panel">
@@ -50,15 +26,13 @@ const MealList = ({mealName, children}) => {
         <div className="meal-card">
             <h4>{mealName}</h4>
 
-            // danie główne
-            <MealContent mealArray={koktajl.sniadanie[0]}></MealContent>
+            <MealContent mealArray={mainCourse}></MealContent>
             <button className="more">(...)</button>
-            <MealRecipe mealArray={koktajl.sniadanie[0]}></MealRecipe>
+            <MealRecipe mealArray={mainCourse}></MealRecipe>
 
-            // dodatki
-            <MealContent mealArray={salatka}></MealContent>
+            <MealContent mealArray={addition}></MealContent>
             <button className="more">(...)</button>
-            <MealRecipe mealArray={salatka}></MealRecipe>
+            <MealRecipe mealArray={addition}></MealRecipe>
 
             <button className="edit">📋</button>
 
@@ -66,7 +40,6 @@ const MealList = ({mealName, children}) => {
         </div>
     </div>
 }
-
 
 const MealContent = ({mealArray}) => {
     return <div className="content">
@@ -95,7 +68,6 @@ return <div className="recipe">
 }
 
 
-
 function App() {
 
     return (
@@ -110,8 +82,8 @@ function App() {
             </nav>
 
             <div id="satMon" className="screen">{
-                days.map((day, index) => (
-                    <DayPannel dayName={days[index].toUpperCase()}>{
+                daysSatMon.map((day, index) => (
+                    <DayPannel dayName={daysSatMon[index].toUpperCase()}>{
                         meals.map((meal, index) => (
                             <MealList mealName={meals[index]}></MealList>
                         ))
