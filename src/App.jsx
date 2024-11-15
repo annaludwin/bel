@@ -2,6 +2,7 @@ import "./reset.css";
 import "./styles.css";
 import "./mealBase";
 import mealBase from "./mealBase";
+import { useState } from "react";
 
 const daysSatMon = ["Sobota", "Niedziela", "Poniedziałek"];
 const daysTueFri = ["Wtorek", "Środa", "Czwartek", "Piątek"];
@@ -81,63 +82,62 @@ const ShoppingListItem = ({ product }) => {
   );
 };
 
-const WeekPanel = ({ weekPart, children }) => {
+const WeekPanel = ({ weekPart }) => {
   return (
-    <div id="satMon" className="screen">
-      {children}
+    <div className="screen">
+      {weekPart.map((day) => (
+        <DayPanel key={day} dayName={day.toUpperCase()}>
+          {meals.map((meal) => (
+            <MealList key={meal} mealName={meal}></MealList>
+          ))}
+        </DayPanel>
+      ))}
+
+      <section className="day-panel dark">
+        <h3 className="shoppingList no-margin ">Lista zakupów</h3>
+        <h4 className="shoppingList">sobota-poniedziałek</h4>
+        <button className="shop">stwórz listę zakupów</button>
+        <div
+          className="hide"
+          style={{ color: "blanchedalmond", marginTop: "1em" }}
+        >
+          <input type="checkbox" value="hide" />
+          <label>ukryj zaznaczone</label>
+        </div>
+
+        <div className="meal-card list">
+          <ShoppingListItem product={"Produkt 1"}></ShoppingListItem>
+          <ShoppingListItem product={"Produkt 2"}></ShoppingListItem>
+          <ShoppingListItem product={"..."}></ShoppingListItem>
+        </div>
+      </section>
     </div>
   );
 };
 
 function App() {
+  const [weekPart, setWeekPart] = useState(daysTueFri);
+
   return (
     <>
       <nav>
         <h1>🔔BeL</h1>
         <div className="rail">
-          <button>sobota-poniedziałek</button>
-          <button>wtorek-piątek</button>
+          <button onClick={() => setWeekPart(daysSatMon)}>
+            sobota-poniedziałek
+          </button>
+          <button onClick={() => setWeekPart(daysTueFri)}>wtorek-piątek</button>
           <button>🍔</button>
         </div>
       </nav>
 
-      <div id="satMon" className="screen">
-        {daysSatMon.map((day) => (
-          <DayPanel key={day} dayName={day.toUpperCase()}>
-            {meals.map((meal) => (
-              <MealList key={meal} mealName={meal}></MealList>
-            ))}
-          </DayPanel>
-        ))}
-
-        <section id="shoppingListSatMon" className="day-panel dark">
-          <h3 className="shoppingList no-margin ">Lista zakupów</h3>
-          <h4 className="shoppingList">sobota-poniedziałek</h4>
-          <button className="shop">stwórz listę zakupów</button>
-          <div
-            className="hide"
-            style={{ color: "blanchedalmond", marginTop: "1em" }}
-          >
-            <input type="checkbox" value="hide" />
-            <label>ukryj zaznaczone</label>
-          </div>
-
-          <div className="meal-card list">
-            <ShoppingListItem product={"Produkt 1"}></ShoppingListItem>
-            <ShoppingListItem product={"Produkt 2"}></ShoppingListItem>
-            <ShoppingListItem product={"..."}></ShoppingListItem>
-          </div>
-        </section>
-      </div>
+      <WeekPanel weekPart={weekPart}></WeekPanel>
     </>
   );
 }
 
 /*
 todo:
- - przerzucic całość widoku do komponentu który przyjmuje argument - tablica dni
- - dopisac eventHandler dl guzików przełaczania grupy dni(l. 81,82) - wyciągnąć na zewnąrz potem tę funkcję - dac ja powyzej returna z l. 75
- - dopisac useState do tego przełączania
 
 
 */
