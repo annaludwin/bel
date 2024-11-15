@@ -117,6 +117,9 @@ const WeekPanel = ({ weekPart }) => {
 
 function App() {
   const [weekPart, setWeekPart] = useState(daysTueFri);
+  const [isBurger, setBurger] = useState(true);
+
+  console.log(weekPart, isBurger);
 
   return (
     <>
@@ -127,7 +130,9 @@ function App() {
             sobota-poniedziałek
           </button>
           <button onClick={() => setWeekPart(daysTueFri)}>wtorek-piątek</button>
-          <button>🍔</button>
+          <button onClick={() => setBurger(!isBurger)}>
+            {isBurger ? "🍔" : "❤"}
+          </button>
         </div>
       </nav>
 
@@ -138,7 +143,7 @@ function App() {
 
 /*
 todo:
-
+ podpiac handler pod guzik tworzenia listy i stworzyc listę
 
 */
 export default App;
