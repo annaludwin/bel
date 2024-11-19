@@ -1,20 +1,17 @@
 import "./reset.css";
 import "./styles.css";
 import "./mealBase";
-import mealBase from "./mealBase";
 import { useState } from "react";
+import mealBase from "./mealBase";
+
+// tymczasowe, będzie dynamicznie zmieniane:
+const addition = mealBase.dodatki[8];
+const mainCourse = mealBase.sniadanie.owsianki[1];
 
 const daysSatMon = ["Sobota", "Niedziela", "Poniedziałek"];
 const daysTueFri = ["Wtorek", "Środa", "Czwartek", "Piątek"];
-const meals = [
-  "Śniadanie",
-  "Drugie śniadanie",
-  "Obiad",
-  "Podwieczorek",
-  "Kolacja",
-];
-const addition = mealBase.dodatki[8];
-const mainCourse = mealBase.sniadanie.owsianki[1];
+const mealSatMon = daysSatMon.map((day) => makeDay(day, mainCourse, addition));
+const mealTueFri = daysTueFri.map((day) => makeDay(day, mainCourse, addition));
 
 const DayPanel = ({ dayName, children }) => {
   return (
@@ -24,6 +21,10 @@ const DayPanel = ({ dayName, children }) => {
     </section>
   );
 };
+
+// console.log(mealSatMon);
+// console.log(meals);
+// console.log(mealSatMon[0].dayName);
 
 const MealList = ({ mealName }) => {
   return (
@@ -51,8 +52,8 @@ const MealContent = ({ mealArray }) => {
       <p className="title">{mealArray.title}</p>
       <h5>Składniki</h5>
       <ul>
-        {mealArray.ingredients.map((ingredient) => (
-          <li key={ingredient}>{ingredient}</li>
+        {mealArray.ingredients.map((ingredient, index) => (
+          <li key={ingredient + index}>{ingredient}</li>
         ))}
       </ul>
     </div>
@@ -64,7 +65,7 @@ const MealRecipe = ({ mealArray }) => {
     <div className="recipe">
       <h5>Przepis</h5>
       <ol>
-        {mealArray.reciepe.map((ingredient) => (
+        {mealArray.recipe.map((ingredient) => (
           <li key={ingredient}>{ingredient}</li>
         ))}
       </ol>
@@ -86,9 +87,9 @@ const WeekPanel = ({ weekPart }) => {
   return (
     <div className="screen">
       {weekPart.map((day) => (
-        <DayPanel key={day} dayName={day.toUpperCase()}>
-          {meals.map((meal) => (
-            <MealList key={meal} mealName={meal}></MealList>
+        <DayPanel key={day.dayName} dayName={day.dayName.toUpperCase()}>
+          {day.meals.map((meal) => (
+            <MealList key={meal.title} mealName={meal.title}></MealList>
           ))}
         </DayPanel>
       ))}
@@ -116,29 +117,58 @@ const WeekPanel = ({ weekPart }) => {
 };
 
 function App() {
-  const [weekPart, setWeekPart] = useState(daysTueFri);
-  const [isBurger, setBurger] = useState(true);
-
-  console.log(weekPart, isBurger);
+  const [weekPartMenu, setWeekPartMenu] = useState(mealTueFri);
 
   return (
     <>
       <nav>
         <h1>🔔BeL</h1>
         <div className="rail">
-          <button onClick={() => setWeekPart(daysSatMon)}>
+          <button onClick={() => setWeekPartMenu(mealSatMon)}>
             sobota-poniedziałek
           </button>
-          <button onClick={() => setWeekPart(daysTueFri)}>wtorek-piątek</button>
-          <button onClick={() => setBurger(!isBurger)}>
-            {isBurger ? "🍔" : "❤"}
+          <button onClick={() => setWeekPartMenu(mealTueFri)}>
+            wtorek-piątek
           </button>
         </div>
       </nav>
 
-      <WeekPanel weekPart={weekPart}></WeekPanel>
+      <WeekPanel weekPart={weekPartMenu}></WeekPanel>
     </>
   );
+}
+
+function makeDay(dayName, mainCourse = {}, addition = []) {
+  return {
+    dayName: dayName,
+    meals: [
+      {
+        title: "Śniadanie",
+        mainCourse: mainCourse,
+        addition: addition,
+      },
+      {
+        title: "2-gie śniadanie",
+        mainCourse: mainCourse,
+        addition: addition,
+      },
+      {
+        title: "Obiad",
+        mainCourse: mainCourse,
+        addition: addition,
+      },
+      {
+        title: "Podwieczorek",
+        mainCourse: mainCourse,
+        addition: addition,
+      },
+      {
+        title: "Kolacja",
+        mainCourse: mainCourse,
+        addition: addition,
+      },
+    ],
+  };
 }
 
 /*

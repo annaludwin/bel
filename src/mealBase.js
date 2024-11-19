@@ -1,317 +1,2166 @@
 export default {
-    "sniadanie": {
-        "owsianki": [
-
-            { "title": "Bananowy kuskus z jogurtem", "calories": "511 kcal", "ingredients": ["Kasza 71 g (5,5 łyżki),", "Banan 170 g (0,9 średniej szt.),", "Jogurt naturalny 138 g (0,9 opak. po 150 g),", "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 4 g (niecała łyżeczka)"], "reciepe": ["Kuskus zalej wrzątkiem na 5-7 min. Gdy napęcznieje, zmiksuj z bananem", "Jogurt wymieszaj z nasionami słonecznika i polej nim kaszę"] }, { "title": "Owsianka z jabłkiem, cynamonem i orzechami", "calories": "512 kcal", "ingredients": ["Płatki owsiane 60 g (6 łyżek),", "Mleko 220 g (1 szkl.),", "Jabłko 170 g (1 średnia szt.),", "Przyprawy 2 g (1 szczypta),", "Orzechy 15 g"], "reciepe": ["Płatki owsiane ugotuj na mleku", "Do owsianki dodaj pokrojone jabłko, cynamon i orzechy"] }, { "title": "Owsianka marchewkowa z jabłkiem", "calories": "482 kcal", "ingredients": ["Płatki owsiane 60 g (6 łyżek),", "Mleko 220 g (1 szkl.),", "Marchew 50 g (0,5 dużej szt.),", "Jabłko 85 g (½ średniej szt.),", "Orzechy 15 g,", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Marchew obierz i zetrzyj na tarce o grubych oczkach", "Do garnka dodaj płatki owsiane, mleko i marchewkę. Gotuj, aż płatki owsiane będą miękkie", "Do gotowej owsianki dodaj pokrojone jabłko, orzechy oraz cynamon"] }, { "title": "Owsianka z bananem", "calories": "470 kcal", "ingredients": ["Płatki owsiane 50 g (5 łyżek),", "Banan 185 g (1 średnia szt.),", "Mleko 220 g (1 szkl.)"], "reciepe": ["Płatki wsyp do mleka, podgrzej (możesz też zjeść na zimno)", "Banana pokrój i dodaj na końcu do owsianki"] }, { "title": "Owsianka z gruszką, rodzynkami, cynamonem i chia", "calories": "470 kcal", "ingredients": ["Mleko 250 g (1,1 szkl.),", "Płatki owsiane 50 g (5 łyżek),", "Przyprawy 4 g (2 szczypty),", "Gruszka 170 g (1 średnia szt.),", "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 10 g (2 łyżeczki),", "Rodzynki 5 g (niecała łyżka)"], "reciepe": ["Ugotuj płatki owsiane z chia i rodzynkami na mleku przez ok. 10 minut lub aż będą gotowe. Co jakiś czas mieszaj", "Przełóż owsiankę do miski. Udekoruj pokrojoną gruszką i posyp cynamonem"] }
+  sniadanie: {
+    owsianki: [
+      {
+        title: "Bananowy kuskus z jogurtem",
+        calories: "511 kcal",
+        ingredients: [
+          "Kasza 71 g (5,5 łyżki),",
+          "Banan 170 g (0,9 średniej szt.),",
+          "Jogurt naturalny 138 g (0,9 opak. po 150 g),",
+          "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 4 g (niecała łyżeczka)",
         ],
-        "płatki": []
+        recipe: [
+          "Kuskus zalej wrzątkiem na 5-7 min. Gdy napęcznieje, zmiksuj z bananem",
+          "Jogurt wymieszaj z nasionami słonecznika i polej nim kaszę",
+        ],
+      },
+      {
+        title: "Owsianka z jabłkiem, cynamonem i orzechami",
+        calories: "512 kcal",
+        ingredients: [
+          "Płatki owsiane 60 g (6 łyżek),",
+          "Mleko 220 g (1 szkl.),",
+          "Jabłko 170 g (1 średnia szt.),",
+          "Przyprawy 2 g (1 szczypta),",
+          "Orzechy 15 g",
+        ],
+        recipe: [
+          "Płatki owsiane ugotuj na mleku",
+          "Do owsianki dodaj pokrojone jabłko, cynamon i orzechy",
+        ],
+      },
+      {
+        title: "Owsianka marchewkowa z jabłkiem",
+        calories: "482 kcal",
+        ingredients: [
+          "Płatki owsiane 60 g (6 łyżek),",
+          "Mleko 220 g (1 szkl.),",
+          "Marchew 50 g (0,5 dużej szt.),",
+          "Jabłko 85 g (½ średniej szt.),",
+          "Orzechy 15 g,",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Marchew obierz i zetrzyj na tarce o grubych oczkach",
+          "Do garnka dodaj płatki owsiane, mleko i marchewkę. Gotuj, aż płatki owsiane będą miękkie",
+          "Do gotowej owsianki dodaj pokrojone jabłko, orzechy oraz cynamon",
+        ],
+      },
+      {
+        title: "Owsianka z bananem",
+        calories: "470 kcal",
+        ingredients: [
+          "Płatki owsiane 50 g (5 łyżek),",
+          "Banan 185 g (1 średnia szt.),",
+          "Mleko 220 g (1 szkl.)",
+        ],
+        recipe: [
+          "Płatki wsyp do mleka, podgrzej (możesz też zjeść na zimno)",
+          "Banana pokrój i dodaj na końcu do owsianki",
+        ],
+      },
+      {
+        title: "Owsianka z gruszką, rodzynkami, cynamonem i chia",
+        calories: "470 kcal",
+        ingredients: [
+          "Mleko 250 g (1,1 szkl.),",
+          "Płatki owsiane 50 g (5 łyżek),",
+          "Przyprawy 4 g (2 szczypty),",
+          "Gruszka 170 g (1 średnia szt.),",
+          "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 10 g (2 łyżeczki),",
+          "Rodzynki 5 g (niecała łyżka)",
+        ],
+        recipe: [
+          "Ugotuj płatki owsiane z chia i rodzynkami na mleku przez ok. 10 minut lub aż będą gotowe. Co jakiś czas mieszaj",
+          "Przełóż owsiankę do miski. Udekoruj pokrojoną gruszką i posyp cynamonem",
+        ],
+      },
+    ],
+    płatki: [],
+  },
+  drugieSniadanie: {
+    koktajle: [
+      {
+        title: "Koktajl z masła orzechowego, banana i siemienia lnianego",
+        calories: "299 kcal",
+        ingredients: [
+          "Mleko 79 g (0,4 szkl.),",
+          "Jogurt naturalny 86 g (0,6 opak. po 150 g),",
+          "Banan 86 g (0,5 średniej szt.),",
+          "Masło orzechowe 100% 14 g (niecała łyżka),",
+          "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 7 g (1,4 łyżeczki)",
+        ],
+        recipe: [
+          "Banana obierz i podziel na mniejsze kawałki",
+          "Wszystkie składniki umieść w pojemniku blendera",
+          "Zmiksuj na gładki koktajl",
+        ],
+      },
+      {
+        title: "Koktajl z gruszką i miodem",
+        calories: "376 kcal",
+        ingredients: [
+          "Gruszka 170 g (1 średnia szt.),",
+          "Mleko 220 g (1 szkl.),",
+          "Miód pszczeli 10 g (2 łyżeczki),",
+          "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 10 g (2 łyżeczki),",
+          "Jabłko 170 g (1 średnia szt.)",
+        ],
+        recipe: [
+          "Składniki przełóż do wysokiego naczynia, następnie zmiksuj je na gładką masę. Jeśli wolisz rzadszą konsystencje możesz dolać wody.",
+        ],
+      },
+      {
+        title: "Koktajl z buraka i owoców +orzechy",
+        calories: "592 kcal",
+        ingredients: [
+          "Burak 100 g,",
+          "Banan 120 g (0,6 średniej szt.),",
+          "Gruszka 340 g (2 średnie szt.),",
+          "Woda 440 g (2 szkl.),",
+          "Orzechy 40 g",
+        ],
+        recipe: [
+          "Buraka obierz. Usuń z gruszki gniazdo nasienne",
+          "Zmiksuj buraka, gruszkę, banana i wodę",
+          "Wraz z koktajlem spożyj orzechy",
+        ],
+      },
+      {
+        title: "Koktajl mleczny z bananem i awokado",
+        calories: "287 kcal",
+        ingredients: [
+          "Awokado 70 g (½ szt.),",
+          "Banan 60 g (0,3 średniej szt.),",
+          "Mleko 220 g (1 szkl.)",
+        ],
+        recipe: [
+          "Wyjmij miąższ z awokado, banana pokrój w kostkę",
+          "Wszystkie składniki zmiksuj na koktajl",
+        ],
+      },
+      {
+        title: "Pudding bananowo-kawowy",
+        calories: "193 kcal",
+        ingredients: [
+          "Banan 150 g (0,8 średniej szt.),",
+          "Woda 50 g (0,2 szkl.),",
+          "Mleko 100 g (0,5 szkl.),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Woda = napar z kawy",
+          "Zaparz małą kawę",
+          "Zmiksuj kawę z bananem, mlekiem i cynamonem",
+        ],
+      },
+      {
+        title: "Koktajl gruszkowo-szpinakowy z migdałami",
+        calories: "530 kcal",
+        ingredients: [
+          "Mleko 170 g (0,8 szkl.),",
+          "Szpinak świeży lub mrożony 40 g,",
+          "Banan 185 g (1 średnia szt.),",
+          "Gruszka 170 g (1 średnia szt.),",
+          "Migdały 30 g (2 łyżki),",
+          "Cytryna 5 g (0,1 szt.)",
+        ],
+        recipe: [
+          "Zmiksuj sok z cytryny, banana, mleko, szpinak i gruszkę",
+          "Posyp posiekanymi migdałami",
+          "Schłodź przed podaniem",
+        ],
+      },
+      {
+        title: "Koktajl szarlotkowy z rodzynkami",
+        calories: "300 kcal",
+        ingredients: [
+          "Mleko 145 g (0,7 szkl.),",
+          "Banan 122 g (0,7 średniej szt.),",
+          "Jabłko 112 g (0,7 średniej szt.),",
+          "Rodzynki 19 g (1,3 łyżki),",
+          "Przyprawy 1 g (0,7 szczypt)",
+        ],
+        recipe: [
+          "Banana możesz wcześniej zamrozić, uprzednio krojąc w plastry, ale nie jest to konieczne",
+          "Jabłka obierz ze skórki i pozbaw gniazd nasiennych",
+          "wszystkie składniki zmiksuj na gładki koktajl",
+          "Opcjonalnie dodaj cynamon i sproszkowaną wanilię",
+        ],
+      },
+      {
+        title: "Koktajl jagodowo-bananowy",
+        calories: "327 kcal",
+        ingredients: [
+          "Banan 185 g (1 średnia szt.),",
+          "Jagody 90 g (2 garści),",
+          "Mleko 220 g (1 szkl.)",
+        ],
+        recipe: ["Zmiksuj na gładki koktajl"],
+      },
+      {
+        title: "Koktajl z banana i kiwi z natką pietruszki",
+        calories: "300 kcal",
+        ingredients: [
+          "Banan 185 g (1 średnia szt.),",
+          "Kiwi 220 g (2 szt.),",
+          "Natka pietruszki, świeża lub suszona 6 g (3 łyżeczki)",
+        ],
+        recipe: [
+          "Banana i kiwi pokrój na mniejsze kawałki",
+          "Dodaj posiekaną natkę pietruszki",
+          "Zmiksuj całość",
+        ],
+      },
+      {
+        title: "Koktajl bananowy z kakao i otrębami",
+        calories: "324 kcal",
+        ingredients: [
+          "Kefir naturalny 220 g (1 szkl.),",
+          "Banan 170 g (0,9 średniej szt.),",
+          "Kakao 10 g (2 łyżeczki),",
+          "Otręby 4 g (1 łyżka)",
+        ],
+        recipe: ["Zmiksuj na gładki koktajl"],
+      },
+      {
+        title: "Koktajl banan-cukinia-jabłko-kiwi-szpinak-cytryna",
+        calories: "298 kcal",
+        ingredients: [
+          "Banan 160 g (0,9 średniej szt.),",
+          "Szpinak świeży lub mrożony 60 g,",
+          "Jabłko 100 g (0,6 średniej szt.),",
+          "Kiwi 110 g (1 szt.),",
+          "Cytryna 48 g (0,6 szt.),",
+          "Cukinia 80 g (0,3 szt.)",
+        ],
+        recipe: ["Zmiksuj na gładki koktajl"],
+      },
+      {
+        title: "Kakaowy koktajl bananowy",
+        calories: "300 kcal",
+        ingredients: [
+          "Maślanka naturalna 220 g (1 szkl.),",
+          "Banan 185 g (1 średnia szt.),",
+          "Kakao 10 g (2 łyżeczki),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: ["Zmiksuj na gładki koktajl"],
+      },
+      {
+        title: "Koktajl czekoladowy z gruszką",
+        calories: "377 kcal",
+        ingredients: [
+          "Kakao 10 g (2 łyżeczki),",
+          "Mleko 220 g (1 szkl.),",
+          "Gruszka 340 g (2 średnie szt.),",
+          "Orzechy 6 g",
+        ],
+        recipe: [
+          "Gruszkę pokrój w krostkę i wrzuć doi miski z pozostałymi składnikami",
+          "Całość zblenduj, wysypując na wierzch ulubione orzechy",
+        ],
+      },
+      {
+        title: "Koktajl jaglano-owocowy",
+        calories: "377 kcal",
+        ingredients: [
+          "Jogurt naturalny 150 g (1 opak. po 150 g),",
+          "Banan 185 g (1 średnia szt.),",
+          "Mandarynka 60 g (1 szt.),",
+          "Kasza 26 g (2 łyżki)",
+        ],
+        recipe: [
+          "Kaszę przepłucz zimną i gorącą wodą, a następnie ugotuj",
+          "Zblenduj wszystkie składniki",
+        ],
+      },
+      {
+        title: "Koktajl z ananasem, awokado i siemieniem lnianym",
+        calories: "477 kcal",
+        ingredients: [
+          "Ananas świeży lub z puszki 30 g (1 plaster),",
+          "Awokado 140 g (1 szt.),",
+          "Mleko 220 g (1 szkl.),",
+          "Jabłko 170 g (1 średnia szt.),",
+          "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 5 g (1 łyżeczka),",
+          "Woda 220 g (1 szkl.)",
+        ],
+        recipe: ["Zmiksuj na gładki koktajl"],
+      },
+      {
+        title: "Koktajl gruszkowy z cynamonem",
+        calories: "203 kcal",
+        ingredients: [
+          "Kefir naturalny 220 g (1 szkl.),",
+          "Gruszka 170 g (1 średnia szt.),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: ["Zmiksuj na gładki koktajl"],
+      },
+      {
+        title: "Zielony bananowo-truskawkowy shake",
+        calories: "270 kcal",
+        ingredients: [
+          "Banan 185 g (1 średnia szt.),",
+          "Truskawki świeże lub mrożone 100 g,",
+          "Szpinak świeży lub mrożony 70 g,",
+          "Mleko 110 g (½ szkl.)",
+        ],
+        recipe: [
+          "Zmiksuj wszystkie składniki",
+          "Schłodź przed podaniem lub dodaj pokruszony lód",
+        ],
+      },
+      {
+        title: "Milkshake truskawkowy",
+        calories: "184 kcal",
+        ingredients: [
+          "Truskawki świeże lub mrożone 200 g (10 ),",
+          "Mleko 220 g (1 szkl.),",
+          "Miód pszczeli 5 g (1 łyżeczka)",
+        ],
+        recipe: ["Zmiksuj na gładki koktajl"],
+      },
+    ],
+    smoothie: [
+      {
+        title: "Smoothie bananowo- kokosowe",
+        calories: "212 kcal",
+        ingredients: [
+          "Mleko 127 g (0,6 szkl.),",
+          "Banan 107 g (0,6 średniej szt.),",
+          "Wiórki kokosowe 6 g (1,7 łyżki)",
+        ],
+        recipe: ["Całość zmiksuj na gładki koktajl"],
+      },
+      {
+        title: "Zielone smoothie ze szpinakiem i gruszką",
+        calories: "218 kcal",
+        ingredients: [
+          "Mleko 220 g (1 szkl.),",
+          "Szpinak świeży lub mrożony 25 g,",
+          "Gruszka 80 g (0,5 średniej szt.),",
+          "Banan 60 g (0,3 średniej szt.),",
+          "Cytryna 8 g (0,1 szt.)",
+        ],
+        recipe: [
+          "Gruszkę i banana obierz i pokrój na mniejsze kawałki",
+          "Dodaj garść szpinaku i kilka listków mięty, zmiksuj",
+          "Wlej mleko, sok z cytryny, wrzuć kostkę lodu i ponownie zmiksuj do uzyskania jednolitej konsystencji",
+          "Tak przygotowane smoothie przystrój listkami mięty",
+        ],
+      },
+      {
+        title: "Smoothie pina colada",
+        calories: "270 kcal",
+        ingredients: [
+          "Mleko 220 g (1 szkl.),",
+          "Ananas świeży lub z puszki 120 g (4 plastry),",
+          "Wiórki kokosowe 12 g (3 łyżki),",
+          "Miód pszczeli 5 g (1 łyżeczka)",
+        ],
+        recipe: [
+          "Ananasa, wiórki kokosowe, mleko i łyżeczkę miódu umieść w kielichu blendera",
+          "Całość zmiksuj na gładki koktajl",
+        ],
+      },
+      {
+        title: "Smoothie truskawkowo-ananasowe",
+        calories: "179 kcal",
+        ingredients: [
+          "Truskawki świeże lub mrożone 100 g,",
+          "Ananas świeży lub z puszki 60 g (2 plastry),",
+          "Jogurt naturalny 100 g (0,7 opak. po 150 g),",
+          "Sok owocowy 100% 100 g (0,5 szkl.),",
+          "Miód pszczeli 5 g (1 łyżeczka)",
+        ],
+        recipe: ["Całość zmiksuj na gładki koktajl"],
+      },
+      {
+        title: "Smoothie z buraka, truskawek, banana, otrąb i jogurtu",
+        calories: "292 kcal",
+        ingredients: [
+          "Jogurt naturalny 150 g (1 opak. po 150 g),",
+          "Burak 100 g,",
+          "Truskawki świeże lub mrożone 100 g,",
+          "Banan 120 g (0,6 średniej szt.),",
+          "Otręby 12 g (3 łyżki)",
+        ],
+        recipe: ["Całość zmiksuj na gładki koktajl"],
+      },
+      {
+        title: "Zielony napój warzywno-owocowy",
+        calories: "185 kcal",
+        ingredients: [
+          "Sałata 50 g (10 liści),",
+          "Kiwi 110 g (1 szt.),",
+          "Banan 90 g (0,5 średniej szt.),",
+          "Miód pszczeli 10 g (2 łyżeczki),",
+          "Woda 220 g (1 szkl.)",
+        ],
+        recipe: ["Całość zmiksuj na gładki koktajl"],
+      },
+    ],
+  },
+  obiad: {
+    kasza: [
+      {
+        title: "Kurczak caprese z kaszą",
+        calories: "633 kcal",
+        ingredients: [
+          "Mięso z piersi kurczaka 125 g,",
+          "Kasza 91 g (7 łyżek),",
+          "Ser mozzarella 60 g (3 plastry),",
+          "Pomidor 60 g (0,5 średniej szt.),",
+          "Oliwa z oliwek 5 g (niecała łyżka),",
+          "Przyprawy 5 g (2½ szczypt)",
+        ],
+        recipe: [
+          "Piekarnik nagrzej do 190 stopni C. Pierś z kurczaka natnij w 3 miejscach (w poprzek) na głębokość ok. 2 cm, nie przecinając mięsa do końca. Dokładnie dopraw solą i pieprzem, natrzyj tymiankiem oraz oliwą",
+          "Na dnie żaroodpornego naczynia ułóż plasterki pomidorów, dopraw je solą. Na pomidorach połóż kurczaka. Mozzarellę pokrój na cienkie plasterki (tyle plasterków ile nacięć w mięsie), dopraw solą i włóż w nacięcia w filetach. Wciśnij też po listku bazylii",
+          "Wstaw do piekarnika i piecz bez przykrycia przez ok. 35 minut. Posyp świeżą bazylią",
+          "Podaj z ugotowaną kaszą",
+        ],
+      },
+      {
+        title: "Kurczak w jogurcie z kaszą i sałatką z pomidorów",
+        calories: "560 kcal",
+        ingredients: [
+          "Mięso z piersi kurczaka 100 g,",
+          "Jogurt naturalny 150 g (1 opak. po 150 g),",
+          "Kasza 65 g (5 łyżek),",
+          "Cytryna 20 g (¼ szt.),",
+          "Czosnek 7 g (1 ząbek),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Mąka pełnoziarnista 5 g (niecała łyżka)",
+        ],
+        recipe: [
+          "W miseczce wymieszaj sok z cytryny, jogurt, sprasowany czosnek, chili, kolendrę imbir, pieprz oraz mąkę",
+          "Kurczaka natrzyj oliwą, ułóż w naczyniu żaroodpornym i zapiecz w piekarniku przez około 15 minut (180 stopni)",
+          "Do kurczaka wlej marynatę i zapiekaj jeszcze przez około 20 minut",
+          "Podawaj z ugotowaną kaszą i sałatką z pomidora (DODATEK)",
+        ],
+      },
+      {
+        title: "Kurczak z warzywami i kaszą",
+        calories: "574 kcal",
+        ingredients: [
+          "Mięso z piersi kurczaka 100 g,",
+          "Kasza 100 g (7,7 łyżki),",
+          "Papryka 120 g (½ szt.),",
+          "Cukinia 120 g (½ szt.),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Przygotuj marynatę z oliwy i ziół prowansalskich, rozmarynu, pieprzu",
+          "Warzywa pokrój i podduś w niewielkiej ilości wody przez 5 minut",
+          "Mięso pokrój i dokładnie obtocz w marynacie",
+          "Mięso i warzywa zawiń w folie aluminiową",
+          "Całość zapiekaj w rozgrzanym piekarniku, aż mięso będzie miękkie",
+          "Podawaj z ugotowaną kaszą",
+        ],
+      },
+      {
+        title: "Kurczak po węgiersku z kaszą",
+        calories: "561 kcal",
+        ingredients: [
+          "Mięso z piersi kurczaka 100 g,",
+          "Pieczarki 100 g (5 szt.),",
+          "Papryka 120 g (½ szt.),",
+          "Koncentrat pomidorowy 10 g (2 łyżeczki),",
+          "Czosnek 7 g (1 ząbek),",
+          "Kasza 91 g (7 łyżek),",
+          "Olej 10 g (2 łyżeczki),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "W garnku lub na patelni rozgrzej olej. Dodaj posiekany czosnek oraz koncentrat",
+          "Dodaj odrobinę wody i pokrojone mięso, paprykę i pieczarki",
+          "Przypraw chili, pieprzem i bazylią. Dodaj liść laurowy i duś pod przykryciem przez 30 minut. W razie potrzeby dolej wody",
+          "Podawaj z ugotowaną kaszą",
+        ],
+      },
+      {
+        title: "Bulgur z grillowanym kurczakiem i czerwoną kapustą",
+        calories: "677 kcal",
+        ingredients: [
+          "Kasza 117 g (9 łyżek),",
+          "Mięso z piersi kurczaka 80 g,",
+          "Kapusta 100 g,",
+          "Oliwa z oliwek 20 g (2 łyżki),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Kaszę ugotuj w lekko osolonej wodzie",
+          "Mięso pokrój w paski, posyp solą, pieprzem i curry, wyłóż na blasze obłożonej papierem do pieczenia, piecz 30 minut w 170 stopniach C",
+          "W tym czasie poszatkuj kapustę, wymieszaj z oliwą, dopraw solą, pieprzem, sokiem z cytryny",
+          "Kaszę podawaj z kurczakiem i surówką",
+        ],
+      },
+      {
+        title: "Puree z ziemniaków i kaszy z kurczakiem i surówką",
+        calories: "653 kcal",
+        ingredients: [
+          "Ziemniaki 233 g (2,9 szt.),",
+          "Kasza 37 g (2,9 łyżki),",
+          "Jogurt naturalny 65 g (0,4 opak. po 150 g),",
+          "Mięso z piersi kurczaka 182 g,",
+          "Przyprawy 2 g (1,5 szczypt)",
+        ],
+        recipe: [
+          "Ziemniaki i kaszę ugotuj, a następnie wymieszaj i dodaj jogurt. Rozmieszaj i rozgnieć dokładnie",
+          "Mięso pokrój w kostkę, oprósz chili, pierzem i curry. Zalej wrzątkiem i ugotuj",
+          "Kaszę z ziemniakami i mięso przełóż na talerz i podawaj z surówką z marchwii i selera (DODATEK)",
+        ],
+      },
+      {
+        title: "Indyk z pieczarkami z piekarnika w tymianku",
+        calories: "608 kcal",
+        ingredients: [
+          "Mięso z piersi indyka 89 g,",
+          "Pieczarki 53 g (2,7 szt.),",
+          "Ogórek kwaszony 107 g (1,8 szt.),",
+          "Kasza 105 g (8,1 łyżek),",
+          "Olej 17 g (3,6 łyżeczki),",
+          "Przyprawy 1 g (0,9 szczypt)",
+        ],
+        recipe: [
+          "Kaszę ugotuj w lekko osolonej wodzie",
+          "Mięso lekko rozbij, posyp przyprawami i ułóż w naczyniu żaroodpornym lub na patelni",
+          "Na mięsie wyłóż plastry pieczarek, całość skrop olejem",
+          "Piecz 30 minut w 180 stopniach C lub smaż pod przykryciem kilkanaście minut, podawaj z kaszą i słupkami ogórka",
+        ],
+      },
+      {
+        title: "Indyk w imbirowej marynacie z mrożonymi warzywami i kaszą",
+        calories: "564 kcal",
+        ingredients: [
+          "Mięso z piersi indyka 100 g,",
+          "Czosnek 7 g (1 ząbek),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Miód pszczeli 10 g (2 łyżeczki),",
+          "Kasza 91 g (7 łyżek),",
+          "Przyprawy 2 g (1 szczypta),",
+          "Warzywa mrożone 150 g (1 porcja 150 g)",
+        ],
+        recipe: [
+          "Posiekaj drobno czosnek i wymieszaj go z oliwą, pieprzem, imbirem, chili i miodem",
+          "Mięso obtocz dokładnie w marynacie i włóż do piekarnika rozgrzanego do 180 stopni (najlepiej opcja grill). Piecz mięso kilka minut, aż będzie miękkie i zarumienione",
+          "Podawaj z ugotowaną kaszą i mieszanką warzyw",
+        ],
+      },
+      {
+        title: "Szaszłyki z indyka, cukinii i pieczarek w czosnku",
+        calories: "620 kcal",
+        ingredients: [
+          "Kasza 104 g (8 łyżek),",
+          "Cukinia 240 g (1 szt.),",
+          "Pieczarki 100 g (5 szt.),",
+          "Mięso z piersi indyka 50 g,",
+          "Oliwa z oliwek 20 g (2 łyżki)",
+        ],
+        recipe: [
+          "Kaszę ugotuj w lekko osolonej wodzie",
+          "Cukinię pokrój w talarki, pieczarki przekrój na połowy, mięso pokrój w kostkę",
+          "Składniki nadziewaj na patyczki do szaszłyków, polej marynatą zrobioną z oliwy i przypraw, wyłóż na folii do pieczenia lub na tacy do grillowania",
+          "Szaszłyki grilluj/piecz 15-20 minut w 190 stopniach i podawaj z kaszą",
+        ],
+      },
+      {
+        title: "Pierś z indyka w miodzie z kaszą i surówką",
+        calories: "650 kcal",
+        ingredients: [
+          "Mięso z piersi indyka 125 g,",
+          "Masło 10 g (2 płaskie łyżeczki),",
+          "Miód pszczeli 10 g (2 łyżeczki),",
+          "Musztarda 10 g (1 łyżeczka ),",
+          "Kasza 100 g (7,7 łyżki)",
+        ],
+        recipe: [
+          "Roztop masło i wymieszaj z miodem, musztardą oraz curry",
+          "Mięso pokrój na kawałki i obtocz dokładnie w marynacie",
+          "Włóż do piekarnika rozgrzanego do 180 stopni i zapiekaj około 25 minut",
+          "Podawaj z kaszą i surówką z marchwii i selera (DODATEK)",
+        ],
+      },
+      {
+        title: "Polędwiczki wieprzowe z mozzarellą, podane z kaszą",
+        calories: "623 kcal",
+        ingredients: [
+          "Wieprzowina 120 g,",
+          "Kasza 52 g (4 łyżki),",
+          "Ser mozzarella 60 g (3 plastry),",
+          "Szynka 45 g (3 plastry),",
+          "Pomidor 60 g (0,5 średniej szt.),",
+          "Czosnek 3 g (0,4 ząbka),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Polędwiczkę umyj, osusz, odkrój błonę znajdującą się na zewnętrznej stronie polędwiczki. Pokrój ukośnie na plastry o grubości ok. 2,5 cm.",
+          'Każdy kawałek rozbij tłuczkiem (najlepiej takim zakończonym metalową "kratką"). Natrzyj drobno startym lub przeciśniętym przez praskę czosnkiem, zawiń w folię spożywczą i włóż do lodówki na ok. 1 godzinę',
+          "Mięso wyjmij z lodówki i dopraw solą oraz pieprzem. Mozzarellę pokrój na tyle plasterków, ile masz porcji mięsa. Na każdym plasterku polędwiczki umieść plasterek mozzarelli, a na wierzchu połóż plasterek szynki. Zepnij wykałaczką, przebijając mięso w 2 miejscach. Pod wystającą wykałaczkę włóż kawałek rozmarynu",
+          "Rozgrzej oliwę na większej patelni. Włóż mięso szynką do góry i smaż przez ok. 2,5 minuty na większym ogniu, przewróć na drugą stronę i smażyć kolejne ok. 2,5 minuty. Odstaw z ognia i posyp pokrojonymi pomidorkami koktajlowymi",
+          "Podaj z ugotowaną kaszą",
+        ],
+      },
+      {
+        title: "Pieczona mozzarella w szynce i pomidorach",
+        calories: "664 kcal",
+        ingredients: [
+          "Ser mozzarella 60 g (3 plastry),",
+          "Pomidor 130 g (1 średnia szt.),",
+          "Szynka 15 g (1 plaster),",
+          "Kasza 117 g (9 łyżek),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Kaszę ugotuj w lekko osolonej wodzie",
+          "Mozzarellę zawiń w szynkę, włóż do folii do pieczenia, obłóż posiekanymi pomidorami i posyp przyprawami, całość skrop oliwą",
+          "Piecz 15 minut w 200 stopniach C i podawaj z kaszą",
+        ],
+      },
+    ],
+    ziemniaki: [
+      {
+        title: "Kurczak a'la Jamie Oliver z surówką i ziemniakami",
+        calories: "576 kcal",
+        ingredients: [
+          "Mięso z piersi kurczaka 125 g,",
+          "Oliwa z oliwek 5 g (niecała łyżka),",
+          "Ziemniaki 400 g (5 szt.),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Mięso natrzyj oliwą i przyprawami (chili, pieprz, sól, papryka, oregano)",
+          "Przyprawione mięso zawiń w papier do pieczenia i delikatnie rozbij lub rozwałkuj wałkiem do ciasta",
+          "Mięso wyjmij z papieru i smaż na patelni grillowej bez użycia tłuszczu lub upiecz w piekarniku (180 stopni, 15 minut)",
+          "Podawaj z ugotowanymi ziemniakami i sałatką pomidorowo-paprykową (DODATEK);",
+        ],
+      },
+      {
+        title: "Puree z ziemniaków i kaszy z kurczakiem i surówką",
+        calories: "653 kcal",
+        ingredients: [
+          "Ziemniaki 233 g (2,9 szt.),",
+          "Kasza 37 g (2,9 łyżki),",
+          "Jogurt naturalny 65 g (0,4 opak. po 150 g),",
+          "Mięso z piersi kurczaka 182 g,",
+          "Przyprawy 2 g (1,5 szczypt)",
+        ],
+        recipe: [
+          "Ziemniaki i kaszę ugotuj, a następnie wymieszaj i dodaj jogurt. Rozmieszaj i rozgnieć dokładnie",
+          "Mięso pokrój w kostkę, oprósz chili, pierzem i curry. Zalej wrzątkiem i ugotuj",
+          "Kaszę z ziemniakami i mięso przełóż na talerz i podawaj z surówką z marchwii i selera (DODATEK);",
+        ],
+      },
+      {
+        title: "Indyk z pieczarkami, ziemniakami i surówką",
+        calories: "567 kcal",
+        ingredients: [
+          "Mięso z piersi indyka 125 g,",
+          "Ziemniaki 320 g (4 szt.),",
+          "Pieczarki 120 g (6 szt.),",
+          "Ogórek kwaszony 90 g (1½ szt.),",
+          "Cebula 55 g (½ szt.),",
+          "Oliwa z oliwek 5 g (niecała łyżka),",
+          "Przyprawy 1 g (½ szczypt)",
+        ],
+        recipe: [
+          "Ugotuj ziemniaki. Mięso indyka pokrój w plastry i rozbij tłuczkiem",
+          "Cebulę i ogórka i pieczarki pokroić w kostkę",
+          "Indyka podsmażyć krótko na rozgrzanej oliwie i przełożyć do garnka",
+          "Cebulę, ogórka i pieczarki poddusić na oliwie i dołączyć do mięsa",
+          "Doprawić pieprzem i imbirem, dodać wody, by zakryć wszystkie składniki. Dusić pod przykryciem do miękkości",
+          "Podawać z ziemniakami i surówką z marchewki i jabłka (DODATEK)",
+        ],
+      },
+      {
+        title: "Indyk z ogórkiem kiszonym i kalafiorem na ziemniaczkach",
+        calories: "571 kcal",
+        ingredients: [
+          "Ziemniaki 240 g (3 szt.),",
+          "Kalafior świeży lub mrożony 150 g,",
+          "Ogórek kwaszony 60 g (1 szt.),",
+          "Mięso z piersi indyka 100 g,",
+          "Oliwa z oliwek 30 g (3 łyżki)",
+        ],
+        recipe: [
+          "Ziemniaki obierz, pokrój w plastry",
+          "Mięso oprósz przyprawami, wraz z ziemniakami wyłóż w naczyniu żaroodpornym i całość skrop oliwą",
+          "Dołóż różyczki kalafiora",
+          "Całość piecz 30 minut w 180-190 stopniach C, podawaj z plastrami kiszonego ogórka",
+        ],
+      },
+      {
+        title: "Gulasz z wołowiny i oliwek z ziemniakami",
+        calories: "594 kcal",
+        ingredients: [
+          "Wołowina 200 g,",
+          "Oliwki 36 g (12 szt.),",
+          "Pomidor 260 g (2 średnie szt.),",
+          "Koncentrat pomidorowy 10 g (2 łyżeczki),",
+          "Ziemniaki 320 g (4 szt.),",
+          "Cebula 60 g (0,5 szt.),",
+          "Czosnek 6 g (0,9 ząbka),",
+          "Przyprawy 4 g (2 szczypty)",
+        ],
+        recipe: [
+          "Mięso pokrój w kostkę",
+          "Do mięsa dodaj posiekaną cebulę i czosnek",
+          "Zalej całość niewielką ilością wrzątku i duś",
+          "Po chwili dodaj koncentrat i przyprawy: chili, pieprz, zioła prowansalskie. Duś pod przykryciem przez około 40 minut (w razie potrzeby dolewaj wody)",
+          "Pod koniec duszenia dodaj sparzonego, obranego i pokrojonego pomidora oraz pokrojone oliwki",
+          "Duś jeszcze kilka minut, a następnie podawaj z ugotowanymi ziemniakami",
+        ],
+      },
+      {
+        title: "Pieczony schab z ziemniakami i kapustą kwaszoną",
+        calories: "673 kcal",
+        ingredients: [
+          "Wieprzowina 120 g,",
+          "Ziemniaki 320 g (4 szt.),",
+          "Musztarda 20 g (2 łyżeczki),",
+          "Olej 15 g (3 łyżeczki)",
+        ],
+        recipe: [
+          "Plastry schabu delikatnie rozbij i wymieszaj z olejem, musztardą, solą i pieprzem. Połóż w naczyniu żaroodpornym i podlej odrobiną wody. Wstaw do piekarnika nagrzanego do 180 stopni i piecz przez około 40 minut",
+          "Podawaj z ugotowanymi ziemniakami i surówką z kwaszonej kapusty (DODATEK)",
+        ],
+      },
+      {
+        title: "Klopsiki z ziemniakami i surówką z buraczków",
+        calories: "575 kcal",
+        ingredients: [
+          "Mięso mielone chude 100 g (1 porcja po 100 g),",
+          "Jaja kurze 60 g (1 szt.),",
+          "Cebula 40 g (0,4 szt.),",
+          "Ziemniaki 160 g (2 szt.),",
+          "Natka pietruszki, świeża lub suszona 2 g (1 łyżeczka ),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Mięso połącz z jajkiem, pokrojoną cebulką, solą, pieprzem i natką pietruszki. Całość wymieszaj i uformuj w klopsy",
+          "Podsmaż na patelni z obu stron, aż się zarumienią",
+          "Podawaj z gotowanymi ziemniakami i surówką z buraczków (DODATEK)",
+        ],
+      },
+      {
+        title: "Kotlety mielone z puree ziemniaczanym i ogórkiem kiszonym",
+        calories: "556 kcal",
+        ingredients: [
+          "Ziemniaki 355 g (4,4 szt.),",
+          "Masło 3 g (niecała łyżeczka),",
+          "Mięso mielone chude 66 g (0,7 porcji po 100g),",
+          "Ogórek kwaszony 88 g (1,5 szt.),",
+          "Oliwa z oliwek 12 g (1,3 łyżki),",
+          "Przyprawy 1 g (0,7 szczypt),",
+          "Otręby 5 g (1,5 łyżki)",
+        ],
+        recipe: [
+          "Ziemniaki ugotuj w lekko osolonej wodzie",
+          "Mielone mięso dopraw, połącz z otrębami i uformuj kotleciki",
+          "Mięso smaż z każdej strony po 2-3 minuty na patelni z olejem",
+          "W międzyczasie rozdrobnij ogórka według uznania, a ziemniaki wygnieć na puree z dodatkiem masła",
+          "Podawaj kotleciki na puree z dodatkiem ogórka",
+        ],
+      },
+      {
+        title: "Kotlety drobiowe z warzywami w piekarniku",
+        calories: "559 kcal",
+        ingredients: [
+          "Mięso mielone chude 150 g (1½ porcji po 100g),",
+          "Przyprawy 2 g (1 szczypta),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Ziemniaki 160 g (2 szt.),",
+          "Papryka 120 g (½ szt.),",
+          "Marchew 110 g (1 duża szt.)",
+        ],
+        recipe: [
+          "Rozgrzej piekarnik do 180°C",
+          "Wymieszaj chude mięso mielone (drobiowe) z przyprawami",
+          "Uformuj kotlety i przełóż je na blachę wyłożoną papierem do pieczenia",
+          "Pokrój warzywa w słupki (ziemniaki w cieńsze) i wymieszaj z oliwą i przyprawami. Przełóż na blachę i upiecz razem z kotletami przez ok. 20-30 minut (w połowie pieczenia przewróć je na drugą stronę) lub aż będą gotowe",
+        ],
+      },
+    ],
+    ryż: [
+      {
+        title: "Kurczak duszony w winie z ryżem i fasolką",
+        calories: "574 kcal",
+        ingredients: [
+          "Mięso z piersi kurczaka 100 g,",
+          "Wino białe wytrawne 50 g (0,3 porcji 150 g),",
+          "Mleko 70 g (0,3 szkl.),",
+          "Koncentrat pomidorowy 10 g (2 łyżeczki),",
+          "Masło 5 g (1 płaska łyżeczka),",
+          "Fasola szparagowa świeża lub mrożona 150 g,",
+          "Ryż brązowy 100 g (6,7 łyżki)",
+        ],
+        recipe: [
+          "Mięso pokrój w kostkę i oprósz pieprzem, rozmarynem, bazylią i solą",
+          "Do garnka wlej mleko, wino. Dodaj masło i kurczaka",
+          "Koncentrat zmieszaj z 1/4 szklanki wody i dodaj do garnka",
+          "Zagotuj i duś pod przykryciem około 20-25 minut",
+          "Podawaj z ugotowanym ryżem i fasolką szparagową",
+        ],
+      },
+      {
+        title: "Kurczak tandori",
+        calories: "664 kcal",
+        ingredients: [
+          "Ryż brązowy 90 g (6 łyżek),",
+          "Mięso z piersi kurczaka 100 g,",
+          "Cebula 110 g (1 szt.),",
+          "Papryka 240 g (1 szt.),",
+          "Oliwa z oliwek 20 g (2 łyżki),",
+          "Przyprawy 4 g (2 szczypty)",
+        ],
+        recipe: [
+          "         Wszystkie przyprawy wymieszaj z oliwą, mięso pokrój w kostkę i zamarynuj",
+          "Ryż ugotuj, cebulę posiekaj, paprykę pokrój w kostkę",
+          "Kurczaka podsmaż ze wszystkich stron wraz z warzywami",
+          "Paprykę i cebulę wymieszaj z ryżem, podawaj z mięsem",
+        ],
+      },
+      {
+        title: "Szaszłyki z kurczaka w curry z ryżem i surówką",
+        calories: "586 kcal",
+        ingredients: [
+          "Mięso z piersi kurczaka 100 g,",
+          "Papryka 120 g (½ szt.),",
+          "Ryż brązowy 90 g (6 łyżek),",
+          "Jogurt naturalny 75 g (½ opak. po 150 g),",
+          "Musztarda 20 g (2 łyżeczki),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "2/3 porcji jogurtu wymieszaj z curry i obtocz w nim kurczaka pokrojonego w kostkę",
+          "Na patyki do szaszłyków ponabijaj naprzemiennie kawałki kurczaka oraz papryki",
+          "Wstaw do piekarnika rozgrzanego do 220 stopni na około 10 minut",
+          "Pozostały jogurt wymieszaj z musztardą i otrzymanym dipem polej szaszłyki",
+          "Podawaj z ugotowanym ryżem i surówką z marchwii i selera (DODATEK)",
+        ],
+      },
+      {
+        title: "Pierś z kurczaka duszona z papryką, ryż i surówka",
+        calories: "561 kcal",
+        ingredients: [
+          "Mięso z piersi kurczaka 125 g,",
+          "Papryka 120 g (½ szt.),",
+          "Czosnek 7 g (1 ząbek),",
+          "Natka pietruszki, świeża lub suszona 6 g (3 łyżeczki),",
+          "Przyprawy 2 g (1 szczypta),",
+          "Ryż brązowy 90 g (6 łyżek),",
+          "Oliwa z oliwek 10 g (1 łyżka)",
+        ],
+        recipe: [
+          "Ugotuj ryż. Czosnek obierz i pokrój w cienkie plasterki.",
+          "Mięso natrzyj pieprzem, solą i chili i obłóż czosnkiem",
+          "Paprykę pokrój w cienkie paski",
+          "Na rozgrzanej oliwi krótko podsmaż mięso i dodaj paprykę. Przykryj i duś przez około 15 minut. W razie potrzeby dodaj odrobinę wody",
+          "Przed podaniem posyp pietruszką",
+          "Podawaj z surówką z kapusty pekińskiej (DODATEK)",
+        ],
+      },
+      {
+        title: "Curry z indyka",
+        calories: "575 kcal",
+        ingredients: [
+          "Mięso z piersi indyka 125 g,",
+          "Ryż brązowy 75 g (5 łyżek),",
+          "Masło 20 g (4 płaskie łyżeczki),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "W garnku rozpuść masło i dodaj do niego sos pomidorowy oraz curry (około 1 łyżeczki) i imbir",
+          "Indyka pokrój w drobne kawałki i dodaj do gotującego się sosu. Duś przez około 25 minut",
+          "Podawaj z ugotowanym ryżem",
+        ],
+      },
+      {
+        title: "Czosnkowy indyk z ryżem",
+        calories: "576 kcal",
+        ingredients: [
+          "Mięso z piersi indyka 120 g,",
+          "Czosnek 7 g (1 ząbek),",
+          "Sałata 30 g (6 liści),",
+          "Papryka 120 g (½ szt.),",
+          "Pomidor 130 g (1 średnia szt.),",
+          "Olej 10 g (2 łyżeczki),",
+          "Ryż brązowy 100 g (6,7 łyżki),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Mięso i czosnek pokrój na kawałki. Umieść w naczyniu żaroodpornym, przypraw ziołami prowansalskimi i skrop olejem",
+          "Wstaw do piekarnika rozgrzanego do 180 stopni na około 25 minut",
+          "Liście sałaty porwij na mniejsze kawałki. Paprykę i pomidora pokrój. Warzywa wymieszaj z gotowym mięsem",
+          "Przypraw bazylią i podawaj z ugotowanym ryżem",
+        ],
+      },
+      {
+        title: "Tajska wołowina na ryżu",
+        calories: "667 kcal",
+        ingredients: [
+          "Wołowina 100 g,",
+          "Ryż brązowy 105 g (7 łyżek),",
+          "Koncentrat pomidorowy 15 g (3 łyżeczki),",
+          "Cebula 110 g (1 szt.),",
+          "Oliwa z oliwek 20 g (2 łyżki),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Wołowinę drobno pokrój, wrzuć na oliwę, dopraw i podlej odrobiną wody",
+          "Mięso duś 20 minut, w tym czasie ugotuj ryż w lekko osolonej wodzie",
+          "Do mięsa dodaj posiekaną cebulę, koncentrat, gotuj jeszcze 10 minut i podawaj na ryżu",
+        ],
+      },
+      {
+        title: "Mięso mielone z ryżem cukinią i pieczarkami",
+        calories: "568 kcal",
+        ingredients: [
+          "Mięso mielone chude 120 g (1,2 porcji po 100g),",
+          "Pieczarki 100 g (5 szt.),",
+          "Cukinia 120 g (½ szt.),",
+          "Ryż brązowy 75 g (5 łyżek),",
+          "Olej 5 g (1 łyżeczka),",
+          "Czosnek 7 g (1 ząbek),",
+          "Cebula 30 g (0,3 szt.),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Pieczarki i cukinię obierz, a następnie pokrój w plasterki",
+          "Na rozgrzanej patelni podsmaż cebulę, czosnek i mięso. Po kilku minutach dodaj pieczarki i cukinię",
+          "Dopraw pieprzem i ziołami prowansalskimi",
+          "Podawaj z ugotowanym ryżem",
+        ],
+      },
+      {
+        title: "Leczo z mięsem mielonym i cukinią oraz ryżem",
+        calories: "557 kcal",
+        ingredients: [
+          "Mięso mielone chude 100 g (1 porcja po 100 g),",
+          "Papryka 240 g (1 szt.),",
+          "Cukinia 120 g (½ szt.),",
+          "Cebula 55 g (½ szt.),",
+          "Pomidor 130 g (1 średnia szt.),",
+          "Koncentrat pomidorowy 10 g (2 łyżeczki),",
+          "Ryż brązowy 60 g (4 łyżki),",
+          "Olej 5 g (1 łyżeczka)",
+        ],
+        recipe: [
+          "W garnku rozgrzej oliwę i przesmaż na niej mięso i posiekaną cebulę",
+          "Paprykę i cukinię pokrój w kostkę i dodaj do mięsa",
+          "Przypraw pieprzem, chili oraz odrobiną soli",
+          "Pomidory sparz, obierz i pokrój w kostkę. Następnie dodaj je razem z koncentratem do pozostałych składników",
+          "Dodaj odrobinę wody i gotuj duś jeszcze kilka minut",
+          "Przypraw bazylią i podawaj z ugotowanym ryżem",
+        ],
+      },
+    ],
+    makaron: [
+      {
+        title: "Makaron z kurczakiem i pieczarkami",
+        calories: "710 kcal",
+        ingredients: [
+          "Makaron pełnoziarnisty 120 g (1,7 szklanki),",
+          "Mięso z piersi kurczaka 100 g,",
+          "Pieczarki 120 g (6 szt.),",
+          "Mąka pełnoziarnista 10 g (1 łyżka),",
+          "Mleko 80 g (0,4 szkl.),",
+          "Olej 10 g (2 łyżeczki),",
+          "Cebula 60 g (0,5 szt.),",
+          "Przyprawy 4 g (2 szczypty)",
+        ],
+        recipe: [
+          "Makaron ugotuj",
+          "Cebulę i czosnek i pieczarki posiekaj. Podsmaż kilka minut na rozgrzanym oleju",
+          "Kurczaka pokrój w kostkę i dodaj do pieczarek. Smaż do miękkości kurczaka",
+          "Mąkę wymieszaj z wodą i dodaj do kurczaka. Trzymaj na wolnym ogniu dolewając od czasu do czasu wody",
+          "Dodaj mleko, sól i pieprz. Gotuj do momentu zgęstnienia sosu",
+          "Makaron polej sosem",
+        ],
+      },
+      {
+        title: "Makaron z indykiem, cukinią, natką i mozzarellą",
+        calories: "555 kcal",
+        ingredients: [
+          "Makaron pełnoziarnisty 80 g (1,1 szklanki),",
+          "Oliwa z oliwek 5 g (niecała łyżka),",
+          "Mięso z piersi indyka 125 g,",
+          "Czosnek 7 g (1 ząbek),",
+          "Cukinia 120 g (½ szt.),",
+          "Natka pietruszki, świeża lub suszona 4 g (2 łyżeczki),",
+          "Ser mozzarella 40 g (2 plastry)",
+        ],
+        recipe: [
+          "Ugotuj makaron zgodnie z instrukcją na opakowaniu",
+          "Drobno posiekaj czosnek i natkę. Pokrój cukinię i indyka pokrój w kostkę",
+          "Rozgrzej oliwę na patelni. Wrzuć kurczaka i duś, aż nabierze koloru. Dodaj cukinię i czosnek i dalej mieszaj",
+          "Dopraw solą i pieprzem. Dodaj startą lub drobno pokrojoną mozzarellę i odcedzony makaron i całość wymieszaj",
+          "Przełóż na talerz. Posyp natką",
+        ],
+      },
+      {
+        title: "Makaron z dipem paprykowym i wołowiną",
+        calories: "674 kcal",
+        ingredients: [
+          "Makaron pełnoziarnisty 100 g (1,4 szklanki),",
+          "Wołowina 50 g,",
+          "Papryka 240 g (1 szt.),",
+          "Cebula 110 g (1 szt.),",
+          "Oliwa z oliwek 20 g (2 łyżki),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Makaron ugotuj w lekko osolonej wodzie",
+          "Na patelni podsmaż na połowie oliwy mięso mielone lub drobno posiekane, dopraw",
+          "W rondlu oddzielnie na pozostałej oliwie podsmaż pokrojone warzywa, dopraw i zblenduj na gładki mus",
+          "Na makaronie wyłóż mięso, całość polej dipem paprykowym i udekoruj świeżą natką",
+        ],
+      },
+      {
+        title: "Makaron z mięsem, pieczarkami, kapustą i marchwią",
+        calories: "656 kcal",
+        ingredients: [
+          "Makaron pełnoziarnisty 100 g (1,4 szklanki),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Cebula 35 g (0,3 szt.),",
+          "Wieprzowina 120 g,",
+          "Przyprawy 4 g (2 szczypty),",
+          "Pieczarki 100 g (5 szt.),",
+          "Kapusta 80 g,",
+          "Marchew 55 g (½ dużej szt.)",
+        ],
+        recipe: [
+          "Posiekaj cebulę. Pokrój pieczarki w ćwiartki, a mięso w równą kostkę",
+          "Rozgrzej oliwę na patelni. Wrzuć cebulę i mięso i duś, aż nabiorą koloru. Dodaj przyprawy (sól, pieprz, tymianek, rozmaryn)",
+          "Dodaj pieczarki i resztę przyprawy (ziele angielskie, liść laurowy) i duś przez ok. 7-10 minut. W razie potrzeby dodaj kilka łyżek wody",
+          "Ugotuj makaron zgodnie z instrukcją na opakowaniu",
+          "Poszatkuj kapustę i zetrzyj marchew na tarce. Dodaj je do pieczarek i mieszaj przez kilka minut",
+          "Wymieszaj makaron z mięsem i warzywami",
+        ],
+      },
+      {
+        title: "Spaghetti z mięsem mielonym",
+        calories: "608 kcal",
+        ingredients: [
+          "Makaron pełnoziarnisty 90 g (1,3 szklanki),",
+          "Włoszczyzna świeża lub mrożona 100 g,",
+          "Mięso mielone chude 100 g (1 porcja po 100 g),",
+          "Szczypiorek świeży lub suszony 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Przygotuj sos (DODATEK)",
+          "Makaron ugotuj al dente",
+          "Na patelni rozgrzej oliwę i przesmaż na niej mięso. Dopraw ziołami, pieprzem i solą.",
+          "Do mięsa dodaj włoszczyznę, a po 5 minutach połącz wszystko z sosem",
+          "Makaron polej sosem i posyp posiekanym szczypiorkiem",
+        ],
+      },
+    ],
+    ryba: [
+      {
+        title: "Ziołowa ryba na warzywach (a'la Gordon Ramsay) z kaszą",
+        calories: "634 kcal",
+        ingredients: [
+          "Ryba chuda świeża lub mrożona 250 g,",
+          "Kasza 52 g (4 łyżki),",
+          "Cukinia 240 g (1 szt.),",
+          "Cytryna 40 g (½ szt.),",
+          "Oliwki 24 g (8 szt.),",
+          "Pomidor 260 g (2 średnie szt.),",
+          "Olej 10 g (2 łyżeczki),",
+          "Przyprawy 4 g (2 szczypty)",
+        ],
+        recipe: [
+          "Cukinię pokrój w kostkę, a następnie podsmaż na rozgrzanym oleju",
+          "Dodaj oliwki, oraz sparzonego i obranego ze skórki pomidora",
+          "Przypraw solą, pieprzem i rozmarynem",
+          "Filet natrzyj solą i pieprzem",
+          "W naczyniu żaroodpornym wyłóż warzywa, a na nich rybę skropioną olejem i sokiem z cytryny",
+          "Zapiekaj w rozgrzanym piekarniku (200 stopni) przez około 25 minut",
+          "Podawaj z ugotowaną kaszą",
+        ],
+      },
+      {
+        title: "Ryba ze szpinakiem i mozzarellą z ziemniakami",
+        calories: "562 kcal",
+        ingredients: [
+          "Ryba chuda świeża lub mrożona 150 g,",
+          "Szpinak świeży lub mrożony 100 g,",
+          "Czosnek 7 g (1 ząbek),",
+          "Ser mozzarella 40 g (2 plastry),",
+          "Ziemniaki 320 g (4 szt.),",
+          "Olej 5 g (1 łyżeczka),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Rybę oprósz solą i pieprzem",
+          "Czosnek posiekaj i posyp nim rybę",
+          "Na wierzch wyłóż szpinak",
+          "Całość skrop olejem i zawiń w folię do pieczenia. Zapiekaj w piekarniku przez 20 minut w temperaturze 180 stopni",
+          "5 minut przed końcem zapiekania rozwiń rybę i na wierz połóż mozzarellę",
+          "Podawaj z ugotowanymi ziemniakami",
+        ],
+      },
+      {
+        title: "Domowe paluszki rybne z ziemniakami i sałatką",
+        calories: "660 kcal",
+        ingredients: [
+          "Ryba chuda świeża lub mrożona 100 g,",
+          "Jaja kurze 60 g (1 szt.),",
+          "Bułka tarta 8 g (1 łyżka),",
+          "Ziemniaki 400 g (5 szt.),",
+          "Oliwa z oliwek 20 g (2 łyżki)",
+        ],
+        recipe: [
+          "Ziemniaki obierz, pokrój w ćwiartki i ugotuj w lekko osolonej wodzie",
+          "Rybę pokrój w paski (paluszki), każdy obtocz w przyprawach (sól, pieprz, gałka muszkatołowa, odrobina curry), następnie w roztrzepanym jajku i bułce tartej",
+          "Rybę smaż po 2-3 minuty na stronie na patelni z oliwą",
+          "W międzyczasie przygotuj sałatkę pomidorowo-paprykową (DODATEK), podawaj z rybą i ziemniakami",
+        ],
+      },
+      ,
+      {
+        title: "Łosoś zapiekany z mozzarellą i puree ziemniaczanym",
+        calories: "562 kcal",
+        ingredients: [
+          "Ryba tłusta świeża lub mrożona 100 g,",
+          "Ziemniaki 240 g (3 szt.),",
+          "Mleko 50 g (0,2 szkl.),",
+          "Ser mozzarella 60 g (3 plastry),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Plastry sera połóż na rybie, dopraw ziołami prowansalskimi i zapiecz",
+          "Ziemniaki ugotuj w lekko osolonej wodzie i potłucz z mlekiem",
+        ],
+      },
+      {
+        title: "Łosoś na parze z puree z ziemniaków i mizerią",
+        calories: "568 kcal",
+        ingredients: [
+          "Ryba tłusta świeża lub mrożona 150 g,",
+          "Ziemniaki 240 g (3 szt.),",
+          "Ogórek zielony 170 g (1 szt.),",
+          "Jogurt naturalny 60 g (0,4 opak. po 150 g),",
+          "Przyprawy 2 g (1 szczypta),",
+          "Mleko 50 g (0,2 szkl.)",
+        ],
+        recipe: [
+          "Łososia dopraw rozmarynem i pieprzem, ugotuj na parze",
+          "Ziemniaki ugotuj w lekko osolonej wodzie i potłucz z mlekiem",
+          "Ogórka zetrzyj na tarce, wymieszaj z jogurtem i pieprzem",
+        ],
+      },
+      {
+        title: "Cassolette (zapiekanka) z łososia i ziemniaków",
+        calories: "585 kcal",
+        ingredients: [
+          "Ryba tłusta świeża lub mrożona 80 g,",
+          "Ziemniaki 400 g (5 szt.),",
+          "Marchew 110 g (1 duża szt.),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Ziemniaki i marchew obierz, pokrój w talarki",
+          "Łososia pokrój w kostkę, wyłóż na dnie naczynia żaroodpornego",
+          "Na łososiu połóż plastry marchewki i ziemniaków, całość dopraw",
+          "Zapiekankę piecz 40 minut w 190 stopniach C",
+        ],
+      },
+    ],
+    "vege makaron": [
+      {
+        title: "Makaron z sosem pomidorowym",
+        calories: "620 kcal",
+        ingredients: [
+          "Makaron pełnoziarnisty 130 g (1,9 szklanki),",
+          "Pomidor 340 g (2,6 średniej szt.),",
+          "Cebula 110 g (1 szt.),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Ugotuj makaron na półtwardo.",
+          "Drobno posiekaną cebulę zeszklij na oliwie.",
+          "Sparz pomidory, zdejmij skórkę i pokrój na kawałki.",
+          "Dorzuć pomidory do cebuli, trzymaj na ogniu, aż do uzyskania sosu pomidorowego.",
+          "Wymieszaj z przyprawami.",
+          "Jedz z makaronem.",
+        ],
+      },
+      {
+        title: "Makaron z bakłażanem i pomidorami",
+        calories: "656 kcal",
+        ingredients: [
+          "Bakłażan 109 g (0,5 szt.),",
+          "Pomidor 212 g (1,6 średniej szt.),",
+          "Czosnek 8 g (1,3 ząbka),",
+          "Makaron pełnoziarnisty 153 g (2,2 szklanki),",
+          "Oliwa z oliwek 6 g (niecała łyżka),",
+          "Przyprawy 0 g (0,3 szczypt)",
+        ],
+        recipe: [
+          "Bakłażana pokrój w kostkę, czosnek w plasterki.",
+          "W rondlu rozgrzej oliwę, podsmaż chwilę czosnek, dodaj bakłażana, a po 5 minutach pomidory pokrojone w kawałki. Przypraw solą, pieprzem i chilli. Całość duś 10 minut.",
+          "Makaron ugotuj al dente według przepisu na opakowaniu.",
+          "Dodaj odcedzony makaron do rondla z warzywami. Wymieszaj.",
+        ],
+      },
+      {
+        title: "Makaron z cukinią i białym serem",
+        calories: "540 kcal",
+        ingredients: [
+          "Cukinia 240 g (1 szt.),",
+          "Ser twarogowy chudy 80 g (2,7 plastrów),",
+          "Makaron pełnoziarnisty 100 g (1,4 szklanki),",
+          "Masło 5 g (1 płaska łyżeczka),",
+          "Oliwa z oliwek 5 g (niecała łyżka),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Cukinię umyj, nie obieraj i pokrój w kostkę. Smaż na małym ogniu przez 10 minut.",
+          "W tym samym czasie ugotuj makaron al dente w osolonej wodzie. Odcedź.",
+          "Makaron przełóż na patelnię do cukinii, dodaj masło i oliwę.",
+          "Posyp pokruszonym białym serem, dopraw solą, pieprzem i bazylią.",
+        ],
+      },
+      {
+        title: "Makaron zapiekany ze szpinakiem i mozzarellą",
+        calories: "565 kcal",
+        ingredients: [
+          "Makaron pełnoziarnisty 90 g (1,3 szklanki),",
+          "Szpinak świeży lub mrożony 100 g,",
+          "Ser mozzarella 80 g (4 plastry),",
+          "Jogurt naturalny 60 g (0,4 opak. po 150 g),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Makaron gotuj 5 minut w lekko osolonej wodzie, odcedź i włóż do naczynia żaroodpornego",
+          "Do makaronu dodaj szpinak wymieszany z jogurtem i pieprzem, na wierzch połóż starty ser",
+          "Całość zapiecz przez 15 minut w piekarniku",
+        ],
+      },
+      {
+        title: "Makaron z pesto bazyliowym z mozzarellą",
+        calories: "556 kcal",
+        ingredients: [
+          "Makaron pełnoziarnisty 61 g (0,9 szklanki),",
+          "Oliwa z oliwek 18 g (1,9 łyżki),",
+          "Przyprawy 3 g (1,9 szczypt),",
+          "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 9 g (1,9 łyżeczki),",
+          "Ser mozzarella 49 g (2,5 plastrów)",
+        ],
+        recipe: [
+          "Makaron ugotuj al dente",
+          "Oliwę zblenduj z bazylią, solą, pieprzem i nasionami słonecznika",
+          "Makaron wymieszaj z bazyliowym pesto",
+          "Posyp danie pokrojoną mozzarellą",
+        ],
+      },
+      {
+        title: "Łosoś z sosem szpinakowym i makaronem",
+        calories: "576 kcal",
+        ingredients: [
+          "Ryba tłusta świeża lub mrożona 76 g,",
+          "Szpinak świeży lub mrożony 64 g,",
+          "Mleko 128 g (0,6 szkl.),",
+          "Czosnek 8 g (1,3 ząbka),",
+          "Oliwa z oliwek 12 g (1,3 łyżki),",
+          "Makaron pełnoziarnisty 64 g (0,9 szklanki),",
+          "Przyprawy 1 g (0,6 szczypt)",
+        ],
+        recipe: [
+          "Rybę podziel na mniejsze kawałki, oprósz przyprawami, posmaruj oliwą i zapiecz w piekarniku",
+          "Szpinak dopraw czosnkiem, polej mlekiem i duś pod przykryciem",
+          "Na gotowego łososia przełóż szpinak",
+        ],
+      },
+      {
+        title: "Spaghetti z łososiem",
+        calories: "658 kcal",
+        ingredients: [
+          "Makaron pełnoziarnisty 120 g (1,7 szklanki),",
+          "Pomidor 260 g (2 średnie szt.),",
+          "Ryba tłusta świeża lub mrożona 50 g,",
+          "Pieczarki 100 g (5 szt.),",
+          "Przyprawy 2 g (1 szczypta),",
+          "Olej 10 g (2 łyżeczki)",
+        ],
+        recipe: [
+          "Pieczarki pokrój w plastry i wrzuć na rozgrzany olej, duś około 3 minuty, aż puszczą wodę",
+          "Do pieczarek wrzuć makaron i wlej wody do poziomu makaronu, co jakiś czas przemieszaj",
+          "Pomidory oraz łososia pokrój w kostkę i dorzuć do makaronu, wymieszaj",
+          "W razie potrzeby dolej trochę wody, ale nie za dużo - cała wlana woda ma zostać wchłonięta przez makaron, dopraw i podawaj",
+        ],
+      },
+      {
+        title: "Makaron z tuńczykiem w sosie cytrynowym",
+        calories: "366 kcal",
+        ingredients: [
+          "Makaron pełnoziarnisty 50 g (0,7 szklanki),",
+          "Tuńczyk w sosie własnym 90 g (3 łyżki),",
+          "Cytryna 30 g (0,4 szt.),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Czosnek 7 g (1 ząbek),",
+          "Natka pietruszki, świeża lub suszona 2 g (1 łyżeczka )",
+        ],
+        recipe: [
+          "Ugotuj makaron",
+          "W czasie gotowania makaronu rozgrzej na patelni oliwę, dodaj czosnek i odrobinę startej skórki z cytryny",
+          "Podsmażaj do czasu aż czosnek się zeszkli, następnie zdejmij z patelni czosnek i skórkę z cytryny",
+          "Na patelnię dorzuć tuńczyka, natkę pietruszki, dodaj sok wyciśnięty z cytryny i podsmażaj ok. 5 minut",
+          "Dodaj ugotowany makaron, dopraw pieprzem i wymieszaj",
+        ],
+      },
+      {
+        title: "Makaron z sosem pomidorowym i tuńczykiem",
+        calories: "582 kcal",
+        ingredients: [
+          "Makaron pełnoziarnisty 120 g (1,7 szklanki),",
+          "Tuńczyk w sosie własnym 90 g (3 łyżki)",
+        ],
+        recipe: [
+          "Przygotuj sos (DODATEK)",
+          "Makaron ugotuj al dente",
+          "Do sosu dodaj tuńczyka i polej nim makaron",
+        ],
+      },
+    ],
+    "vege inne": [
+      {
+        title: "Zielone naleśniki z twarożkiem, pieczarkami i koperkiem",
+        calories: "598 kcal",
+        ingredients: [
+          "Mąka pełnoziarnista 80 g (8 łyżek),",
+          "Olej 10 g (2 łyżeczki),",
+          "Mleko 8 g (0,1 szkl.),",
+          "Jaja kurze 120 g (2 szt.),",
+          "Ser twarogowy chudy 60 g (2 plastry),",
+          "Przyprawy 4 g (2 szczypty),",
+          "Szpinak świeży lub mrożony 20 g,",
+          "Pieczarki 120 g (6 szt.)",
+        ],
+        recipe: [
+          "Mąkę przesiej przez sito, dolej mleko i wbij jajko. Ciasto wymieszaj i zblenduj ze szpinakiem na gładką masę",
+          "Podsmaż naleśniki na złoty kolor z obu stron",
+          "W międzyczasie pokrój pieczarki w plastry i podsmaż je kilka minut na patelni",
+          "Na gotowego naleśnika nałóż twarożek z częścią przygotowanego koperku i pieprz. Wyłóż na niego przygotowane pieczarki, zawiń i posyp do ozdoby pozostałym koperkiem",
+        ],
+      },
+      {
+        title: "Wegetariańskie leczo z papryki i pieczarek na jaglance",
+        calories: "575 kcal",
+        ingredients: [
+          "Kasza 91 g (7 łyżek),",
+          "Pieczarki 100 g (5 szt.),",
+          "Papryka 240 g (1 szt.),",
+          "Cukinia 240 g (1 szt.),",
+          "Koncentrat pomidorowy 20 g (4 łyżeczki),",
+          "Olej 15 g (3 łyżeczki),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Kaszę ugotuj w lekko osolonej wodzie",
+          "Warzywa i pieczarki pokrój w kostkę, wrzuć na patelnię z olejem i dopraw",
+          "Dodaj koncentrat pomidorowy, duś 15 minut pod przykryciem i podawaj potem na kaszy",
+        ],
+      },
+    ],
+  },
+  podwieczorek: {
+    "naleśniki i racuchy": [],
+    "na słodko": [
+      {
+        title: "Waniliowy pudding chia z mango",
+        calories: "472 kcal",
+        ingredients: [
+          "Mango 140 g (½ sztuka 280 g),",
+          "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 20 g (4 łyżeczki),",
+          "Jogurt naturalny 300 g (2 opak. po 150 g),",
+          "Miód pszczeli 10 g (2 łyżeczki),",
+          "Wiórki kokosowe 8 g (2 łyżki),",
+          "Przyprawy 4 g (2 szczypty)",
+        ],
+        recipe: [
+          "Wymieszaj ze sobą jogurt, chia, wanilię i odstaw do lodówki na całą noc",
+          "Następnego dnia, zmiksuj mango i połóż na warstwę puddingu chia",
+          "Na wierzchu posyp wiórkami kokosowymi",
+        ],
+      },
+      {
+        title: "Mus owocowy",
+        calories: "195 kcal",
+        ingredients: [
+          "Jabłko 85 g (½ średniej szt.),",
+          "Kiwi 110 g (1 szt.),",
+          "Banan 90 g (0,5 średniej szt.),",
+          "Otręby 4 g (1 łyżka)",
+        ],
+        recipe: [
+          "Obierz banana i kiwi",
+          "Z jabłka wykrój gniazdo nasienne",
+          "Zmiksuj wszystkie owoce i dodaj otręby",
+          "Jeśli mus będzie zbyt gęsty dodaj niewielką ilość wody",
+        ],
+      },
+      {
+        title: "Jogurt z płatkami, miodem i truskawkami",
+        calories: "190 kcal",
+        ingredients: [
+          "Jogurt naturalny 150 g (1 opak. po 150 g),",
+          "Płatki owsiane 20 g (2 łyżki),",
+          "Miód pszczeli 5 g (1 łyżeczka),",
+          "Truskawki świeże lub mrożone 40 g",
+        ],
+        recipe: [
+          "Wymieszaj jogurt z miodem i płatkami owsianymi",
+          "Pokrój truskawki i dodaj do jogurtu",
+        ],
+      },
+      {
+        title: "Partaszka z jabłkiem",
+        calories: "392 kcal",
+        ingredients: [
+          "Mleko 300 g (1,4 szkl.),",
+          "Jaja kurze 60 g (1 szt.),",
+          "Mąka pełnoziarnista 30 g (3 łyżki),",
+          "Miód pszczeli 5 g (1 łyżeczka),",
+          "Jabłko 85 g (½ średniej szt.),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Zagotuj 2/3 mleka",
+          "W osobnym naczyniu wymieszaj jajko, pozostałą część mleka, mąkę, miód oraz szczyptę soli i cynamonu",
+          "Do gotującego się mleka wlej wymieszane pozostałe składniki. Cały czas intensywnie mieszaj",
+          "Gdy potrawa zgęstnieje, dodaj pokrojone w kostkę jabłko",
+        ],
+      },
+      {
+        title: "Ciastka owsiane z rodzynkami",
+        calories: "193 kcal",
+        ingredients: [
+          "Płatki owsiane 33 g (3,3 łyżki),",
+          "Jaja kurze 20 g (0,3 szt.),",
+          "Rodzynki 10 g (niecała łyżka),",
+          "Miód pszczeli 5 g (1 łyżeczka),",
+          "Przyprawy 0 g (0,3 szczypt)",
+        ],
+        recipe: [
+          "Płatki zalej wrzątkiem i przykryj na 2-3 minuty",
+          "Dodaj jajko, miód, rodzynki i cynamon i dokładnie wymieszaj",
+          "Uformuj ciasteczka i włóż do piekarnika rozgrzanego do 180 stopni na 12 minut",
+        ],
+      },
+      {
+        title: "Muffiny otrębowe z jabłkami",
+        calories: "402 kcal",
+        ingredients: [
+          "Otręby 40 g (10 łyżek),",
+          "Jaja kurze 120 g (2 szt.),",
+          "Serek wiejski naturalny 80 g (4 łyżki),",
+          "Jabłko 170 g (1 średnia szt.)",
+        ],
+        recipe: [
+          "Jajka roztrzep i zmiksuj z serkiem wiejskim, dodaj otręby i starte jabłko",
+          "Masę wylej do foremek do muffinek i piecz około 20 minut w piekarniku",
+        ],
+      },
+      {
+        title: "Banan grillowany z miodem i imbirem",
+        calories: "178 kcal",
+        ingredients: [
+          "Banan 170 g (0,9 średniej szt.),",
+          "Miód pszczeli 5 g (1 łyżeczka),",
+          "Cytryna 5 g (0,1 szt.),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Miód wymieszaj z sokiem z cytryny i szczyptą imbiru",
+          "Banana razem ze skórką przekrój wzdłuż na pół",
+          "Banana posmaruj przygotowanym sosem i grilluj na patelni aż lekko się zarumieni",
+        ],
+      },
+      {
+        title: "Zapiekana owsianka owocowa",
+        calories: "381 kcal",
+        ingredients: [
+          "Płatki owsiane 30 g (3 łyżki),",
+          "Jabłko 170 g (1 średnia szt.),",
+          "Banan 90 g (0,5 średniej szt.),",
+          "Miód pszczeli 5 g (1 łyżeczka),",
+          "Jogurt naturalny 50 g (0,3 opak. po 150 g),",
+          "Mleko 110 g (½ szkl.),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Płatki zalej wrzącym mlekiem i odstaw pod przykryciem na 10 minut",
+          "Jabłko zetrzyj na tarce, a banana pokrój w kostkę. Owoce dodaj do płatków i posyp cynamonem",
+          "Owsiankę przełóż do naczynia żaroodpornego i zapiekaj w piekarniku rozgrzanym do 180 stopniu przez około 20 minut",
+          "Zapieczoną owsiankę zalej jogurtem i miodem",
+        ],
+      },
+      {
+        title: "Placuszki otrębowe z cynamonem",
+        calories: "199 kcal",
+        ingredients: [
+          "Otręby 20 g (5,2 łyżki),",
+          "Jaja kurze 78 g (1,3 szt.),",
+          "Jogurt naturalny 52 g (0,3 opak. po 150 g),",
+          "Miód pszczeli 6 g (1,3 łyżeczki),",
+          "Przyprawy 2 g (1,3 szczypt)",
+        ],
+        recipe: [
+          "Wymieszaj wszystkie składniki: jaja, jogurt, miód, cynamon i otręby (mogą być otręby owsiane lub pomieszane pół na pół owsiane z pszennymi)",
+          "Odstaw powstałą masę na 5 minut",
+          "Z powstałej masy usmaż placuszki na suchej patelni teflonowej",
+        ],
+      },
+    ],
+    "na słono": [],
+  },
+  kolacja: {
+    kanapki: [
+      {
+        title: "Kanapki z pastą z tuńczyka",
+        calories: "528 kcal",
+        ingredients: [
+          "Pieczywo pełnoziarniste 140 g (4 kromki),",
+          "Tuńczyk w sosie własnym 60 g (2 łyżki),",
+          "Ogórek kwaszony 120 g (2 szt.),",
+          "Jogurt naturalny 60 g (0,4 opak. po 150 g),",
+          "Cebula 40 g (0,4 szt.),",
+          "Jaja kurze 60 g (1 szt.)",
+        ],
+        recipe: [
+          "Tuńczyka i ugotowane na twardo jajko rozgnieć widelcem i wymieszaj z jogurtem, posiekaną cebulą i ogórkiem",
+          "Przypraw pieprzem i solą",
+          "Posmaruj pieczywo pastą",
+        ],
+      },
+      {
+        title: "Kanapka z pastą jajeczno-pieczarkową i pomidorem",
+        calories: "518 kcal",
+        ingredients: [
+          "PASTA:",
+          "Jaja kurze 96 g (1,6 szt.),",
+          "Pieczarki 64 g (3,2 szt.),",
+          "Cebula 32 g (0,3 szt.),",
+          "Olej 8 g (1,6 łyżeczki),",
+          "Przyprawy 3 g (1,6 szczypt)",
+          "POZOSTAŁE",
+          "Pieczywo pełnoziarniste 112 g (3,2 kromki),",
+          "Pomidor 193 g (1,5 średniej szt.),",
+          "Szczypiorek świeży lub suszony 3 g (1,6 szczypt)",
+        ],
+        recipe: [
+          "Posiekane pieczarki i cebulę podsmaż na rozgrzanym oleju",
+          "Zmiksuj z ugotowanym na twardo jajkiem",
+          "Przypraw pieprzem i solą do smaku",
+          "Pieczywo posmaruj pastą",
+          "Na wierzch ułóż plasterki pomidora i posyp szczypiorkiem",
+        ],
+      },
+      {
+        title: "Pasta z wędzoną makrelą, pieczywo, papryka",
+        calories: "372 kcal",
+        ingredients: [
+          "Papryka 79 g (0,3 szt.),",
+          "Pieczywo pełnoziarniste 93 g (2,7 kromki),",
+          "Ryba tłusta świeża lub mrożona 53 g,",
+          "Jogurt naturalny 39 g (0,3 opak. po 150 g),",
+          "Przyprawy 5 g (2,7 szczypt),",
+          "Natka pietruszki, świeża lub suszona 5 g (2,7 łyżeczki)",
+        ],
+        recipe: [
+          "Rybę ugnieć z jogurtem, natką i pieprzem",
+          "Na pieczywie rozłóż pastę",
+          "Zjedz z papryką",
+        ],
+      },
+      {
+        title: "Kanapka z jajkiem w sosie szczypiorkowym",
+        calories: "467 kcal",
+        ingredients: [
+          "Jaja kurze 120 g (2 szt.),",
+          "Jogurt naturalny 75 g (½ opak. po 150 g),",
+          "Szczypiorek świeży lub suszony 10 g (5 szczypt),",
+          "Rzodkiewka 45 g (3 szt.),",
+          "Pieczywo pełnoziarniste 105 g (3 kromki)",
+        ],
+        recipe: [
+          "Jajko ugotuj na twardo i pokrój w plasterki",
+          "Szczypiorek i rzodkiewkę posiekaj. Wymieszaj z jogurtem",
+          "Jajko ułóż na pieczywie i polej otrzymanym sosem",
+        ],
+      },
+      {
+        title: "Kanapki z pastą z awokado i ogórka",
+        calories: "383 kcal",
+        ingredients: [
+          "Pieczywo pełnoziarniste 105 g (3 kromki),",
+          "Awokado 70 g (½ szt.),",
+          "Rzodkiewka 45 g (3 szt.),",
+          "Ogórek zielony 85 g (½ szt.),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Awokado obierz i zmiksuj razem z ogórkiem i rzodkiewką",
+          "Pastę przypraw pieprzem i posmaruj nią pieczywo",
+        ],
+      },
+      {
+        title: "Kanapka z pastą twarogową",
+        calories: "364 kcal",
+        ingredients: [
+          "Pieczywo pełnoziarniste 105 g (3 kromki),",
+          "Ser twarogowy chudy 90 g (3 plastry),",
+          "Jogurt naturalny 45 g (0,3 opak. po 150 g),",
+          "Szczypiorek świeży lub suszony 6 g (3 szczypty),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Ser utrzyj z jogurtem, szczypiorkiem oraz ulubionymi ziołami i przyprawami",
+          "Pieczywo posmaruj pastą",
+        ],
+      },
+      {
+        title: "Kanapki z cukinią i rzodkiewką",
+        calories: "177 kcal",
+        ingredients: [
+          "Cukinia 60 g (¼ szt.),",
+          "Rzodkiewka 45 g (3 szt.),",
+          "Pieczywo pełnoziarniste 35 g (1 kromka),",
+          "Olej 5 g (1 łyżeczka),",
+          "Masło 5 g (1 płaska łyżeczka),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Cukinię pokrój w półplasterki, dopraw solą, pieprzem oraz ziołami prowansalskimi i podsmaż na oleju",
+          "Pieczywo posmaruj masłem",
+          "Cukinię ułóż na chlebie, na wierzch dodaj plasterki rzodkiewki",
+        ],
+      },
+      {
+        title: "Kanapka z masłem bazyliowym, szynką i papryką",
+        calories: "374 kcal",
+        ingredients: [
+          "Pieczywo pełnoziarniste 105 g (3 kromki),",
+          "Szynka 45 g (3 plastry),",
+          "Papryka 60 g (¼ szt.),",
+          "Masło 10 g (2 płaskie łyżeczki),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Bazylię świeżą lub suszoną utrzyj dokładnie z masłem i posmaruj nim pieczywo",
+          "Na kanapce ułóż szynkę i pokrojoną paprykę",
+        ],
+      },
+      {
+        title: "Kanapka z serkiem, awokado i papryką",
+        calories: "473 kcal",
+        ingredients: [
+          "Pieczywo pełnoziarniste 105 g (3 kromki),",
+          "Puszysty serek twarogowy 24 g (2,4 łyżeczka - 10 g),",
+          "Awokado 70 g (½ szt.),",
+          "Papryka 170 g (0,7 szt.)",
+        ],
+        recipe: [
+          "Pieczywo posmaruj serkiem i ułóż na nim pokrojoną paprykę",
+          "Awokado wydrąż łyżeczką, rozgnieć widelcem i ułóż na kanapce",
+        ],
+      },
+    ],
+    "tosty i zapiekanki": [
+      {
+        title: "Grzanki z jajecznicą, pomidorem i koperkiem",
+        calories: "462 kcal",
+        ingredients: [
+          "Jaja kurze 120 g (2 szt.),",
+          "Pieczywo pełnoziarniste 105 g (3 kromki),",
+          "Pomidor 30 g (0,2 średniej szt.),",
+          "Koperek świeży lub suszony 2 g (1 łyżeczka ),",
+          "Olej 5 g (1 łyżeczka),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Pieczywo zapiecz w piekarniku lub w tosterze",
+          "Jajka rozmieszaj z odrobiną wody i wlej na rozgrzany olej. Przypraw pieprzem",
+          "Na grzankach ułóż plastry pomidora i jajecznicę",
+          "Posyp posiekanym koperkiem",
+        ],
+      },
+      {
+        title: "Tosty z mozzarellą, szynką i kukurydzą",
+        calories: "512 kcal",
+        ingredients: [
+          "Pieczywo pełnoziarniste 121 g (3,5 kromki),",
+          "Szynka 26 g (1,7 plastra szt.),",
+          "Kukurydza konserwowa 52 g (3,5 łyżki),",
+          "Pomidor 112 g (0,9 średniej szt.),",
+          "Ser mozzarella 52 g (2,6 plastrów)",
+        ],
+        recipe: [
+          "Pieczywo obłóż plastrami szynki, sera, pomidora",
+          "Posyp kukurydzą i złóż kanapki",
+          "Zapiekaj w tosterze lub piekarniku rozgrzanym do 220 stopni C przez 10 minut",
+        ],
+      },
+      {
+        title: "Tosty z jajkiem i szynką",
+        calories: "415 kcal",
+        ingredients: [
+          "Pieczywo pełnoziarniste 90 g (2,6 kromki),",
+          "Szynka 38 g (2,6 plastra szt.),",
+          "Jaja kurze 77 g (1,3 szt.),",
+          "Sałata 12 g (2,6 liści),",
+          "Pomidor 38 g (0,3 średniej szt.),",
+          "Przyprawy 2 g (1,3 szczypt),",
+          "Olej 6 g (1,3 łyżeczki)",
+        ],
+        recipe: [
+          "Pieczywo zapiecz w tosterze lub piekarniku",
+          "Na wierzch pieczywa wyłóż sałatę, szynkę i pomidora",
+          "Jajko usmaż na niewielkiej ilości tłuszczu i przełóż na kanapkę",
+          "Przykryj drugą kromką",
+        ],
+      },
+      {
+        title: "Tost z awokado i szynką a'la Jamie Oliver",
+        calories: "511 kcal",
+        ingredients: [
+          "Pieczywo pełnoziarniste 105 g (3 kromki),",
+          "Szynka 45 g (3 plastry),",
+          "Pomidor 130 g (1 średnia szt.),",
+          "Awokado 70 g (½ szt.),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Cytryna 5 g (0,1 szt.),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Zapiecz pieczywo w tosterze lub piekarniku",
+          "Skrop oliwą",
+          "Na kanapkach ułóż plastry pomidora, szynkę oraz pokrojone awokado",
+          "Skrop sokiem z cytryny i posyp bazylią",
+        ],
+      },
+      {
+        title: "Grzanki z jabłkami i cynamonem",
+        calories: "406 kcal",
+        ingredients: [
+          "Pieczywo pełnoziarniste 105 g (3 kromki),",
+          "Jabłko 170 g (1 średnia szt.),",
+          "Masło 10 g (2 płaskie łyżeczki),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Pieczywo posmaruj masłem",
+          "Jabłko pokrój w plasterki i ułóż na kanapce",
+          "Posyp cynamonem",
+          "Wstaw do piekarnika rozgrzanego do 180 stopni na 3-4 minuty.",
+        ],
+      },
+      {
+        title: "Grzanki z pomidorem, papryką i cukinią",
+        calories: "391 kcal",
+        ingredients: [
+          "Pieczywo pełnoziarniste 105 g (3 kromki),",
+          "Cukinia 70 g (0,3 szt.),",
+          "Pomidor 130 g (1 średnia szt.),",
+          "Papryka 60 g (¼ szt.),",
+          "Czosnek 7 g (1 ząbek),",
+          "Przyprawy 2 g (1 szczypta),",
+          "Oliwa z oliwek 10 g (1 łyżka)",
+        ],
+        recipe: [
+          "Wszystkie warzywa pokrój w drobną kostkę i przypraw ziołami prowansalskimi",
+          "Pieczywo włóż do piekarnika rozgrzanego do 180 stopni na 5 minut. Po wyjęciu ułóż na nim warzywa i skrop oliwa z oliwek",
+        ],
+      },
+    ],
+    inne: [
+      {
+        title: "Jajecznica z pieczarkami i otrębami z pieczywem",
+        calories: "489 kcal",
+        ingredients: [
+          "Jaja kurze 120 g (2 szt.),",
+          "Pieczywo pełnoziarniste 105 g (3 kromki),",
+          "Pieczarki 100 g (5 szt.),",
+          "Otręby 8 g (2 łyżki),",
+          "Olej 5 g (1 łyżeczka)",
+        ],
+        recipe: [
+          "Pieczarki posiekaj i podsmaż 5 minut na oleju",
+          "Do pieczarek dodaj jajko, otręby i usmaż",
+          "Podaj z pieczywem (możesz je opiec w opiekaczu lub piekarniku)",
+        ],
+      },
+      {
+        title: "Jajka sadzone, sałatka (awokado,pomidor), chleb",
+        calories: "486 kcal",
+        ingredients: [
+          "Jaja kurze 120 g (2 szt.),",
+          "Pieczywo pełnoziarniste 70 g (2 kromki),",
+          "Awokado 70 g (½ szt.),",
+          "Pomidor 200 g (1,5 średniej szt.),",
+          "Cytryna 20 g (¼ szt.),",
+          "Przyprawy 6 g (3 szczypty)",
+        ],
+        recipe: [
+          "Jajka zrób na sadzone na patelni bez tłuszczu. Popieprz i posól",
+          "Cząstki pomidora i kawałki awokado wymieszaj, skrop sokiem i posyp bazylią",
+          "Zjedz z pieczywem",
+        ],
+      },
+      {
+        title: "Jajka na twardo w sosie jogurtowo-ziołowym",
+        calories: "393 kcal",
+        ingredients: [
+          "Jaja kurze 120 g (2 szt.),",
+          "Jogurt naturalny 100 g (0,7 opak. po 150 g),",
+          "Pieczywo pełnoziarniste 35 g (1 kromka),",
+          "Suszone pomidory w oleju 40 g (2 plastry),",
+          "Szczypiorek świeży lub suszony 2 g (1 szczypta),",
+          "Natka pietruszki, świeża lub suszona 2 g (1 łyżeczka ),",
+          "Koperek świeży lub suszony 2 g (1 łyżeczka )",
+        ],
+        recipe: [
+          "Jajka ugotuj na twardo (około 8 minut)",
+          "Natkę pietruszki, koperek i szczypiorek drobno posiekaj, suszone pomidory pokrój na małe kawałki",
+          "Zioła i suszone pomidory wymieszaj z jogurtem i podaj z jajkami",
+          "Zjedz z pieczywem pełnoziarnistym",
+        ],
+      },
+      {
+        title: "Jajko na miękko, chleb ze szpinakowym pesto, pomidor",
+        calories: "485 kcal",
+        ingredients: [
+          "Jaja kurze 120 g (2 szt.),",
+          "Pomidor 200 g (1,5 średniej szt.),",
+          "Szpinak świeży lub mrożony 20 g,",
+          "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 5 g (1 łyżeczka),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Pieczywo pełnoziarniste 70 g (2 kromki),",
+          "Przyprawy 10 g (5 szczypt),",
+          "Cytryna 16 g (0,2 szt.)",
+        ],
+        recipe: [
+          "Przyprawy: sól, pieprz, oregano",
+          "Ugotuj jajka na miekko",
+          "Szpinak/ natkę pietruszki zmiksuj z sokiem z cytryny, pestkami słonecznika, przyprawami i oliwą",
+          "Rozsmaruj powstałą pastę na pieczywie",
+          "Zjedz kanapki, jajko i pomidora pokrojonego w ćwiartki",
+        ],
+      },
+      {
+        title: "Omlet owsiany",
+        calories: "373 kcal",
+        ingredients: [
+          "Jaja kurze 120 g (2 szt.),",
+          "Płatki owsiane 30 g (3 łyżki),",
+          "Czosnek 7 g (1 ząbek),",
+          "Olej 10 g (2 łyżeczki),",
+          "Przyprawy 2 g (1 szczypta),",
+          "Szczypiorek świeży lub suszony 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Jajka wybij do miski, roztrzep, przypraw solą i pieprzem",
+          "Dodaj płatki owsiane, przeciśnięty przez praskę czosnek, posiekany szczypiorek i dokładnie wymieszaj",
+          "Masę wyłóż na rozgrzaną, posmarowaną olejem patelnię",
+          "Omlet smaż z obu stron do momentu ścięcia się masy",
+        ],
+      },
+      {
+        title: "Omlet z pomidorami, pieczywo",
+        calories: "384 kcal",
+        ingredients: [
+          "Jaja kurze 60 g (1 szt.),",
+          "Pomidor 65 g (½ średniej szt.),",
+          "Olej 5 g (1 łyżeczka),",
+          "Natka pietruszki, świeża lub suszona 2 g (1 łyżeczka ),",
+          "Pieczywo pełnoziarniste 105 g (3 kromki)",
+        ],
+        recipe: [
+          "Jajko roztrzep z posiekaną natką pietruszki, odrobiną wody i soli",
+          "Wlej na rozgrzany olej i gdy się zetnie przerzuć na drugą stronę",
+          "Pomidory sparz, pokrój w kostkę i ułóż na gorącym omlecie",
+          "Podawaj z pieczywem",
+        ],
+      },
+      {
+        title: "Omlet ze szczypiorkiem i pieczywem czosnkowym",
+        calories: "461 kcal",
+        ingredients: [
+          "Jaja kurze 120 g (2 szt.),",
+          "Pieczywo pełnoziarniste 70 g (2 kromki),",
+          "Szczypiorek świeży lub suszony 12 g (6 szczypt),",
+          "Masło 10 g (2 płaskie łyżeczki),",
+          "Olej 5 g (1 łyżeczka),",
+          "Czosnek 7 g (1 ząbek)",
+        ],
+        recipe: [
+          "Jajka roztrzep widelcem, dodaj posiekany szczypiorek i usmaż na oleju",
+          "Czosnek przeciśnij przez praskę, wymieszaj z masłem i posmaruj nim pieczywo, włóż do piekarnika na 5 minut",
+        ],
+      },
+      {
+        title: "Omlet z pieczarkami i pieczywem",
+        calories: "475 kcal",
+        ingredients: [
+          "Jaja kurze 120 g (2 szt.),",
+          "Pieczarki 100 g (5 szt.),",
+          "Woda 20 g (0,1 szkl.),",
+          "Pieczywo pełnoziarniste 105 g (3 kromki),",
+          "Przyprawy 2 g (1 szczypta),",
+          "Olej 5 g (1 łyżeczka)",
+        ],
+        recipe: [
+          "Jajka roztrzep z wodą oraz pieprzem i odrobiną soli",
+          "Patelnię przesmaruj delikatnie olejem i wylej na nią jajka",
+          "Gdy omlet się zetnie, zsuń go na talerz i przewracając na drugą stronę ponownie umieść na patelni",
+          "W osobnym garnku podduś na odrobinie oleju i wody pokrojone w plasterki pieczarki",
+          "Na gotowy omlet wyłóż pieczarki i zegnij go na pół",
+          "Podawaj z pieczywem",
+        ],
+      },
+      {
+        title: "Naleśniki z jabłkami i cynamonem",
+        calories: "466 kcal",
+        ingredients: [
+          "Jaja kurze 56 g (0,9 szt.),",
+          "Mleko 103 g (0,5 szkl.),",
+          "Mąka pełnoziarnista 65 g (6,6 łyżki),",
+          "Jabłko 159 g (0,9 średniej szt.),",
+          "Przyprawy 1 g (0,9 szczypt),",
+          "Olej 4 g (niecała łyżeczka)",
+        ],
+        recipe: [
+          "Zmiksuj mleko, mąkę, olej i jajka. Dodaj około 1/4 szklanki wody i wymieszaj",
+          "Patelnię posmaruj delikatnie olejem i wylej na nią ciasto naleśnikowe. Smaż z obu stron",
+          "Jabłka obierz i pokrój w drobna kostkę. Zalej niewielką ilością wrzątku, dodaj cynamon i ugotuj",
+          "Na gotowe naleśniki wyłóż jabłka i zwiń",
+        ],
+      },
+      {
+        title: "Koreczki caprese",
+        calories: "405 kcal",
+        ingredients: [
+          "Pomidor 130 g (1 średnia szt.),",
+          "Ser mozzarella 120 g (6 plastrów),",
+          "Pieczywo pełnoziarniste 35 g (1 kromka),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Pieczywo opiecz na grzankę, następnie pokrój w kostkę",
+          "Pomidory i mozzarellę pokrój w większą kostkę. Możesz też użyć pomidorków koktajlowych (wtedy przekrój je na pół) oraz mini kuleczek mozzarelli",
+          "Na patyczki od szaszłyków nałóż kolejno: grzankę, pomidora, mozzarellę. Skrop przygotowane koreczki octem balsamicznym",
+        ],
+      },
+      {
+        title: "Roladki z tortilli z szynką, awokado i papryką",
+        calories: "379 kcal",
+        ingredients: [
+          "Sałata 10 g (2 liście),",
+          "Szynka 30 g (2 plastry),",
+          "Papryka 100 g (0,4 szt.),",
+          "Awokado 45 g (0,3 szt.),",
+          "Przyprawy 2 g (1 szczypta)",
+        ],
+        recipe: [
+          "Przygotuj tortillę (DODATEK)",
+          "Sałatę porwij na mniejsze części. Paprykę oraz awokado pokrój w kostkę",
+          "Na rozłożony placek tortilli nałóż wszystkie składniki, dopraw. Następnie ściśle zawiń całość w rulon",
+          "Pokrój tortillę w paski o szerokości ok. 2 cm",
+        ],
+      },
+      {
+        title: "Sałatka z wędzonym łososiem i sosem miodowo-cytrynowym",
+        calories: "374 kcal",
+        ingredients: [
+          "Ryba tłusta świeża lub mrożona 100 g,",
+          "Sałata 45 g (9 liści),",
+          "Pomidor 130 g (1 średnia szt.),",
+          "Cytryna 20 g (¼ szt.),",
+          "Oliwa z oliwek 10 g (1 łyżka),",
+          "Miód pszczeli 14 g (2,8 łyżeczki),",
+          "Musztarda 5 g (niecała łyżeczka),",
+          "Przyprawy 4 g (2 szczypty)",
+        ],
+        recipe: [
+          "Pokrój łososia w podłużne paski",
+          "Porwij sałatę, przełóż ją do miski, dodaj pokrojonego pomidora oraz łososia",
+          "Do małej miseczki lub szklanki wlej sok z cytryny, dodaj przyprawy (sól, pieprz), wymieszaj. Cały czas mieszając stopniowo wlewaj oliwę. Nadal mieszając dodaj miód i musztardę",
+          "Polej powstałym sosem sałatkę i wymieszaj",
+        ],
+      },
+    ],
+  },
+  dodatki: [
+    {
+      title: "Sos pomidorowy",
+      calories: "dodatek",
+      ingredients: [
+        "Pomidor 170 g (1,3 średniej szt.),",
+        "Czosnek 3 g (0,4 ząbka),",
+        "Przyprawy 2 g (1 szczypta),",
+        "Oliwa z oliwek 5 g (niecała łyżka),",
+        "Cebula 30 g (0,3 szt.)",
+      ],
+      recipe: [
+        "Cebulę i czosnek podsmaż na rozgrzanej oliwie",
+        "Dodaj sparzone pomidory i duś przez kilka minut",
+        "Przypraw ulubionymi przyprawami i ziołami (np. pieprz, chili, zioła prowansalskie, rozmaryn)",
+      ],
     },
-    "drugieSniadanie": {
-        "koktajle": [
-            {
-                "title": "Koktajl z masła orzechowego, banana i siemienia lnianego",
-                "calories": "299 kcal",
-                "ingredients": [
-                    "Mleko 79 g (0,4 szkl.),",
-                    "Jogurt naturalny 86 g (0,6 opak. po 150 g),",
-                    "Banan 86 g (0,5 średniej szt.),",
-                    "Masło orzechowe 100% 14 g (niecała łyżka),",
-                    "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 7 g (1,4 łyżeczki)"
-                ],
-                "reciepe": [
-                    "Banana obierz i podziel na mniejsze kawałki",
-                    "Wszystkie składniki umieść w pojemniku blendera",
-                    "Zmiksuj na gładki koktajl"
-                ]
-            },
-            {
-                "title": "Koktajl z gruszką i miodem",
-                "calories": "376 kcal",
-                "ingredients": [
-                    "Gruszka 170 g (1 średnia szt.),",
-                    "Mleko 220 g (1 szkl.),",
-                    "Miód pszczeli 10 g (2 łyżeczki),",
-                    "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 10 g (2 łyżeczki),",
-                    "Jabłko 170 g (1 średnia szt.)"
-                ],
-                "reciepe": [
-                    "Składniki przełóż do wysokiego naczynia, następnie zmiksuj je na gładką masę. Jeśli wolisz rzadszą konsystencje możesz dolać wody."
-                ]
-            },
-            {
-                "title": "Koktajl z buraka i owoców +orzechy",
-                "calories": "592 kcal",
-                "ingredients": [
-                    "Burak 100 g,",
-                    "Banan 120 g (0,6 średniej szt.),",
-                    "Gruszka 340 g (2 średnie szt.),",
-                    "Woda 440 g (2 szkl.),",
-                    "Orzechy 40 g"
-                ],
-                "reciepe": [
-                    "Buraka obierz. Usuń z gruszki gniazdo nasienne",
-                    "Zmiksuj buraka, gruszkę, banana i wodę",
-                    "Wraz z koktajlem spożyj orzechy"
-                ]
-            },
-            {
-                "title": "Koktajl mleczny z bananem i awokado",
-                "calories": "287 kcal",
-                "ingredients": [
-                    "Awokado 70 g (½ szt.),",
-                    "Banan 60 g (0,3 średniej szt.),",
-                    "Mleko 220 g (1 szkl.)"
-                ],
-                "reciepe": [
-                    "Wyjmij miąższ z awokado, banana pokrój w kostkę",
-                    "Wszystkie składniki zmiksuj na koktajl"
-                ]
-            },
-            {
-                "title": "Pudding bananowo-kawowy",
-                "calories": "193 kcal",
-                "ingredients": [
-                    "Banan 150 g (0,8 średniej szt.),",
-                    "Woda 50 g (0,2 szkl.),",
-                    "Mleko 100 g (0,5 szkl.),",
-                    "Przyprawy 2 g (1 szczypta)"
-                ],
-                "reciepe": [
-                    "Woda = napar z kawy",
-                    "Zaparz małą kawę",
-                    "Zmiksuj kawę z bananem, mlekiem i cynamonem"
-                ]
-            },
-            {
-                "title": "Koktajl gruszkowo-szpinakowy z migdałami",
-                "calories": "530 kcal",
-                "ingredients": [
-                    "Mleko 170 g (0,8 szkl.),",
-                    "Szpinak świeży lub mrożony 40 g,",
-                    "Banan 185 g (1 średnia szt.),",
-                    "Gruszka 170 g (1 średnia szt.),",
-                    "Migdały 30 g (2 łyżki),",
-                    "Cytryna 5 g (0,1 szt.)"
-                ],
-                "reciepe": [
-                    "Zmiksuj sok z cytryny, banana, mleko, szpinak i gruszkę",
-                    "Posyp posiekanymi migdałami",
-                    "Schłodź przed podaniem"
-                ]
-            },
-            {
-                "title": "Koktajl szarlotkowy z rodzynkami",
-                "calories": "300 kcal",
-                "ingredients": [
-                    "Mleko 145 g (0,7 szkl.),",
-                    "Banan 122 g (0,7 średniej szt.),",
-                    "Jabłko 112 g (0,7 średniej szt.),",
-                    "Rodzynki 19 g (1,3 łyżki),",
-                    "Przyprawy 1 g (0,7 szczypt)"
-                ],
-                "reciepe": [
-                    "Banana możesz wcześniej zamrozić, uprzednio krojąc w plastry, ale nie jest to konieczne",
-                    "Jabłka obierz ze skórki i pozbaw gniazd nasiennych",
-                    "wszystkie składniki zmiksuj na gładki koktajl",
-                    "Opcjonalnie dodaj cynamon i sproszkowaną wanilię"
-                ]
-            },
-            {
-                "title": "Koktajl jagodowo-bananowy",
-                "calories": "327 kcal",
-                "ingredients": [
-                    "Banan 185 g (1 średnia szt.),",
-                    "Jagody 90 g (2 garści),",
-                    "Mleko 220 g (1 szkl.)"
-                ],
-                "reciepe": [
-                    "Zmiksuj na gładki koktajl"
-                ]
-            },
-            {
-                "title": "Koktajl z banana i kiwi z natką pietruszki",
-                "calories": "300 kcal",
-                "ingredients": [
-                    "Banan 185 g (1 średnia szt.),",
-                    "Kiwi 220 g (2 szt.),",
-                    "Natka pietruszki, świeża lub suszona 6 g (3 łyżeczki)"
-                ],
-                "reciepe": [
-                    "Banana i kiwi pokrój na mniejsze kawałki",
-                    "Dodaj posiekaną natkę pietruszki",
-                    "Zmiksuj całość"
-                ]
-            },
-            {
-                "title": "Koktajl bananowy z kakao i otrębami",
-                "calories": "324 kcal",
-                "ingredients": [
-                    "Kefir naturalny 220 g (1 szkl.),",
-                    "Banan 170 g (0,9 średniej szt.),",
-                    "Kakao 10 g (2 łyżeczki),",
-                    "Otręby 4 g (1 łyżka)"
-                ],
-                "reciepe": [
-                    "Zmiksuj na gładki koktajl"
-                ]
-            },
-            {
-                "title": "Koktajl banan-cukinia-jabłko-kiwi-szpinak-cytryna",
-                "calories": "298 kcal",
-                "ingredients": [
-                    "Banan 160 g (0,9 średniej szt.),",
-                    "Szpinak świeży lub mrożony 60 g,",
-                    "Jabłko 100 g (0,6 średniej szt.),",
-                    "Kiwi 110 g (1 szt.),",
-                    "Cytryna 48 g (0,6 szt.),",
-                    "Cukinia 80 g (0,3 szt.)"
-                ],
-                "reciepe": [
-                    "Zmiksuj na gładki koktajl"
-                ]
-            },
-            {
-                "title": "Kakaowy koktajl bananowy",
-                "calories": "300 kcal",
-                "ingredients": [
-                    "Maślanka naturalna 220 g (1 szkl.),",
-                    "Banan 185 g (1 średnia szt.),",
-                    "Kakao 10 g (2 łyżeczki),",
-                    "Przyprawy 2 g (1 szczypta)"
-                ],
-                "reciepe": [
-                    "Zmiksuj na gładki koktajl"
-                ]
-            },
-            {
-                "title": "Koktajl czekoladowy z gruszką",
-                "calories": "377 kcal",
-                "ingredients": [
-                    "Kakao 10 g (2 łyżeczki),",
-                    "Mleko 220 g (1 szkl.),",
-                    "Gruszka 340 g (2 średnie szt.),",
-                    "Orzechy 6 g"
-                ],
-                "reciepe": [
-                    "Gruszkę pokrój w krostkę i wrzuć doi miski z pozostałymi składnikami",
-                    "Całość zblenduj, wysypując na wierzch ulubione orzechy"
-                ]
-            },
-            {
-                "title": "Koktajl jaglano-owocowy",
-                "calories": "377 kcal",
-                "ingredients": [
-                    "Jogurt naturalny 150 g (1 opak. po 150 g),",
-                    "Banan 185 g (1 średnia szt.),",
-                    "Mandarynka 60 g (1 szt.),",
-                    "Kasza 26 g (2 łyżki)"
-                ],
-                "reciepe": [
-                    "Kaszę przepłucz zimną i gorącą wodą, a następnie ugotuj",
-                    "Zblenduj wszystkie składniki"
-                ]
-            },
-            {
-                "title": "Koktajl z ananasem, awokado i siemieniem lnianym",
-                "calories": "477 kcal",
-                "ingredients": [
-                    "Ananas świeży lub z puszki 30 g (1 plaster),",
-                    "Awokado 140 g (1 szt.),",
-                    "Mleko 220 g (1 szkl.),",
-                    "Jabłko 170 g (1 średnia szt.),",
-                    "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 5 g (1 łyżeczka),",
-                    "Woda 220 g (1 szkl.)"
-                ],
-                "reciepe": [
-                    "Zmiksuj na gładki koktajl"
-                ]
-            },
-            {
-                "title": "Koktajl gruszkowy z cynamonem",
-                "calories": "203 kcal",
-                "ingredients": [
-                    "Kefir naturalny 220 g (1 szkl.),",
-                    "Gruszka 170 g (1 średnia szt.),",
-                    "Przyprawy 2 g (1 szczypta)"
-                ],
-                "reciepe": [
-                    "Zmiksuj na gładki koktajl"
-                ]
-            },
-            {
-                "title": "Zielony bananowo-truskawkowy shake",
-                "calories": "270 kcal",
-                "ingredients": [
-                    "Banan 185 g (1 średnia szt.),",
-                    "Truskawki świeże lub mrożone 100 g,",
-                    "Szpinak świeży lub mrożony 70 g,",
-                    "Mleko 110 g (½ szkl.)"
-                ],
-                "reciepe": [
-                    "Zmiksuj wszystkie składniki",
-                    "Schłodź przed podaniem lub dodaj pokruszony lód"
-                ]
-            },
-            {
-                "title": "Milkshake truskawkowy",
-                "calories": "184 kcal",
-                "ingredients": [
-                    "Truskawki świeże lub mrożone 200 g (10 ),",
-                    "Mleko 220 g (1 szkl.),",
-                    "Miód pszczeli 5 g (1 łyżeczka)"
-                ],
-                "reciepe": [
-                    "Zmiksuj na gładki koktajl"
-                ]
-            }
-        ],
-        "smoothie": [
-            { "title": "Smoothie bananowo- kokosowe", "calories": "212 kcal", "ingredients": ["Mleko 127 g (0,6 szkl.),", "Banan 107 g (0,6 średniej szt.),", "Wiórki kokosowe 6 g (1,7 łyżki)"], "reciepe": ["Całość zmiksuj na gładki koktajl"] }, { "title": "Zielone smoothie ze szpinakiem i gruszką", "calories": "218 kcal", "ingredients": ["Mleko 220 g (1 szkl.),", "Szpinak świeży lub mrożony 25 g,", "Gruszka 80 g (0,5 średniej szt.),", "Banan 60 g (0,3 średniej szt.),", "Cytryna 8 g (0,1 szt.)"], "reciepe": ["Gruszkę i banana obierz i pokrój na mniejsze kawałki", "Dodaj garść szpinaku i kilka listków mięty, zmiksuj", "Wlej mleko, sok z cytryny, wrzuć kostkę lodu i ponownie zmiksuj do uzyskania jednolitej konsystencji", "Tak przygotowane smoothie przystrój listkami mięty"] }, { "title": "Smoothie pina colada", "calories": "270 kcal", "ingredients": ["Mleko 220 g (1 szkl.),", "Ananas świeży lub z puszki 120 g (4 plastry),", "Wiórki kokosowe 12 g (3 łyżki),", "Miód pszczeli 5 g (1 łyżeczka)"], "reciepe": ["Ananasa, wiórki kokosowe, mleko i łyżeczkę miódu umieść w kielichu blendera", "Całość zmiksuj na gładki koktajl"] }, { "title": "Smoothie truskawkowo-ananasowe", "calories": "179 kcal", "ingredients": ["Truskawki świeże lub mrożone 100 g,", "Ananas świeży lub z puszki 60 g (2 plastry),", "Jogurt naturalny 100 g (0,7 opak. po 150 g),", "Sok owocowy 100% 100 g (0,5 szkl.),", "Miód pszczeli 5 g (1 łyżeczka)"], "reciepe": ["Całość zmiksuj na gładki koktajl"] }, { "title": "Smoothie z buraka, truskawek, banana, otrąb i jogurtu", "calories": "292 kcal", "ingredients": ["Jogurt naturalny 150 g (1 opak. po 150 g),", "Burak 100 g,", "Truskawki świeże lub mrożone 100 g,", "Banan 120 g (0,6 średniej szt.),", "Otręby 12 g (3 łyżki)"], "reciepe": ["Całość zmiksuj na gładki koktajl"] }, { "title": "Zielony napój warzywno-owocowy", "calories": "185 kcal", "ingredients": ["Sałata 50 g (10 liści),", "Kiwi 110 g (1 szt.),", "Banan 90 g (0,5 średniej szt.),", "Miód pszczeli 10 g (2 łyżeczki),", "Woda 220 g (1 szkl.)"], "reciepe": ["Całość zmiksuj na gładki koktajl"] }
-        ]
+    {
+      title: "Tortilla pszenna",
+      calories: "dodatek",
+      ingredients: [
+        "Mąka pszenna 60 g (6 płaskich łyżek),",
+        "Woda 40 g (0,2 szkl.),",
+        "Olej 5 g (1 łyżeczka),",
+        "Przyprawy 2 g (1 szczypta)",
+      ],
+      recipe: [
+        "Mąkę wymieszaj z solą. Wlej gorącą wodę i wymieszaj",
+        "Następnie dodaj olej i wyrób ręką. Odstaw",
+        "Po około 10 minutach podziel ciasto na dwie części, uformuj kuleczki i rozwałkuj cienko (jeśli potrzeba podsyp mąką)",
+        "Smaż na suchej patelni około minuty z jednej i 30 sekund z drugiej strony",
+      ],
     },
-    "obiad": {
-        "kasza": [
-            { "title": "Kurczak caprese z kaszą", "calories": "633 kcal", "ingredients": ["Mięso z piersi kurczaka 125 g,", "Kasza 91 g (7 łyżek),", "Ser mozzarella 60 g (3 plastry),", "Pomidor 60 g (0,5 średniej szt.),", "Oliwa z oliwek 5 g (niecała łyżka),", "Przyprawy 5 g (2½ szczypt)"], "reciepe": ["Piekarnik nagrzej do 190 stopni C. Pierś z kurczaka natnij w 3 miejscach (w poprzek) na głębokość ok. 2 cm, nie przecinając mięsa do końca. Dokładnie dopraw solą i pieprzem, natrzyj tymiankiem oraz oliwą", "Na dnie żaroodpornego naczynia ułóż plasterki pomidorów, dopraw je solą. Na pomidorach połóż kurczaka. Mozzarellę pokrój na cienkie plasterki (tyle plasterków ile nacięć w mięsie), dopraw solą i włóż w nacięcia w filetach. Wciśnij też po listku bazylii", "Wstaw do piekarnika i piecz bez przykrycia przez ok. 35 minut. Posyp świeżą bazylią", "Podaj z ugotowaną kaszą"] }, { "title": "Kurczak w jogurcie z kaszą i sałatką z pomidorów", "calories": "560 kcal", "ingredients": ["Mięso z piersi kurczaka 100 g,", "Jogurt naturalny 150 g (1 opak. po 150 g),", "Kasza 65 g (5 łyżek),", "Cytryna 20 g (¼ szt.),", "Czosnek 7 g (1 ząbek),", "Oliwa z oliwek 10 g (1 łyżka),", "Mąka pełnoziarnista 5 g (niecała łyżka)"], "reciepe": ["W miseczce wymieszaj sok z cytryny, jogurt, sprasowany czosnek, chili, kolendrę imbir, pieprz oraz mąkę", "Kurczaka natrzyj oliwą, ułóż w naczyniu żaroodpornym i zapiecz w piekarniku przez około 15 minut (180 stopni)", "Do kurczaka wlej marynatę i zapiekaj jeszcze przez około 20 minut", "Podawaj z ugotowaną kaszą i sałatką z pomidora (DODATEK)"] }, { "title": "Kurczak z warzywami i kaszą", "calories": "574 kcal", "ingredients": ["Mięso z piersi kurczaka 100 g,", "Kasza 100 g (7,7 łyżki),", "Papryka 120 g (½ szt.),", "Cukinia 120 g (½ szt.),", "Oliwa z oliwek 10 g (1 łyżka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Przygotuj marynatę z oliwy i ziół prowansalskich, rozmarynu, pieprzu", "Warzywa pokrój i podduś w niewielkiej ilości wody przez 5 minut", "Mięso pokrój i dokładnie obtocz w marynacie", "Mięso i warzywa zawiń w folie aluminiową", "Całość zapiekaj w rozgrzanym piekarniku, aż mięso będzie miękkie", "Podawaj z ugotowaną kaszą"] }, { "title": "Kurczak po węgiersku z kaszą", "calories": "561 kcal", "ingredients": ["Mięso z piersi kurczaka 100 g,", "Pieczarki 100 g (5 szt.),", "Papryka 120 g (½ szt.),", "Koncentrat pomidorowy 10 g (2 łyżeczki),", "Czosnek 7 g (1 ząbek),", "Kasza 91 g (7 łyżek),", "Olej 10 g (2 łyżeczki),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["W garnku lub na patelni rozgrzej olej. Dodaj posiekany czosnek oraz koncentrat", "Dodaj odrobinę wody i pokrojone mięso, paprykę i pieczarki", "Przypraw chili, pieprzem i bazylią. Dodaj liść laurowy i duś pod przykryciem przez 30 minut. W razie potrzeby dolej wody", "Podawaj z ugotowaną kaszą"] }, { "title": "Bulgur z grillowanym kurczakiem i czerwoną kapustą", "calories": "677 kcal", "ingredients": ["Kasza 117 g (9 łyżek),", "Mięso z piersi kurczaka 80 g,", "Kapusta 100 g,", "Oliwa z oliwek 20 g (2 łyżki),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Kaszę ugotuj w lekko osolonej wodzie", "Mięso pokrój w paski, posyp solą, pieprzem i curry, wyłóż na blasze obłożonej papierem do pieczenia, piecz 30 minut w 170 stopniach C", "W tym czasie poszatkuj kapustę, wymieszaj z oliwą, dopraw solą, pieprzem, sokiem z cytryny", "Kaszę podawaj z kurczakiem i surówką"] }, { "title": "Puree z ziemniaków i kaszy z kurczakiem i surówką", "calories": "653 kcal", "ingredients": ["Ziemniaki 233 g (2,9 szt.),", "Kasza 37 g (2,9 łyżki),", "Jogurt naturalny 65 g (0,4 opak. po 150 g),", "Mięso z piersi kurczaka 182 g,", "Przyprawy 2 g (1,5 szczypt)"], "reciepe": ["Ziemniaki i kaszę ugotuj, a następnie wymieszaj i dodaj jogurt. Rozmieszaj i rozgnieć dokładnie", "Mięso pokrój w kostkę, oprósz chili, pierzem i curry. Zalej wrzątkiem i ugotuj", "Kaszę z ziemniakami i mięso przełóż na talerz i podawaj z surówką z marchwii i selera (DODATEK)"] }, { "title": "Indyk z pieczarkami z piekarnika w tymianku", "calories": "608 kcal", "ingredients": ["Mięso z piersi indyka 89 g,", "Pieczarki 53 g (2,7 szt.),", "Ogórek kwaszony 107 g (1,8 szt.),", "Kasza 105 g (8,1 łyżek),", "Olej 17 g (3,6 łyżeczki),", "Przyprawy 1 g (0,9 szczypt)"], "reciepe": ["Kaszę ugotuj w lekko osolonej wodzie", "Mięso lekko rozbij, posyp przyprawami i ułóż w naczyniu żaroodpornym lub na patelni", "Na mięsie wyłóż plastry pieczarek, całość skrop olejem", "Piecz 30 minut w 180 stopniach C lub smaż pod przykryciem kilkanaście minut, podawaj z kaszą i słupkami ogórka"] }, { "title": "Indyk w imbirowej marynacie z mrożonymi warzywami i kaszą", "calories": "564 kcal", "ingredients": ["Mięso z piersi indyka 100 g,", "Czosnek 7 g (1 ząbek),", "Oliwa z oliwek 10 g (1 łyżka),", "Miód pszczeli 10 g (2 łyżeczki),", "Kasza 91 g (7 łyżek),", "Przyprawy 2 g (1 szczypta),", "Warzywa mrożone 150 g (1 porcja 150 g)"], "reciepe": ["Posiekaj drobno czosnek i wymieszaj go z oliwą, pieprzem, imbirem, chili i miodem", "Mięso obtocz dokładnie w marynacie i włóż do piekarnika rozgrzanego do 180 stopni (najlepiej opcja grill). Piecz mięso kilka minut, aż będzie miękkie i zarumienione", "Podawaj z ugotowaną kaszą i mieszanką warzyw"] }, { "title": "Szaszłyki z indyka, cukinii i pieczarek w czosnku", "calories": "620 kcal", "ingredients": ["Kasza 104 g (8 łyżek),", "Cukinia 240 g (1 szt.),", "Pieczarki 100 g (5 szt.),", "Mięso z piersi indyka 50 g,", "Oliwa z oliwek 20 g (2 łyżki)"], "reciepe": ["Kaszę ugotuj w lekko osolonej wodzie", "Cukinię pokrój w talarki, pieczarki przekrój na połowy, mięso pokrój w kostkę", "Składniki nadziewaj na patyczki do szaszłyków, polej marynatą zrobioną z oliwy i przypraw, wyłóż na folii do pieczenia lub na tacy do grillowania", "Szaszłyki grilluj/piecz 15-20 minut w 190 stopniach i podawaj z kaszą"] }, { "title": "Pierś z indyka w miodzie z kaszą i surówką", "calories": "650 kcal", "ingredients": ["Mięso z piersi indyka 125 g,", "Masło 10 g (2 płaskie łyżeczki),", "Miód pszczeli 10 g (2 łyżeczki),", "Musztarda 10 g (1 łyżeczka ),", "Kasza 100 g (7,7 łyżki)"], "reciepe": ["Roztop masło i wymieszaj z miodem, musztardą oraz curry", "Mięso pokrój na kawałki i obtocz dokładnie w marynacie", "Włóż do piekarnika rozgrzanego do 180 stopni i zapiekaj około 25 minut", "Podawaj z kaszą i surówką z marchwii i selera (DODATEK)"] }, { "title": "Polędwiczki wieprzowe z mozzarellą, podane z kaszą", "calories": "623 kcal", "ingredients": ["Wieprzowina 120 g,", "Kasza 52 g (4 łyżki),", "Ser mozzarella 60 g (3 plastry),", "Szynka 45 g (3 plastry),", "Pomidor 60 g (0,5 średniej szt.),", "Czosnek 3 g (0,4 ząbka),", "Oliwa z oliwek 10 g (1 łyżka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Polędwiczkę umyj, osusz, odkrój błonę znajdującą się na zewnętrznej stronie polędwiczki. Pokrój ukośnie na plastry o grubości ok. 2,5 cm.", "Każdy kawałek rozbij tłuczkiem (najlepiej takim zakończonym metalową \"kratką\"). Natrzyj drobno startym lub przeciśniętym przez praskę czosnkiem, zawiń w folię spożywczą i włóż do lodówki na ok. 1 godzinę", "Mięso wyjmij z lodówki i dopraw solą oraz pieprzem. Mozzarellę pokrój na tyle plasterków, ile masz porcji mięsa. Na każdym plasterku polędwiczki umieść plasterek mozzarelli, a na wierzchu połóż plasterek szynki. Zepnij wykałaczką, przebijając mięso w 2 miejscach. Pod wystającą wykałaczkę włóż kawałek rozmarynu", "Rozgrzej oliwę na większej patelni. Włóż mięso szynką do góry i smaż przez ok. 2,5 minuty na większym ogniu, przewróć na drugą stronę i smażyć kolejne ok. 2,5 minuty. Odstaw z ognia i posyp pokrojonymi pomidorkami koktajlowymi", "Podaj z ugotowaną kaszą"] }, { "title": "Pieczona mozzarella w szynce i pomidorach", "calories": "664 kcal", "ingredients": ["Ser mozzarella 60 g (3 plastry),", "Pomidor 130 g (1 średnia szt.),", "Szynka 15 g (1 plaster),", "Kasza 117 g (9 łyżek),", "Oliwa z oliwek 10 g (1 łyżka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Kaszę ugotuj w lekko osolonej wodzie", "Mozzarellę zawiń w szynkę, włóż do folii do pieczenia, obłóż posiekanymi pomidorami i posyp przyprawami, całość skrop oliwą", "Piecz 15 minut w 200 stopniach C i podawaj z kaszą"] }
-        ],
-        "ziemniaki": [
-            { "title": "Kurczak a'la Jamie Oliver z surówką i ziemniakami", "calories": "576 kcal", "ingredients": ["Mięso z piersi kurczaka 125 g,", "Oliwa z oliwek 5 g (niecała łyżka),", "Ziemniaki 400 g (5 szt.),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Mięso natrzyj oliwą i przyprawami (chili, pieprz, sól, papryka, oregano)", "Przyprawione mięso zawiń w papier do pieczenia i delikatnie rozbij lub rozwałkuj wałkiem do ciasta", "Mięso wyjmij z papieru i smaż na patelni grillowej bez użycia tłuszczu lub upiecz w piekarniku (180 stopni, 15 minut)", "Podawaj z ugotowanymi ziemniakami i sałatką pomidorowo-paprykową (DODATEK);"] }, { "title": "Puree z ziemniaków i kaszy z kurczakiem i surówką", "calories": "653 kcal", "ingredients": ["Ziemniaki 233 g (2,9 szt.),", "Kasza 37 g (2,9 łyżki),", "Jogurt naturalny 65 g (0,4 opak. po 150 g),", "Mięso z piersi kurczaka 182 g,", "Przyprawy 2 g (1,5 szczypt)"], "reciepe": ["Ziemniaki i kaszę ugotuj, a następnie wymieszaj i dodaj jogurt. Rozmieszaj i rozgnieć dokładnie", "Mięso pokrój w kostkę, oprósz chili, pierzem i curry. Zalej wrzątkiem i ugotuj", "Kaszę z ziemniakami i mięso przełóż na talerz i podawaj z surówką z marchwii i selera (DODATEK);"] }, { "title": "Indyk z pieczarkami, ziemniakami i surówką", "calories": "567 kcal", "ingredients": ["Mięso z piersi indyka 125 g,", "Ziemniaki 320 g (4 szt.),", "Pieczarki 120 g (6 szt.),", "Ogórek kwaszony 90 g (1½ szt.),", "Cebula 55 g (½ szt.),", "Oliwa z oliwek 5 g (niecała łyżka),", "Przyprawy 1 g (½ szczypt)"], "reciepe": ["Ugotuj ziemniaki. Mięso indyka pokrój w plastry i rozbij tłuczkiem", "Cebulę i ogórka i pieczarki pokroić w kostkę", "Indyka podsmażyć krótko na rozgrzanej oliwie i przełożyć do garnka", "Cebulę, ogórka i pieczarki poddusić na oliwie i dołączyć do mięsa", "Doprawić pieprzem i imbirem, dodać wody, by zakryć wszystkie składniki. Dusić pod przykryciem do miękkości", "Podawać z ziemniakami i surówką z marchewki i jabłka (DODATEK)"] }, { "title": "Indyk z ogórkiem kiszonym i kalafiorem na ziemniaczkach", "calories": "571 kcal", "ingredients": ["Ziemniaki 240 g (3 szt.),", "Kalafior świeży lub mrożony 150 g,", "Ogórek kwaszony 60 g (1 szt.),", "Mięso z piersi indyka 100 g,", "Oliwa z oliwek 30 g (3 łyżki)"], "reciepe": ["Ziemniaki obierz, pokrój w plastry", "Mięso oprósz przyprawami, wraz z ziemniakami wyłóż w naczyniu żaroodpornym i całość skrop oliwą", "Dołóż różyczki kalafiora", "Całość piecz 30 minut w 180-190 stopniach C, podawaj z plastrami kiszonego ogórka"] }, { "title": "Gulasz z wołowiny i oliwek z ziemniakami", "calories": "594 kcal", "ingredients": ["Wołowina 200 g,", "Oliwki 36 g (12 szt.),", "Pomidor 260 g (2 średnie szt.),", "Koncentrat pomidorowy 10 g (2 łyżeczki),", "Ziemniaki 320 g (4 szt.),", "Cebula 60 g (0,5 szt.),", "Czosnek 6 g (0,9 ząbka),", "Przyprawy 4 g (2 szczypty)"], "reciepe": ["Mięso pokrój w kostkę", "Do mięsa dodaj posiekaną cebulę i czosnek", "Zalej całość niewielką ilością wrzątku i duś", "Po chwili dodaj koncentrat i przyprawy: chili, pieprz, zioła prowansalskie. Duś pod przykryciem przez około 40 minut (w razie potrzeby dolewaj wody)", "Pod koniec duszenia dodaj sparzonego, obranego i pokrojonego pomidora oraz pokrojone oliwki", "Duś jeszcze kilka minut, a następnie podawaj z ugotowanymi ziemniakami"] }, { "title": "Pieczony schab z ziemniakami i kapustą kwaszoną", "calories": "673 kcal", "ingredients": ["Wieprzowina 120 g,", "Ziemniaki 320 g (4 szt.),", "Musztarda 20 g (2 łyżeczki),", "Olej 15 g (3 łyżeczki)"], "reciepe": ["Plastry schabu delikatnie rozbij i wymieszaj z olejem, musztardą, solą i pieprzem. Połóż w naczyniu żaroodpornym i podlej odrobiną wody. Wstaw do piekarnika nagrzanego do 180 stopni i piecz przez około 40 minut", "Podawaj z ugotowanymi ziemniakami i surówką z kwaszonej kapusty (DODATEK)"] }, { "title": "Klopsiki z ziemniakami i surówką z buraczków", "calories": "575 kcal", "ingredients": ["Mięso mielone chude 100 g (1 porcja po 100 g),", "Jaja kurze 60 g (1 szt.),", "Cebula 40 g (0,4 szt.),", "Ziemniaki 160 g (2 szt.),", "Natka pietruszki, świeża lub suszona 2 g (1 łyżeczka ),", "Oliwa z oliwek 10 g (1 łyżka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Mięso połącz z jajkiem, pokrojoną cebulką, solą, pieprzem i natką pietruszki. Całość wymieszaj i uformuj w klopsy", "Podsmaż na patelni z obu stron, aż się zarumienią", "Podawaj z gotowanymi ziemniakami i surówką z buraczków (DODATEK)"] }, { "title": "Kotlety mielone z puree ziemniaczanym i ogórkiem kiszonym", "calories": "556 kcal", "ingredients": ["Ziemniaki 355 g (4,4 szt.),", "Masło 3 g (niecała łyżeczka),", "Mięso mielone chude 66 g (0,7 porcji po 100g),", "Ogórek kwaszony 88 g (1,5 szt.),", "Oliwa z oliwek 12 g (1,3 łyżki),", "Przyprawy 1 g (0,7 szczypt),", "Otręby 5 g (1,5 łyżki)"], "reciepe": ["Ziemniaki ugotuj w lekko osolonej wodzie", "Mielone mięso dopraw, połącz z otrębami i uformuj kotleciki", "Mięso smaż z każdej strony po 2-3 minuty na patelni z olejem", "W międzyczasie rozdrobnij ogórka według uznania, a ziemniaki wygnieć na puree z dodatkiem masła", "Podawaj kotleciki na puree z dodatkiem ogórka"] }, { "title": "Kotlety drobiowe z warzywami w piekarniku", "calories": "559 kcal", "ingredients": ["Mięso mielone chude 150 g (1½ porcji po 100g),", "Przyprawy 2 g (1 szczypta),", "Oliwa z oliwek 10 g (1 łyżka),", "Ziemniaki 160 g (2 szt.),", "Papryka 120 g (½ szt.),", "Marchew 110 g (1 duża szt.)"], "reciepe": ["Rozgrzej piekarnik do 180°C", "Wymieszaj chude mięso mielone (drobiowe) z przyprawami", "Uformuj kotlety i przełóż je na blachę wyłożoną papierem do pieczenia", "Pokrój warzywa w słupki (ziemniaki w cieńsze) i wymieszaj z oliwą i przyprawami. Przełóż na blachę i upiecz razem z kotletami przez ok. 20-30 minut (w połowie pieczenia przewróć je na drugą stronę) lub aż będą gotowe"] }
-        ],
-        "ryż": [
-            { "title": "Kurczak duszony w winie z ryżem i fasolką", "calories": "574 kcal", "ingredients": ["Mięso z piersi kurczaka 100 g,", "Wino białe wytrawne 50 g (0,3 porcji 150 g),", "Mleko 70 g (0,3 szkl.),", "Koncentrat pomidorowy 10 g (2 łyżeczki),", "Masło 5 g (1 płaska łyżeczka),", "Fasola szparagowa świeża lub mrożona 150 g,", "Ryż brązowy 100 g (6,7 łyżki)"], "reciepe": ["Mięso pokrój w kostkę i oprósz pieprzem, rozmarynem, bazylią i solą", "Do garnka wlej mleko, wino. Dodaj masło i kurczaka", "Koncentrat zmieszaj z 1/4 szklanki wody i dodaj do garnka", "Zagotuj i duś pod przykryciem około 20-25 minut", "Podawaj z ugotowanym ryżem i fasolką szparagową"] }, { "title": "Kurczak tandori", "calories": "664 kcal", "ingredients": ["Ryż brązowy 90 g (6 łyżek),", "Mięso z piersi kurczaka 100 g,", "Cebula 110 g (1 szt.),", "Papryka 240 g (1 szt.),", "Oliwa z oliwek 20 g (2 łyżki),", "Przyprawy 4 g (2 szczypty)"], "reciepe": ["         Wszystkie przyprawy wymieszaj z oliwą, mięso pokrój w kostkę i zamarynuj", "Ryż ugotuj, cebulę posiekaj, paprykę pokrój w kostkę", "Kurczaka podsmaż ze wszystkich stron wraz z warzywami", "Paprykę i cebulę wymieszaj z ryżem, podawaj z mięsem"] }, { "title": "Szaszłyki z kurczaka w curry z ryżem i surówką", "calories": "586 kcal", "ingredients": ["Mięso z piersi kurczaka 100 g,", "Papryka 120 g (½ szt.),", "Ryż brązowy 90 g (6 łyżek),", "Jogurt naturalny 75 g (½ opak. po 150 g),", "Musztarda 20 g (2 łyżeczki),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["2/3 porcji jogurtu wymieszaj z curry i obtocz w nim kurczaka pokrojonego w kostkę", "Na patyki do szaszłyków ponabijaj naprzemiennie kawałki kurczaka oraz papryki", "Wstaw do piekarnika rozgrzanego do 220 stopni na około 10 minut", "Pozostały jogurt wymieszaj z musztardą i otrzymanym dipem polej szaszłyki", "Podawaj z ugotowanym ryżem i surówką z marchwii i selera (DODATEK)"] }, { "title": "Pierś z kurczaka duszona z papryką, ryż i surówka", "calories": "561 kcal", "ingredients": ["Mięso z piersi kurczaka 125 g,", "Papryka 120 g (½ szt.),", "Czosnek 7 g (1 ząbek),", "Natka pietruszki, świeża lub suszona 6 g (3 łyżeczki),", "Przyprawy 2 g (1 szczypta),", "Ryż brązowy 90 g (6 łyżek),", "Oliwa z oliwek 10 g (1 łyżka)"], "reciepe": ["Ugotuj ryż. Czosnek obierz i pokrój w cienkie plasterki.", "Mięso natrzyj pieprzem, solą i chili i obłóż czosnkiem", "Paprykę pokrój w cienkie paski", "Na rozgrzanej oliwi krótko podsmaż mięso i dodaj paprykę. Przykryj i duś przez około 15 minut. W razie potrzeby dodaj odrobinę wody", "Przed podaniem posyp pietruszką", "Podawaj z surówką z kapusty pekińskiej (DODATEK)"] }, { "title": "Curry z indyka", "calories": "575 kcal", "ingredients": ["Mięso z piersi indyka 125 g,", "Ryż brązowy 75 g (5 łyżek),", "Masło 20 g (4 płaskie łyżeczki),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["W garnku rozpuść masło i dodaj do niego sos pomidorowy oraz curry (około 1 łyżeczki) i imbir", "Indyka pokrój w drobne kawałki i dodaj do gotującego się sosu. Duś przez około 25 minut", "Podawaj z ugotowanym ryżem"] }, { "title": "Czosnkowy indyk z ryżem", "calories": "576 kcal", "ingredients": ["Mięso z piersi indyka 120 g,", "Czosnek 7 g (1 ząbek),", "Sałata 30 g (6 liści),", "Papryka 120 g (½ szt.),", "Pomidor 130 g (1 średnia szt.),", "Olej 10 g (2 łyżeczki),", "Ryż brązowy 100 g (6,7 łyżki),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Mięso i czosnek pokrój na kawałki. Umieść w naczyniu żaroodpornym, przypraw ziołami prowansalskimi i skrop olejem", "Wstaw do piekarnika rozgrzanego do 180 stopni na około 25 minut", "Liście sałaty porwij na mniejsze kawałki. Paprykę i pomidora pokrój. Warzywa wymieszaj z gotowym mięsem", "Przypraw bazylią i podawaj z ugotowanym ryżem"] }, { "title": "Tajska wołowina na ryżu", "calories": "667 kcal", "ingredients": ["Wołowina 100 g,", "Ryż brązowy 105 g (7 łyżek),", "Koncentrat pomidorowy 15 g (3 łyżeczki),", "Cebula 110 g (1 szt.),", "Oliwa z oliwek 20 g (2 łyżki),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Wołowinę drobno pokrój, wrzuć na oliwę, dopraw i podlej odrobiną wody", "Mięso duś 20 minut, w tym czasie ugotuj ryż w lekko osolonej wodzie", "Do mięsa dodaj posiekaną cebulę, koncentrat, gotuj jeszcze 10 minut i podawaj na ryżu"] }, { "title": "Mięso mielone z ryżem cukinią i pieczarkami", "calories": "568 kcal", "ingredients": ["Mięso mielone chude 120 g (1,2 porcji po 100g),", "Pieczarki 100 g (5 szt.),", "Cukinia 120 g (½ szt.),", "Ryż brązowy 75 g (5 łyżek),", "Olej 5 g (1 łyżeczka),", "Czosnek 7 g (1 ząbek),", "Cebula 30 g (0,3 szt.),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Pieczarki i cukinię obierz, a następnie pokrój w plasterki", "Na rozgrzanej patelni podsmaż cebulę, czosnek i mięso. Po kilku minutach dodaj pieczarki i cukinię", "Dopraw pieprzem i ziołami prowansalskimi", "Podawaj z ugotowanym ryżem"] }, { "title": "Leczo z mięsem mielonym i cukinią oraz ryżem", "calories": "557 kcal", "ingredients": ["Mięso mielone chude 100 g (1 porcja po 100 g),", "Papryka 240 g (1 szt.),", "Cukinia 120 g (½ szt.),", "Cebula 55 g (½ szt.),", "Pomidor 130 g (1 średnia szt.),", "Koncentrat pomidorowy 10 g (2 łyżeczki),", "Ryż brązowy 60 g (4 łyżki),", "Olej 5 g (1 łyżeczka)"], "reciepe": ["W garnku rozgrzej oliwę i przesmaż na niej mięso i posiekaną cebulę", "Paprykę i cukinię pokrój w kostkę i dodaj do mięsa", "Przypraw pieprzem, chili oraz odrobiną soli", "Pomidory sparz, obierz i pokrój w kostkę. Następnie dodaj je razem z koncentratem do pozostałych składników", "Dodaj odrobinę wody i gotuj duś jeszcze kilka minut", "Przypraw bazylią i podawaj z ugotowanym ryżem"] }
-        ],
-        "makaron": [
-            { "title": "Makaron z kurczakiem i pieczarkami", "calories": "710 kcal", "ingredients": ["Makaron pełnoziarnisty 120 g (1,7 szklanki),", "Mięso z piersi kurczaka 100 g,", "Pieczarki 120 g (6 szt.),", "Mąka pełnoziarnista 10 g (1 łyżka),", "Mleko 80 g (0,4 szkl.),", "Olej 10 g (2 łyżeczki),", "Cebula 60 g (0,5 szt.),", "Przyprawy 4 g (2 szczypty)"], "reciepe": ["Makaron ugotuj", "Cebulę i czosnek i pieczarki posiekaj. Podsmaż kilka minut na rozgrzanym oleju", "Kurczaka pokrój w kostkę i dodaj do pieczarek. Smaż do miękkości kurczaka", "Mąkę wymieszaj z wodą i dodaj do kurczaka. Trzymaj na wolnym ogniu dolewając od czasu do czasu wody", "Dodaj mleko, sól i pieprz. Gotuj do momentu zgęstnienia sosu", "Makaron polej sosem"] }, { "title": "Makaron z indykiem, cukinią, natką i mozzarellą", "calories": "555 kcal", "ingredients": ["Makaron pełnoziarnisty 80 g (1,1 szklanki),", "Oliwa z oliwek 5 g (niecała łyżka),", "Mięso z piersi indyka 125 g,", "Czosnek 7 g (1 ząbek),", "Cukinia 120 g (½ szt.),", "Natka pietruszki, świeża lub suszona 4 g (2 łyżeczki),", "Ser mozzarella 40 g (2 plastry)"], "reciepe": ["Ugotuj makaron zgodnie z instrukcją na opakowaniu", "Drobno posiekaj czosnek i natkę. Pokrój cukinię i indyka pokrój w kostkę", "Rozgrzej oliwę na patelni. Wrzuć kurczaka i duś, aż nabierze koloru. Dodaj cukinię i czosnek i dalej mieszaj", "Dopraw solą i pieprzem. Dodaj startą lub drobno pokrojoną mozzarellę i odcedzony makaron i całość wymieszaj", "Przełóż na talerz. Posyp natką"] }, { "title": "Makaron z dipem paprykowym i wołowiną", "calories": "674 kcal", "ingredients": ["Makaron pełnoziarnisty 100 g (1,4 szklanki),", "Wołowina 50 g,", "Papryka 240 g (1 szt.),", "Cebula 110 g (1 szt.),", "Oliwa z oliwek 20 g (2 łyżki),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Makaron ugotuj w lekko osolonej wodzie", "Na patelni podsmaż na połowie oliwy mięso mielone lub drobno posiekane, dopraw", "W rondlu oddzielnie na pozostałej oliwie podsmaż pokrojone warzywa, dopraw i zblenduj na gładki mus", "Na makaronie wyłóż mięso, całość polej dipem paprykowym i udekoruj świeżą natką"] }, { "title": "Makaron z mięsem, pieczarkami, kapustą i marchwią", "calories": "656 kcal", "ingredients": ["Makaron pełnoziarnisty 100 g (1,4 szklanki),", "Oliwa z oliwek 10 g (1 łyżka),", "Cebula 35 g (0,3 szt.),", "Wieprzowina 120 g,", "Przyprawy 4 g (2 szczypty),", "Pieczarki 100 g (5 szt.),", "Kapusta 80 g,", "Marchew 55 g (½ dużej szt.)"], "reciepe": ["Posiekaj cebulę. Pokrój pieczarki w ćwiartki, a mięso w równą kostkę", "Rozgrzej oliwę na patelni. Wrzuć cebulę i mięso i duś, aż nabiorą koloru. Dodaj przyprawy (sól, pieprz, tymianek, rozmaryn)", "Dodaj pieczarki i resztę przyprawy (ziele angielskie, liść laurowy) i duś przez ok. 7-10 minut. W razie potrzeby dodaj kilka łyżek wody", "Ugotuj makaron zgodnie z instrukcją na opakowaniu", "Poszatkuj kapustę i zetrzyj marchew na tarce. Dodaj je do pieczarek i mieszaj przez kilka minut", "Wymieszaj makaron z mięsem i warzywami"] }, { "title": "Spaghetti z mięsem mielonym", "calories": "608 kcal", "ingredients": ["Makaron pełnoziarnisty 90 g (1,3 szklanki),", "Włoszczyzna świeża lub mrożona 100 g,", "Mięso mielone chude 100 g (1 porcja po 100 g),", "Szczypiorek świeży lub suszony 2 g (1 szczypta)"], "reciepe": ["Przygotuj sos (DODATEK)", "Makaron ugotuj al dente", "Na patelni rozgrzej oliwę i przesmaż na niej mięso. Dopraw ziołami, pieprzem i solą.", "Do mięsa dodaj włoszczyznę, a po 5 minutach połącz wszystko z sosem", "Makaron polej sosem i posyp posiekanym szczypiorkiem"] }
-        ],
-        "ryba": [
-            { "title": "Ziołowa ryba na warzywach (a'la Gordon Ramsay) z kaszą", "calories": "634 kcal", "ingredients": ["Ryba chuda świeża lub mrożona 250 g,", "Kasza 52 g (4 łyżki),", "Cukinia 240 g (1 szt.),", "Cytryna 40 g (½ szt.),", "Oliwki 24 g (8 szt.),", "Pomidor 260 g (2 średnie szt.),", "Olej 10 g (2 łyżeczki),", "Przyprawy 4 g (2 szczypty)"], "reciepe": ["Cukinię pokrój w kostkę, a następnie podsmaż na rozgrzanym oleju", "Dodaj oliwki, oraz sparzonego i obranego ze skórki pomidora", "Przypraw solą, pieprzem i rozmarynem", "Filet natrzyj solą i pieprzem", "W naczyniu żaroodpornym wyłóż warzywa, a na nich rybę skropioną olejem i sokiem z cytryny", "Zapiekaj w rozgrzanym piekarniku (200 stopni) przez około 25 minut", "Podawaj z ugotowaną kaszą"] }, { "title": "Ryba ze szpinakiem i mozzarellą z ziemniakami", "calories": "562 kcal", "ingredients": ["Ryba chuda świeża lub mrożona 150 g,", "Szpinak świeży lub mrożony 100 g,", "Czosnek 7 g (1 ząbek),", "Ser mozzarella 40 g (2 plastry),", "Ziemniaki 320 g (4 szt.),", "Olej 5 g (1 łyżeczka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Rybę oprósz solą i pieprzem", "Czosnek posiekaj i posyp nim rybę", "Na wierzch wyłóż szpinak", "Całość skrop olejem i zawiń w folię do pieczenia. Zapiekaj w piekarniku przez 20 minut w temperaturze 180 stopni", "5 minut przed końcem zapiekania rozwiń rybę i na wierz połóż mozzarellę", "Podawaj z ugotowanymi ziemniakami"] }, { "title": "Domowe paluszki rybne z ziemniakami i sałatką", "calories": "660 kcal", "ingredients": ["Ryba chuda świeża lub mrożona 100 g,", "Jaja kurze 60 g (1 szt.),", "Bułka tarta 8 g (1 łyżka),", "Ziemniaki 400 g (5 szt.),", "Oliwa z oliwek 20 g (2 łyżki)"], "reciepe": ["Ziemniaki obierz, pokrój w ćwiartki i ugotuj w lekko osolonej wodzie", "Rybę pokrój w paski (paluszki), każdy obtocz w przyprawach (sól, pieprz, gałka muszkatołowa, odrobina curry), następnie w roztrzepanym jajku i bułce tartej", "Rybę smaż po 2-3 minuty na stronie na patelni z oliwą", "W międzyczasie przygotuj sałatkę pomidorowo-paprykową (DODATEK), podawaj z rybą i ziemniakami"] },, { "title": "Łosoś zapiekany z mozzarellą i puree ziemniaczanym", "calories": "562 kcal", "ingredients": ["Ryba tłusta świeża lub mrożona 100 g,", "Ziemniaki 240 g (3 szt.),", "Mleko 50 g (0,2 szkl.),", "Ser mozzarella 60 g (3 plastry),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Plastry sera połóż na rybie, dopraw ziołami prowansalskimi i zapiecz", "Ziemniaki ugotuj w lekko osolonej wodzie i potłucz z mlekiem"] }, { "title": "Łosoś na parze z puree z ziemniaków i mizerią", "calories": "568 kcal", "ingredients": ["Ryba tłusta świeża lub mrożona 150 g,", "Ziemniaki 240 g (3 szt.),", "Ogórek zielony 170 g (1 szt.),", "Jogurt naturalny 60 g (0,4 opak. po 150 g),", "Przyprawy 2 g (1 szczypta),", "Mleko 50 g (0,2 szkl.)"], "reciepe": ["Łososia dopraw rozmarynem i pieprzem, ugotuj na parze", "Ziemniaki ugotuj w lekko osolonej wodzie i potłucz z mlekiem", "Ogórka zetrzyj na tarce, wymieszaj z jogurtem i pieprzem"] }, { "title": "Cassolette (zapiekanka) z łososia i ziemniaków", "calories": "585 kcal", "ingredients": ["Ryba tłusta świeża lub mrożona 80 g,", "Ziemniaki 400 g (5 szt.),", "Marchew 110 g (1 duża szt.),", "Oliwa z oliwek 10 g (1 łyżka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Ziemniaki i marchew obierz, pokrój w talarki", "Łososia pokrój w kostkę, wyłóż na dnie naczynia żaroodpornego", "Na łososiu połóż plastry marchewki i ziemniaków, całość dopraw", "Zapiekankę piecz 40 minut w 190 stopniach C"] }
-        ],
-        "vege makaron": [
-            { "title": "Makaron z sosem pomidorowym", "calories": "620 kcal", "ingredients": ["Makaron pełnoziarnisty 130 g (1,9 szklanki),", "Pomidor 340 g (2,6 średniej szt.),", "Cebula 110 g (1 szt.),", "Oliwa z oliwek 10 g (1 łyżka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Ugotuj makaron na półtwardo.", "Drobno posiekaną cebulę zeszklij na oliwie.", "Sparz pomidory, zdejmij skórkę i pokrój na kawałki.", "Dorzuć pomidory do cebuli, trzymaj na ogniu, aż do uzyskania sosu pomidorowego.", "Wymieszaj z przyprawami.", "Jedz z makaronem."] }, { "title": "Makaron z bakłażanem i pomidorami", "calories": "656 kcal", "ingredients": ["Bakłażan 109 g (0,5 szt.),", "Pomidor 212 g (1,6 średniej szt.),", "Czosnek 8 g (1,3 ząbka),", "Makaron pełnoziarnisty 153 g (2,2 szklanki),", "Oliwa z oliwek 6 g (niecała łyżka),", "Przyprawy 0 g (0,3 szczypt)"], "reciepe": ["Bakłażana pokrój w kostkę, czosnek w plasterki.", "W rondlu rozgrzej oliwę, podsmaż chwilę czosnek, dodaj bakłażana, a po 5 minutach pomidory pokrojone w kawałki. Przypraw solą, pieprzem i chilli. Całość duś 10 minut.", "Makaron ugotuj al dente według przepisu na opakowaniu.", "Dodaj odcedzony makaron do rondla z warzywami. Wymieszaj."] }, { "title": "Makaron z cukinią i białym serem", "calories": "540 kcal", "ingredients": ["Cukinia 240 g (1 szt.),", "Ser twarogowy chudy 80 g (2,7 plastrów),", "Makaron pełnoziarnisty 100 g (1,4 szklanki),", "Masło 5 g (1 płaska łyżeczka),", "Oliwa z oliwek 5 g (niecała łyżka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Cukinię umyj, nie obieraj i pokrój w kostkę. Smaż na małym ogniu przez 10 minut.", "W tym samym czasie ugotuj makaron al dente w osolonej wodzie. Odcedź.", "Makaron przełóż na patelnię do cukinii, dodaj masło i oliwę.", "Posyp pokruszonym białym serem, dopraw solą, pieprzem i bazylią."] }, { "title": "Makaron zapiekany ze szpinakiem i mozzarellą", "calories": "565 kcal", "ingredients": ["Makaron pełnoziarnisty 90 g (1,3 szklanki),", "Szpinak świeży lub mrożony 100 g,", "Ser mozzarella 80 g (4 plastry),", "Jogurt naturalny 60 g (0,4 opak. po 150 g),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Makaron gotuj 5 minut w lekko osolonej wodzie, odcedź i włóż do naczynia żaroodpornego", "Do makaronu dodaj szpinak wymieszany z jogurtem i pieprzem, na wierzch połóż starty ser", "Całość zapiecz przez 15 minut w piekarniku"] }, { "title": "Makaron z pesto bazyliowym z mozzarellą", "calories": "556 kcal", "ingredients": ["Makaron pełnoziarnisty 61 g (0,9 szklanki),", "Oliwa z oliwek 18 g (1,9 łyżki),", "Przyprawy 3 g (1,9 szczypt),", "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 9 g (1,9 łyżeczki),", "Ser mozzarella 49 g (2,5 plastrów)"], "reciepe": ["Makaron ugotuj al dente", "Oliwę zblenduj z bazylią, solą, pieprzem i nasionami słonecznika", "Makaron wymieszaj z bazyliowym pesto", "Posyp danie pokrojoną mozzarellą"] }, { "title": "Łosoś z sosem szpinakowym i makaronem", "calories": "576 kcal", "ingredients": ["Ryba tłusta świeża lub mrożona 76 g,", "Szpinak świeży lub mrożony 64 g,", "Mleko 128 g (0,6 szkl.),", "Czosnek 8 g (1,3 ząbka),", "Oliwa z oliwek 12 g (1,3 łyżki),", "Makaron pełnoziarnisty 64 g (0,9 szklanki),", "Przyprawy 1 g (0,6 szczypt)"], "reciepe": ["Rybę podziel na mniejsze kawałki, oprósz przyprawami, posmaruj oliwą i zapiecz w piekarniku", "Szpinak dopraw czosnkiem, polej mlekiem i duś pod przykryciem", "Na gotowego łososia przełóż szpinak"] }, { "title": "Spaghetti z łososiem", "calories": "658 kcal", "ingredients": ["Makaron pełnoziarnisty 120 g (1,7 szklanki),", "Pomidor 260 g (2 średnie szt.),", "Ryba tłusta świeża lub mrożona 50 g,", "Pieczarki 100 g (5 szt.),", "Przyprawy 2 g (1 szczypta),", "Olej 10 g (2 łyżeczki)"], "reciepe": ["Pieczarki pokrój w plastry i wrzuć na rozgrzany olej, duś około 3 minuty, aż puszczą wodę", "Do pieczarek wrzuć makaron i wlej wody do poziomu makaronu, co jakiś czas przemieszaj", "Pomidory oraz łososia pokrój w kostkę i dorzuć do makaronu, wymieszaj", "W razie potrzeby dolej trochę wody, ale nie za dużo - cała wlana woda ma zostać wchłonięta przez makaron, dopraw i podawaj"] }, { "title": "Makaron z tuńczykiem w sosie cytrynowym", "calories": "366 kcal", "ingredients": ["Makaron pełnoziarnisty 50 g (0,7 szklanki),", "Tuńczyk w sosie własnym 90 g (3 łyżki),", "Cytryna 30 g (0,4 szt.),", "Oliwa z oliwek 10 g (1 łyżka),", "Czosnek 7 g (1 ząbek),", "Natka pietruszki, świeża lub suszona 2 g (1 łyżeczka )"], "reciepe": ["Ugotuj makaron", "W czasie gotowania makaronu rozgrzej na patelni oliwę, dodaj czosnek i odrobinę startej skórki z cytryny", "Podsmażaj do czasu aż czosnek się zeszkli, następnie zdejmij z patelni czosnek i skórkę z cytryny", "Na patelnię dorzuć tuńczyka, natkę pietruszki, dodaj sok wyciśnięty z cytryny i podsmażaj ok. 5 minut", "Dodaj ugotowany makaron, dopraw pieprzem i wymieszaj"] }, { "title": "Makaron z sosem pomidorowym i tuńczykiem", "calories": "582 kcal", "ingredients": ["Makaron pełnoziarnisty 120 g (1,7 szklanki),", "Tuńczyk w sosie własnym 90 g (3 łyżki)"], "reciepe": ["Przygotuj sos (DODATEK)", "Makaron ugotuj al dente", "Do sosu dodaj tuńczyka i polej nim makaron"] },
-        ],
-        "vege inne": [
-            { "title": "Zielone naleśniki z twarożkiem, pieczarkami i koperkiem", "calories": "598 kcal", "ingredients": ["Mąka pełnoziarnista 80 g (8 łyżek),", "Olej 10 g (2 łyżeczki),", "Mleko 8 g (0,1 szkl.),", "Jaja kurze 120 g (2 szt.),", "Ser twarogowy chudy 60 g (2 plastry),", "Przyprawy 4 g (2 szczypty),", "Szpinak świeży lub mrożony 20 g,", "Pieczarki 120 g (6 szt.)"], "reciepe": ["Mąkę przesiej przez sito, dolej mleko i wbij jajko. Ciasto wymieszaj i zblenduj ze szpinakiem na gładką masę", "Podsmaż naleśniki na złoty kolor z obu stron", "W międzyczasie pokrój pieczarki w plastry i podsmaż je kilka minut na patelni", "Na gotowego naleśnika nałóż twarożek z częścią przygotowanego koperku i pieprz. Wyłóż na niego przygotowane pieczarki, zawiń i posyp do ozdoby pozostałym koperkiem"] }, { "title": "Wegetariańskie leczo z papryki i pieczarek na jaglance", "calories": "575 kcal", "ingredients": ["Kasza 91 g (7 łyżek),", "Pieczarki 100 g (5 szt.),", "Papryka 240 g (1 szt.),", "Cukinia 240 g (1 szt.),", "Koncentrat pomidorowy 20 g (4 łyżeczki),", "Olej 15 g (3 łyżeczki),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Kaszę ugotuj w lekko osolonej wodzie", "Warzywa i pieczarki pokrój w kostkę, wrzuć na patelnię z olejem i dopraw", "Dodaj koncentrat pomidorowy, duś 15 minut pod przykryciem i podawaj potem na kaszy"] }
-        ]
+    {
+      title: "Sałatka pomidorowo-paprykowa",
+      calories: "dodatek",
+      ingredients: [
+        "Pomidor 130 g (1 średnia szt.),",
+        "Papryka 120 g (½ szt.),",
+        "Szczypiorek świeży lub suszony 2 g (1 szczypta)",
+      ],
+      recipe: [
+        "Pokrój pomidora i paprykę",
+        "Polej sosem winegret i posyp posiekanym szczypiorkiem",
+      ],
     },
-    "podwieczorek": {
-        "naleśniki i racuchy": [],
-        "na słodko": [
-            { "title": "Waniliowy pudding chia z mango", "calories": "472 kcal", "ingredients": ["Mango 140 g (½ sztuka 280 g),", "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 20 g (4 łyżeczki),", "Jogurt naturalny 300 g (2 opak. po 150 g),", "Miód pszczeli 10 g (2 łyżeczki),", "Wiórki kokosowe 8 g (2 łyżki),", "Przyprawy 4 g (2 szczypty)"], "reciepe": ["Wymieszaj ze sobą jogurt, chia, wanilię i odstaw do lodówki na całą noc", "Następnego dnia, zmiksuj mango i połóż na warstwę puddingu chia", "Na wierzchu posyp wiórkami kokosowymi"] }, { "title": "Mus owocowy", "calories": "195 kcal", "ingredients": ["Jabłko 85 g (½ średniej szt.),", "Kiwi 110 g (1 szt.),", "Banan 90 g (0,5 średniej szt.),", "Otręby 4 g (1 łyżka)"], "reciepe": ["Obierz banana i kiwi", "Z jabłka wykrój gniazdo nasienne", "Zmiksuj wszystkie owoce i dodaj otręby", "Jeśli mus będzie zbyt gęsty dodaj niewielką ilość wody"] }, { "title": "Jogurt z płatkami, miodem i truskawkami", "calories": "190 kcal", "ingredients": ["Jogurt naturalny 150 g (1 opak. po 150 g),", "Płatki owsiane 20 g (2 łyżki),", "Miód pszczeli 5 g (1 łyżeczka),", "Truskawki świeże lub mrożone 40 g"], "reciepe": ["Wymieszaj jogurt z miodem i płatkami owsianymi", "Pokrój truskawki i dodaj do jogurtu"] }, { "title": "Partaszka z jabłkiem", "calories": "392 kcal", "ingredients": ["Mleko 300 g (1,4 szkl.),", "Jaja kurze 60 g (1 szt.),", "Mąka pełnoziarnista 30 g (3 łyżki),", "Miód pszczeli 5 g (1 łyżeczka),", "Jabłko 85 g (½ średniej szt.),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Zagotuj 2/3 mleka", "W osobnym naczyniu wymieszaj jajko, pozostałą część mleka, mąkę, miód oraz szczyptę soli i cynamonu", "Do gotującego się mleka wlej wymieszane pozostałe składniki. Cały czas intensywnie mieszaj", "Gdy potrawa zgęstnieje, dodaj pokrojone w kostkę jabłko"] }, { "title": "Ciastka owsiane z rodzynkami", "calories": "193 kcal", "ingredients": ["Płatki owsiane 33 g (3,3 łyżki),", "Jaja kurze 20 g (0,3 szt.),", "Rodzynki 10 g (niecała łyżka),", "Miód pszczeli 5 g (1 łyżeczka),", "Przyprawy 0 g (0,3 szczypt)"], "reciepe": ["Płatki zalej wrzątkiem i przykryj na 2-3 minuty", "Dodaj jajko, miód, rodzynki i cynamon i dokładnie wymieszaj", "Uformuj ciasteczka i włóż do piekarnika rozgrzanego do 180 stopni na 12 minut"] }, { "title": "Muffiny otrębowe z jabłkami", "calories": "402 kcal", "ingredients": ["Otręby 40 g (10 łyżek),", "Jaja kurze 120 g (2 szt.),", "Serek wiejski naturalny 80 g (4 łyżki),", "Jabłko 170 g (1 średnia szt.)"], "reciepe": ["Jajka roztrzep i zmiksuj z serkiem wiejskim, dodaj otręby i starte jabłko", "Masę wylej do foremek do muffinek i piecz około 20 minut w piekarniku"] }, { "title": "Banan grillowany z miodem i imbirem", "calories": "178 kcal", "ingredients": ["Banan 170 g (0,9 średniej szt.),", "Miód pszczeli 5 g (1 łyżeczka),", "Cytryna 5 g (0,1 szt.),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Miód wymieszaj z sokiem z cytryny i szczyptą imbiru", "Banana razem ze skórką przekrój wzdłuż na pół", "Banana posmaruj przygotowanym sosem i grilluj na patelni aż lekko się zarumieni"] }, { "title": "Zapiekana owsianka owocowa", "calories": "381 kcal", "ingredients": ["Płatki owsiane 30 g (3 łyżki),", "Jabłko 170 g (1 średnia szt.),", "Banan 90 g (0,5 średniej szt.),", "Miód pszczeli 5 g (1 łyżeczka),", "Jogurt naturalny 50 g (0,3 opak. po 150 g),", "Mleko 110 g (½ szkl.),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Płatki zalej wrzącym mlekiem i odstaw pod przykryciem na 10 minut", "Jabłko zetrzyj na tarce, a banana pokrój w kostkę. Owoce dodaj do płatków i posyp cynamonem", "Owsiankę przełóż do naczynia żaroodpornego i zapiekaj w piekarniku rozgrzanym do 180 stopniu przez około 20 minut", "Zapieczoną owsiankę zalej jogurtem i miodem"] }, { "title": "Placuszki otrębowe z cynamonem", "calories": "199 kcal", "ingredients": ["Otręby 20 g (5,2 łyżki),", "Jaja kurze 78 g (1,3 szt.),", "Jogurt naturalny 52 g (0,3 opak. po 150 g),", "Miód pszczeli 6 g (1,3 łyżeczki),", "Przyprawy 2 g (1,3 szczypt)"], "reciepe": ["Wymieszaj wszystkie składniki: jaja, jogurt, miód, cynamon i otręby (mogą być otręby owsiane lub pomieszane pół na pół owsiane z pszennymi)", "Odstaw powstałą masę na 5 minut", "Z powstałej masy usmaż placuszki na suchej patelni teflonowej"] }
-        ],
-        "na słono": []
+    {
+      title: "Sos ziołowy Vinaigrette",
+      calories: "dodatek",
+      ingredients: [
+        "Oliwa z oliwek 5 g (niecała łyżka)",
+        "Cytryna 15 g (0,2 szt.)",
+        "Przyprawy 2 g (1 szczypta)",
+      ],
+      recipe: [
+        "Do oliwy dodaj soku z cytryny oraz zioła prowansalskie",
+        "Dokładnie wymieszaj",
+      ],
     },
-    "kolacja": {
-        "kanapki": [
-            { "title": "Kanapki z pastą z tuńczyka", "calories": "528 kcal", "ingredients": ["Pieczywo pełnoziarniste 140 g (4 kromki),", "Tuńczyk w sosie własnym 60 g (2 łyżki),", "Ogórek kwaszony 120 g (2 szt.),", "Jogurt naturalny 60 g (0,4 opak. po 150 g),", "Cebula 40 g (0,4 szt.),", "Jaja kurze 60 g (1 szt.)"], "reciepe": ["Tuńczyka i ugotowane na twardo jajko rozgnieć widelcem i wymieszaj z jogurtem, posiekaną cebulą i ogórkiem", "Przypraw pieprzem i solą", "Posmaruj pieczywo pastą"] }, { "title": "Kanapka z pastą jajeczno-pieczarkową i pomidorem", "calories": "518 kcal", "ingredients": ["PASTA:", "Jaja kurze 96 g (1,6 szt.),", "Pieczarki 64 g (3,2 szt.),", "Cebula 32 g (0,3 szt.),", "Olej 8 g (1,6 łyżeczki),", "Przyprawy 3 g (1,6 szczypt)", "POZOSTAŁE", "Pieczywo pełnoziarniste 112 g (3,2 kromki),", "Pomidor 193 g (1,5 średniej szt.),", "Szczypiorek świeży lub suszony 3 g (1,6 szczypt)"], "reciepe": ["Posiekane pieczarki i cebulę podsmaż na rozgrzanym oleju", "Zmiksuj z ugotowanym na twardo jajkiem", "Przypraw pieprzem i solą do smaku", "Pieczywo posmaruj pastą", "Na wierzch ułóż plasterki pomidora i posyp szczypiorkiem"] }, { "title": "Pasta z wędzoną makrelą, pieczywo, papryka", "calories": "372 kcal", "ingredients": ["Papryka 79 g (0,3 szt.),", "Pieczywo pełnoziarniste 93 g (2,7 kromki),", "Ryba tłusta świeża lub mrożona 53 g,", "Jogurt naturalny 39 g (0,3 opak. po 150 g),", "Przyprawy 5 g (2,7 szczypt),", "Natka pietruszki, świeża lub suszona 5 g (2,7 łyżeczki)"], "reciepe": ["Rybę ugnieć z jogurtem, natką i pieprzem", "Na pieczywie rozłóż pastę", "Zjedz z papryką"] }, { "title": "Kanapka z jajkiem w sosie szczypiorkowym", "calories": "467 kcal", "ingredients": ["Jaja kurze 120 g (2 szt.),", "Jogurt naturalny 75 g (½ opak. po 150 g),", "Szczypiorek świeży lub suszony 10 g (5 szczypt),", "Rzodkiewka 45 g (3 szt.),", "Pieczywo pełnoziarniste 105 g (3 kromki)"], "reciepe": ["Jajko ugotuj na twardo i pokrój w plasterki", "Szczypiorek i rzodkiewkę posiekaj. Wymieszaj z jogurtem", "Jajko ułóż na pieczywie i polej otrzymanym sosem"] }, { "title": "Kanapki z pastą z awokado i ogórka", "calories": "383 kcal", "ingredients": ["Pieczywo pełnoziarniste 105 g (3 kromki),", "Awokado 70 g (½ szt.),", "Rzodkiewka 45 g (3 szt.),", "Ogórek zielony 85 g (½ szt.),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Awokado obierz i zmiksuj razem z ogórkiem i rzodkiewką", "Pastę przypraw pieprzem i posmaruj nią pieczywo"] }, { "title": "Kanapka z pastą twarogową", "calories": "364 kcal", "ingredients": ["Pieczywo pełnoziarniste 105 g (3 kromki),", "Ser twarogowy chudy 90 g (3 plastry),", "Jogurt naturalny 45 g (0,3 opak. po 150 g),", "Szczypiorek świeży lub suszony 6 g (3 szczypty),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Ser utrzyj z jogurtem, szczypiorkiem oraz ulubionymi ziołami i przyprawami", "Pieczywo posmaruj pastą"] }, { "title": "Kanapki z cukinią i rzodkiewką", "calories": "177 kcal", "ingredients": ["Cukinia 60 g (¼ szt.),", "Rzodkiewka 45 g (3 szt.),", "Pieczywo pełnoziarniste 35 g (1 kromka),", "Olej 5 g (1 łyżeczka),", "Masło 5 g (1 płaska łyżeczka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Cukinię pokrój w półplasterki, dopraw solą, pieprzem oraz ziołami prowansalskimi i podsmaż na oleju", "Pieczywo posmaruj masłem", "Cukinię ułóż na chlebie, na wierzch dodaj plasterki rzodkiewki"] }, { "title": "Kanapka z masłem bazyliowym, szynką i papryką", "calories": "374 kcal", "ingredients": ["Pieczywo pełnoziarniste 105 g (3 kromki),", "Szynka 45 g (3 plastry),", "Papryka 60 g (¼ szt.),", "Masło 10 g (2 płaskie łyżeczki),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Bazylię świeżą lub suszoną utrzyj dokładnie z masłem i posmaruj nim pieczywo", "Na kanapce ułóż szynkę i pokrojoną paprykę"] }, { "title": "Kanapka z serkiem, awokado i papryką", "calories": "473 kcal", "ingredients": ["Pieczywo pełnoziarniste 105 g (3 kromki),", "Puszysty serek twarogowy 24 g (2,4 łyżeczka - 10 g),", "Awokado 70 g (½ szt.),", "Papryka 170 g (0,7 szt.)"], "reciepe": ["Pieczywo posmaruj serkiem i ułóż na nim pokrojoną paprykę", "Awokado wydrąż łyżeczką, rozgnieć widelcem i ułóż na kanapce"] }
-        ],
-        "tosty i zapiekanki": [
-            { "title": "Grzanki z jajecznicą, pomidorem i koperkiem", "calories": "462 kcal", "ingredients": ["Jaja kurze 120 g (2 szt.),", "Pieczywo pełnoziarniste 105 g (3 kromki),", "Pomidor 30 g (0,2 średniej szt.),", "Koperek świeży lub suszony 2 g (1 łyżeczka ),", "Olej 5 g (1 łyżeczka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Pieczywo zapiecz w piekarniku lub w tosterze", "Jajka rozmieszaj z odrobiną wody i wlej na rozgrzany olej. Przypraw pieprzem", "Na grzankach ułóż plastry pomidora i jajecznicę", "Posyp posiekanym koperkiem"] }, { "title": "Tosty z mozzarellą, szynką i kukurydzą", "calories": "512 kcal", "ingredients": ["Pieczywo pełnoziarniste 121 g (3,5 kromki),", "Szynka 26 g (1,7 plastra szt.),", "Kukurydza konserwowa 52 g (3,5 łyżki),", "Pomidor 112 g (0,9 średniej szt.),", "Ser mozzarella 52 g (2,6 plastrów)"], "reciepe": ["Pieczywo obłóż plastrami szynki, sera, pomidora", "Posyp kukurydzą i złóż kanapki", "Zapiekaj w tosterze lub piekarniku rozgrzanym do 220 stopni C przez 10 minut"] }, { "title": "Tosty z jajkiem i szynką", "calories": "415 kcal", "ingredients": ["Pieczywo pełnoziarniste 90 g (2,6 kromki),", "Szynka 38 g (2,6 plastra szt.),", "Jaja kurze 77 g (1,3 szt.),", "Sałata 12 g (2,6 liści),", "Pomidor 38 g (0,3 średniej szt.),", "Przyprawy 2 g (1,3 szczypt),", "Olej 6 g (1,3 łyżeczki)"], "reciepe": ["Pieczywo zapiecz w tosterze lub piekarniku", "Na wierzch pieczywa wyłóż sałatę, szynkę i pomidora", "Jajko usmaż na niewielkiej ilości tłuszczu i przełóż na kanapkę", "Przykryj drugą kromką"] }, { "title": "Tost z awokado i szynką a'la Jamie Oliver", "calories": "511 kcal", "ingredients": ["Pieczywo pełnoziarniste 105 g (3 kromki),", "Szynka 45 g (3 plastry),", "Pomidor 130 g (1 średnia szt.),", "Awokado 70 g (½ szt.),", "Oliwa z oliwek 10 g (1 łyżka),", "Cytryna 5 g (0,1 szt.),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Zapiecz pieczywo w tosterze lub piekarniku", "Skrop oliwą", "Na kanapkach ułóż plastry pomidora, szynkę oraz pokrojone awokado", "Skrop sokiem z cytryny i posyp bazylią"] }, { "title": "Grzanki z jabłkami i cynamonem", "calories": "406 kcal", "ingredients": ["Pieczywo pełnoziarniste 105 g (3 kromki),", "Jabłko 170 g (1 średnia szt.),", "Masło 10 g (2 płaskie łyżeczki),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Pieczywo posmaruj masłem", "Jabłko pokrój w plasterki i ułóż na kanapce", "Posyp cynamonem", "Wstaw do piekarnika rozgrzanego do 180 stopni na 3-4 minuty."] }, { "title": "Grzanki z pomidorem, papryką i cukinią", "calories": "391 kcal", "ingredients": ["Pieczywo pełnoziarniste 105 g (3 kromki),", "Cukinia 70 g (0,3 szt.),", "Pomidor 130 g (1 średnia szt.),", "Papryka 60 g (¼ szt.),", "Czosnek 7 g (1 ząbek),", "Przyprawy 2 g (1 szczypta),", "Oliwa z oliwek 10 g (1 łyżka)"], "reciepe": ["Wszystkie warzywa pokrój w drobną kostkę i przypraw ziołami prowansalskimi", "Pieczywo włóż do piekarnika rozgrzanego do 180 stopni na 5 minut. Po wyjęciu ułóż na nim warzywa i skrop oliwa z oliwek"] }
-        ],
-        "inne": [
-            { "title": "Jajecznica z pieczarkami i otrębami z pieczywem", "calories": "489 kcal", "ingredients": ["Jaja kurze 120 g (2 szt.),", "Pieczywo pełnoziarniste 105 g (3 kromki),", "Pieczarki 100 g (5 szt.),", "Otręby 8 g (2 łyżki),", "Olej 5 g (1 łyżeczka)"], "reciepe": ["Pieczarki posiekaj i podsmaż 5 minut na oleju", "Do pieczarek dodaj jajko, otręby i usmaż", "Podaj z pieczywem (możesz je opiec w opiekaczu lub piekarniku)"] }, { "title": "Jajka sadzone, sałatka (awokado,pomidor), chleb", "calories": "486 kcal", "ingredients": ["Jaja kurze 120 g (2 szt.),", "Pieczywo pełnoziarniste 70 g (2 kromki),", "Awokado 70 g (½ szt.),", "Pomidor 200 g (1,5 średniej szt.),", "Cytryna 20 g (¼ szt.),", "Przyprawy 6 g (3 szczypty)"], "reciepe": ["Jajka zrób na sadzone na patelni bez tłuszczu. Popieprz i posól", "Cząstki pomidora i kawałki awokado wymieszaj, skrop sokiem i posyp bazylią", "Zjedz z pieczywem"] }, { "title": "Jajka na twardo w sosie jogurtowo-ziołowym", "calories": "393 kcal", "ingredients": ["Jaja kurze 120 g (2 szt.),", "Jogurt naturalny 100 g (0,7 opak. po 150 g),", "Pieczywo pełnoziarniste 35 g (1 kromka),", "Suszone pomidory w oleju 40 g (2 plastry),", "Szczypiorek świeży lub suszony 2 g (1 szczypta),", "Natka pietruszki, świeża lub suszona 2 g (1 łyżeczka ),", "Koperek świeży lub suszony 2 g (1 łyżeczka )"], "reciepe": ["Jajka ugotuj na twardo (około 8 minut)", "Natkę pietruszki, koperek i szczypiorek drobno posiekaj, suszone pomidory pokrój na małe kawałki", "Zioła i suszone pomidory wymieszaj z jogurtem i podaj z jajkami", "Zjedz z pieczywem pełnoziarnistym"] }, { "title": "Jajko na miękko, chleb ze szpinakowym pesto, pomidor", "calories": "485 kcal", "ingredients": ["Jaja kurze 120 g (2 szt.),", "Pomidor 200 g (1,5 średniej szt.),", "Szpinak świeży lub mrożony 20 g,", "Nasiona słonecznika, dyni, chia, sezam lub siemię lniane 5 g (1 łyżeczka),", "Oliwa z oliwek 10 g (1 łyżka),", "Pieczywo pełnoziarniste 70 g (2 kromki),", "Przyprawy 10 g (5 szczypt),", "Cytryna 16 g (0,2 szt.)"], "reciepe": ["Przyprawy: sól, pieprz, oregano", "Ugotuj jajka na miekko", "Szpinak/ natkę pietruszki zmiksuj z sokiem z cytryny, pestkami słonecznika, przyprawami i oliwą", "Rozsmaruj powstałą pastę na pieczywie", "Zjedz kanapki, jajko i pomidora pokrojonego w ćwiartki"] }, { "title": "Omlet owsiany", "calories": "373 kcal", "ingredients": ["Jaja kurze 120 g (2 szt.),", "Płatki owsiane 30 g (3 łyżki),", "Czosnek 7 g (1 ząbek),", "Olej 10 g (2 łyżeczki),", "Przyprawy 2 g (1 szczypta),", "Szczypiorek świeży lub suszony 2 g (1 szczypta)"], "reciepe": ["Jajka wybij do miski, roztrzep, przypraw solą i pieprzem", "Dodaj płatki owsiane, przeciśnięty przez praskę czosnek, posiekany szczypiorek i dokładnie wymieszaj", "Masę wyłóż na rozgrzaną, posmarowaną olejem patelnię", "Omlet smaż z obu stron do momentu ścięcia się masy"] }, { "title": "Omlet z pomidorami, pieczywo", "calories": "384 kcal", "ingredients": ["Jaja kurze 60 g (1 szt.),", "Pomidor 65 g (½ średniej szt.),", "Olej 5 g (1 łyżeczka),", "Natka pietruszki, świeża lub suszona 2 g (1 łyżeczka ),", "Pieczywo pełnoziarniste 105 g (3 kromki)"], "reciepe": ["Jajko roztrzep z posiekaną natką pietruszki, odrobiną wody i soli", "Wlej na rozgrzany olej i gdy się zetnie przerzuć na drugą stronę", "Pomidory sparz, pokrój w kostkę i ułóż na gorącym omlecie", "Podawaj z pieczywem"] }, { "title": "Omlet ze szczypiorkiem i pieczywem czosnkowym", "calories": "461 kcal", "ingredients": ["Jaja kurze 120 g (2 szt.),", "Pieczywo pełnoziarniste 70 g (2 kromki),", "Szczypiorek świeży lub suszony 12 g (6 szczypt),", "Masło 10 g (2 płaskie łyżeczki),", "Olej 5 g (1 łyżeczka),", "Czosnek 7 g (1 ząbek)"], "reciepe": ["Jajka roztrzep widelcem, dodaj posiekany szczypiorek i usmaż na oleju", "Czosnek przeciśnij przez praskę, wymieszaj z masłem i posmaruj nim pieczywo, włóż do piekarnika na 5 minut"] }, { "title": "Omlet z pieczarkami i pieczywem", "calories": "475 kcal", "ingredients": ["Jaja kurze 120 g (2 szt.),", "Pieczarki 100 g (5 szt.),", "Woda 20 g (0,1 szkl.),", "Pieczywo pełnoziarniste 105 g (3 kromki),", "Przyprawy 2 g (1 szczypta),", "Olej 5 g (1 łyżeczka)"], "reciepe": ["Jajka roztrzep z wodą oraz pieprzem i odrobiną soli", "Patelnię przesmaruj delikatnie olejem i wylej na nią jajka", "Gdy omlet się zetnie, zsuń go na talerz i przewracając na drugą stronę ponownie umieść na patelni", "W osobnym garnku podduś na odrobinie oleju i wody pokrojone w plasterki pieczarki", "Na gotowy omlet wyłóż pieczarki i zegnij go na pół", "Podawaj z pieczywem"] }, { "title": "Naleśniki z jabłkami i cynamonem", "calories": "466 kcal", "ingredients": ["Jaja kurze 56 g (0,9 szt.),", "Mleko 103 g (0,5 szkl.),", "Mąka pełnoziarnista 65 g (6,6 łyżki),", "Jabłko 159 g (0,9 średniej szt.),", "Przyprawy 1 g (0,9 szczypt),", "Olej 4 g (niecała łyżeczka)"], "reciepe": ["Zmiksuj mleko, mąkę, olej i jajka. Dodaj około 1/4 szklanki wody i wymieszaj", "Patelnię posmaruj delikatnie olejem i wylej na nią ciasto naleśnikowe. Smaż z obu stron", "Jabłka obierz i pokrój w drobna kostkę. Zalej niewielką ilością wrzątku, dodaj cynamon i ugotuj", "Na gotowe naleśniki wyłóż jabłka i zwiń"] }, { "title": "Koreczki caprese", "calories": "405 kcal", "ingredients": ["Pomidor 130 g (1 średnia szt.),", "Ser mozzarella 120 g (6 plastrów),", "Pieczywo pełnoziarniste 35 g (1 kromka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Pieczywo opiecz na grzankę, następnie pokrój w kostkę", "Pomidory i mozzarellę pokrój w większą kostkę. Możesz też użyć pomidorków koktajlowych (wtedy przekrój je na pół) oraz mini kuleczek mozzarelli", "Na patyczki od szaszłyków nałóż kolejno: grzankę, pomidora, mozzarellę. Skrop przygotowane koreczki octem balsamicznym"] }, { "title": "Roladki z tortilli z szynką, awokado i papryką", "calories": "379 kcal", "ingredients": ["Sałata 10 g (2 liście),", "Szynka 30 g (2 plastry),", "Papryka 100 g (0,4 szt.),", "Awokado 45 g (0,3 szt.),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Przygotuj tortillę (DODATEK)", "Sałatę porwij na mniejsze części. Paprykę oraz awokado pokrój w kostkę", "Na rozłożony placek tortilli nałóż wszystkie składniki, dopraw. Następnie ściśle zawiń całość w rulon", "Pokrój tortillę w paski o szerokości ok. 2 cm"] }, { "title": "Sałatka z wędzonym łososiem i sosem miodowo-cytrynowym", "calories": "374 kcal", "ingredients": ["Ryba tłusta świeża lub mrożona 100 g,", "Sałata 45 g (9 liści),", "Pomidor 130 g (1 średnia szt.),", "Cytryna 20 g (¼ szt.),", "Oliwa z oliwek 10 g (1 łyżka),", "Miód pszczeli 14 g (2,8 łyżeczki),", "Musztarda 5 g (niecała łyżeczka),", "Przyprawy 4 g (2 szczypty)"], "reciepe": ["Pokrój łososia w podłużne paski", "Porwij sałatę, przełóż ją do miski, dodaj pokrojonego pomidora oraz łososia", "Do małej miseczki lub szklanki wlej sok z cytryny, dodaj przyprawy (sól, pieprz), wymieszaj. Cały czas mieszając stopniowo wlewaj oliwę. Nadal mieszając dodaj miód i musztardę", "Polej powstałym sosem sałatkę i wymieszaj"] }
-        ]
+    {
+      title: "Surówka z kapusty pekińskiej",
+      calories: "dodatek",
+      ingredients: [
+        "Kapusta 50 g,",
+        "Papryka 50 g (0,2 szt.),",
+        "Cebula 20 g (0,2 szt.),",
+        "Cytryna 5 g (0,1 szt.),",
+        "Oliwa z oliwek 5 g (niecała łyżka),",
+        "Przyprawy 2 g (1 szczypta)",
+      ],
+      recipe: [
+        "Warzywa drobno posiekaj",
+        "Skrop sokiem z cytryny i oliwą",
+        "Przypraw do smaku i dokładnie wymieszaj",
+      ],
     },
-    "dodatki": [
-        { "title": "Sos pomidorowy", "calories": "dodatek", "ingredients": ["Pomidor 170 g (1,3 średniej szt.),", "Czosnek 3 g (0,4 ząbka),", "Przyprawy 2 g (1 szczypta),", "Oliwa z oliwek 5 g (niecała łyżka),", "Cebula 30 g (0,3 szt.)"], "reciepe": ["Cebulę i czosnek podsmaż na rozgrzanej oliwie", "Dodaj sparzone pomidory i duś przez kilka minut", "Przypraw ulubionymi przyprawami i ziołami (np. pieprz, chili, zioła prowansalskie, rozmaryn)"] }, { "title": "Tortilla pszenna", "calories": "dodatek", "ingredients": ["Mąka pszenna 60 g (6 płaskich łyżek),", "Woda 40 g (0,2 szkl.),", "Olej 5 g (1 łyżeczka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Mąkę wymieszaj z solą. Wlej gorącą wodę i wymieszaj", "Następnie dodaj olej i wyrób ręką. Odstaw", "Po około 10 minutach podziel ciasto na dwie części, uformuj kuleczki i rozwałkuj cienko (jeśli potrzeba podsyp mąką)", "Smaż na suchej patelni około minuty z jednej i 30 sekund z drugiej strony"] }, { "title": "Sałatka pomidorowo-paprykowa", "calories": "dodatek", "ingredients": ["Pomidor 130 g (1 średnia szt.),", "Papryka 120 g (½ szt.),", "Szczypiorek świeży lub suszony 2 g (1 szczypta)"], "reciepe": ["Pokrój pomidora i paprykę", "Polej sosem winegret i posyp posiekanym szczypiorkiem"] }, { "title": "Sos ziołowy Vinaigrette", "calories": "dodatek", "ingredients": ["Oliwa z oliwek 5 g (niecała łyżka)", "Cytryna 15 g (0,2 szt.)", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Do oliwy dodaj soku z cytryny oraz zioła prowansalskie", "Dokładnie wymieszaj"] }, { "title": "Surówka z kapusty pekińskiej", "calories": "dodatek", "ingredients": ["Kapusta 50 g,", "Papryka 50 g (0,2 szt.),", "Cebula 20 g (0,2 szt.),", "Cytryna 5 g (0,1 szt.),", "Oliwa z oliwek 5 g (niecała łyżka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Warzywa drobno posiekaj", "Skrop sokiem z cytryny i oliwą", "Przypraw do smaku i dokładnie wymieszaj"] }, { "title": "Surówka z marchwi i selera", "calories": "dodatek", "ingredients": ["Marchew 110 g (1 duża szt.),", "Seler korzeniowy 50 g,", "Cytryna 15 g (0,2 szt.),", "Natka pietruszki, świeża lub suszona 2 g (1 łyżeczka ),", "Olej 5 g (1 łyżeczka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Marchew i selera obierz i zetrzyj na tarce o drobnych otworach", "Dodaj sok z cytryny, olej i posiekaną natkę pietruszki", "Przypraw do smaku i dokładnie wymieszaj"] }, { "title": "Surówka z marchewki i jabłka", "calories": "dodatek", "ingredients": ["Marchew 110 g (1 duża szt.),", "Jabłko 160 g (0,9 średniej szt.),", "Przyprawy 4 g (2 szczypty),", "Cukier 4 g (niecała łyżeczka)"], "reciepe": ["Marchew i jabłko obierz", "Zetrzyj na tarce", "Dopraw cukrem, solą i pieprzem", "Dokładnie wymieszaj"] }, { "title": "Surówka z kwaszonej kapusty", "calories": "dodatek", "ingredients": ["Kapusta kwaszona 87 g,", "Cebula 27 g (¼ szt.),", "Natka pietruszki, świeża lub suszona 1 g (niecała łyżeczka),", "Olej 8 g (1¾ łyżeczki),", "Cukier 2 g (niecała łyżeczka)"], "reciepe": ["Pokrój kapustę oraz cebulę", "Dodaj cukier i olej", "Wymieszaj i posyp natką pietruszki."] }, { "title": "Surówka z buraczków", "calories": "dodatek", "ingredients": ["Burak 150 g,", "Cebula 20 g (0,2 szt.),", "Cytryna 15 g (0,2 szt.),", "Miód pszczeli 5 g (1 łyżeczka),", "Przyprawy 2 g (1 szczypta)"], "reciepe": ["Buraczka ugotuj do miękkości, obierz i zetrzyj na tarce", "Cebulę drobno posiekaj", "Wymieszaj buraczki z cebulą, miodem, sokiem z cytryny, sola i pieprzem"] },  { "title": "Surówka z pomidorów", "calories": "dodatek", "ingredients": ["Pomidor 170 g (1,3 średniej szt.),", "Szczypiorek świeży lub suszony 2 g (1 szczypta),", "Cytryna 20 g (¼ szt.),", "Przyprawy 2 g (1 szczypta),", "Oliwa z oliwek 5 g (niecała łyżka)"], "reciepe": ["Pomidory pokrój w plasterki", "Dodaj posiekany szczypiorek", "Dodaj oliwę, pieprz i zioła prowansalskie", "Skrop sokiem z cytryny", "Dokładnie wymieszaj"] }
-    ]
-
-}
+    {
+      title: "Surówka z marchwi i selera",
+      calories: "dodatek",
+      ingredients: [
+        "Marchew 110 g (1 duża szt.),",
+        "Seler korzeniowy 50 g,",
+        "Cytryna 15 g (0,2 szt.),",
+        "Natka pietruszki, świeża lub suszona 2 g (1 łyżeczka ),",
+        "Olej 5 g (1 łyżeczka),",
+        "Przyprawy 2 g (1 szczypta)",
+      ],
+      recipe: [
+        "Marchew i selera obierz i zetrzyj na tarce o drobnych otworach",
+        "Dodaj sok z cytryny, olej i posiekaną natkę pietruszki",
+        "Przypraw do smaku i dokładnie wymieszaj",
+      ],
+    },
+    {
+      title: "Surówka z marchewki i jabłka",
+      calories: "dodatek",
+      ingredients: [
+        "Marchew 110 g (1 duża szt.),",
+        "Jabłko 160 g (0,9 średniej szt.),",
+        "Przyprawy 4 g (2 szczypty),",
+        "Cukier 4 g (niecała łyżeczka)",
+      ],
+      recipe: [
+        "Marchew i jabłko obierz",
+        "Zetrzyj na tarce",
+        "Dopraw cukrem, solą i pieprzem",
+        "Dokładnie wymieszaj",
+      ],
+    },
+    {
+      title: "Surówka z kwaszonej kapusty",
+      calories: "dodatek",
+      ingredients: [
+        "Kapusta kwaszona 87 g,",
+        "Cebula 27 g (¼ szt.),",
+        "Natka pietruszki, świeża lub suszona 1 g (niecała łyżeczka),",
+        "Olej 8 g (1¾ łyżeczki),",
+        "Cukier 2 g (niecała łyżeczka)",
+      ],
+      recipe: [
+        "Pokrój kapustę oraz cebulę",
+        "Dodaj cukier i olej",
+        "Wymieszaj i posyp natką pietruszki.",
+      ],
+    },
+    {
+      title: "Surówka z buraczków",
+      calories: "dodatek",
+      ingredients: [
+        "Burak 150 g,",
+        "Cebula 20 g (0,2 szt.),",
+        "Cytryna 15 g (0,2 szt.),",
+        "Miód pszczeli 5 g (1 łyżeczka),",
+        "Przyprawy 2 g (1 szczypta)",
+      ],
+      recipe: [
+        "Buraczka ugotuj do miękkości, obierz i zetrzyj na tarce",
+        "Cebulę drobno posiekaj",
+        "Wymieszaj buraczki z cebulą, miodem, sokiem z cytryny, sola i pieprzem",
+      ],
+    },
+    {
+      title: "Surówka z pomidorów",
+      calories: "dodatek",
+      ingredients: [
+        "Pomidor 170 g (1,3 średniej szt.),",
+        "Szczypiorek świeży lub suszony 2 g (1 szczypta),",
+        "Cytryna 20 g (¼ szt.),",
+        "Przyprawy 2 g (1 szczypta),",
+        "Oliwa z oliwek 5 g (niecała łyżka)",
+      ],
+      recipe: [
+        "Pomidory pokrój w plasterki",
+        "Dodaj posiekany szczypiorek",
+        "Dodaj oliwę, pieprz i zioła prowansalskie",
+        "Skrop sokiem z cytryny",
+        "Dokładnie wymieszaj",
+      ],
+    },
+  ],
+};
