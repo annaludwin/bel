@@ -7,8 +7,8 @@ import mealBase from "./mealBase";
 import { Tabs } from "./tabs";
 
 // tymczasowe, będzie dynamicznie zmieniane:
-const addition = mealBase.dodatki[8];
-const mainCourse = mealBase.sniadanie.owsianki[1];
+const addition = mealBase.additions[8];
+const mainCourse = mealBase.breakfast.owsianki[1];
 
 const daysSatMon = ["Sobota", "Niedziela", "Poniedziałek"];
 const daysTueFri = ["Wtorek", "Środa", "Czwartek", "Piątek"];
@@ -24,11 +24,13 @@ const DayPanel = ({ dayName, children }) => {
   );
 };
 
-const MealList = ({ mealName, openModalAndLoadData }) => {
+const MealList = ({ meal, openModalAndLoadData }) => {
+  console.log(meal);
+
   return (
     <div className="meal-list">
       <div className="meal-card">
-        <h4>{mealName}</h4>
+        <h4>{meal.title}</h4>
 
         <MealContent mealArray={mainCourse}></MealContent>
         <button className="more">(...)</button>
@@ -41,7 +43,7 @@ const MealList = ({ mealName, openModalAndLoadData }) => {
         <button
           className="edit"
           onClick={() => {
-            openModalAndLoadData("modal", mealName);
+            openModalAndLoadData("modal", meal.title);
           }}
         >
           📋
@@ -96,7 +98,7 @@ const WeekPanel = ({ weekPart, openModalAndLoadData }) => {
           {day.meals.map((meal) => (
             <MealList
               key={meal.title}
-              mealName={meal.title}
+              meal={meal}
               openModalAndLoadData={openModalAndLoadData}
             ></MealList>
           ))}
@@ -126,6 +128,8 @@ const WeekPanel = ({ weekPart, openModalAndLoadData }) => {
 };
 
 const Modal = ({ switchModal, mealName, mealBase }) => {
+  console.log(mealBase.dinner.ziemniaki[0].title);
+
   return (
     <div id="modal" className="modal">
       <div className="content">
@@ -142,7 +146,9 @@ const Modal = ({ switchModal, mealName, mealBase }) => {
               <option value="name" disabled>
                 Wybierz kategorię posiłku
               </option>
-              {/*{mealBase[category].map(() => "duuuuupa")}*/}
+              <option value="name" disabled>
+                {mealBase.dinner.ziemniaki[0].title}
+              </option>
             </select>
             <div className="list"></div>
           </div>
@@ -165,15 +171,12 @@ function App() {
     setView(view);
   }
 
-  function getMealName(mealName = null, category = null) {
+  function openModalAndLoadData(view, mealName, category) {
+    switchModal(view);
     setSelectedMeal({ mealName, category });
   }
 
-  function openModalAndLoadData(view, selectedMeal) {
-    switchModal(view);
-    getMealName(selectedMeal);
-  }
-
+  console.log(selectedMeal);
   return (
     <>
       <nav>
@@ -210,19 +213,19 @@ function makeDay(dayName, mainCourse = {}, addition = []) {
     meals: [
       {
         title: "Śniadanie",
-        category: "sniadanie",
+        category: "breakfast",
         mainCourse: mainCourse,
         addition: addition,
       },
       {
         title: "2-gie śniadanie",
-        category: "drugieSniadanie",
+        category: "brunch",
         mainCourse: mainCourse,
         addition: addition,
       },
       {
         title: "Obiad",
-        category: "obiad",
+        category: "dinner",
         mainCourse: mainCourse,
         addition: addition,
       },

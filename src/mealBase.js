@@ -1,5 +1,5 @@
 export default {
-  sniadanie: {
+  breakfast: {
     owsianki: [
       {
         title: "Bananowy kuskus z jogurtem",
@@ -79,7 +79,7 @@ export default {
     ],
     płatki: [],
   },
-  drugieSniadanie: {
+  brunch: {
     koktajle: [
       {
         title: "Koktajl z masła orzechowego, banana i siemienia lnianego",
@@ -404,7 +404,7 @@ export default {
       },
     ],
   },
-  obiad: {
+  dinner: {
     kasza: [
       {
         title: "Kurczak caprese z kaszą",
@@ -1376,7 +1376,7 @@ export default {
       },
     ],
   },
-  podwieczorek: {
+  snack: {
     "naleśniki i racuchy": [],
     "na słodko": [
       {
@@ -1527,7 +1527,7 @@ export default {
     ],
     "na słono": [],
   },
-  kolacja: {
+  supper: {
     kanapki: [
       {
         title: "Kanapki z pastą z tuńczyka",
@@ -2003,7 +2003,7 @@ export default {
       },
     ],
   },
-  dodatki: [
+  additions: [
     {
       title: "Sos pomidorowy",
       calories: "dodatek",
