@@ -38,7 +38,7 @@ const MealList = ({ mealName, switchModal }) => {
         <button className="more">(...)</button>
         <MealRecipe mealArray={addition}></MealRecipe>
 
-        <button className="edit" onClick={() => switchModal("modal")}>
+        <button className="edit" onClick={() => switchModal("modal", mealName)}>
           📋
         </button>
       </div>
@@ -120,19 +120,22 @@ const WeekPanel = ({ weekPart, switchModal }) => {
   );
 };
 
-const Modal = ({ switchModal }) => {
+const Modal = ({ switchModal, mealName }) => {
   return (
     <div id="modal" className="modal">
       <div className="content">
         <div className="navigation">
-          <h3></h3> <button onClick={() => switchModal("weekPanel")}>✖</button>
+          <h3>Dodaj {mealName.toLowerCase()}</h3>{" "}
+          <button onClick={() => switchModal("weekPanel", { mealName })}>
+            ✖
+          </button>
         </div>
 
         <div className="columns">
           <div className="stack --gap-0">
             <select defaultValue="title">
               <option value="title" disabled>
-                www
+                Wybierz kategorię posiłku
               </option>
             </select>
             <div className="list"></div>
@@ -147,9 +150,11 @@ const Modal = ({ switchModal }) => {
 function App() {
   const [weekPartMenu, setWeekPartMenu] = useState(mealTueFri);
   const [view, setView] = useState("weekPanel");
+  const [selectedMeal, setSelectedMeal] = useState(null);
 
-  function switchModal(view) {
+  function switchModal(view, selectedMeal = null) {
     setView(view);
+    setSelectedMeal(selectedMeal);
   }
 
   return (
@@ -165,7 +170,9 @@ function App() {
           </button>
         </div>
       </nav>
-      {view === "modal" ? <Modal switchModal={switchModal}></Modal> : null}
+      {view === "modal" ? (
+        <Modal switchModal={switchModal} mealName={selectedMeal}></Modal>
+      ) : null}
       {view === "weekPanel" ? (
         <WeekPanel
           weekPart={weekPartMenu}
