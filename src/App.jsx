@@ -127,15 +127,15 @@ const WeekPanel = ({ weekPart, openModalAndLoadData }) => {
   );
 };
 
-const Modal = ({ switchModal, mealName, mealBase }) => {
-  console.log(Object.keys(mealBase.breakfast));
+const Modal = ({ switchModal, meal, mealBase }) => {
+  console.log(Object.keys(meal));
 
   return (
     <div id="modal" className="modal">
       <div className="content">
         <div className="navigation">
-          <h3>Dodaj {mealName.mealName.toLowerCase()}</h3>
-          <button onClick={() => switchModal("weekPanel", { mealName })}>
+          <h3>Dodaj {meal.mealName.toLowerCase()}</h3>
+          <button onClick={() => switchModal("weekPanel", { mealName: meal })}>
             ✖
           </button>
         </div>
@@ -146,9 +146,9 @@ const Modal = ({ switchModal, mealName, mealBase }) => {
               <option value="name" disabled>
                 Wybierz kategorię posiłku
               </option>
-              {Object.keys(mealBase.breakfast).map((category) => {
-                <option value="name">{category}</option>;
-              })}
+              {Object.keys(mealBase.breakfast).map((category) => (
+                <option value="name">{category}</option>
+              ))}
             </select>
             <div className="list"></div>
           </div>
@@ -193,7 +193,7 @@ function App() {
       {view === "modal" ? (
         <Modal
           switchModal={switchModal}
-          mealName={selectedMeal}
+          meal={selectedMeal}
           mealBase={mealBase}
         ></Modal>
       ) : null}
