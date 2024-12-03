@@ -24,7 +24,7 @@ const DayPanel = ({ dayName, children }) => {
   );
 };
 
-const MealList = ({ mealName }) => {
+const MealList = ({ mealName, switchModal }) => {
   return (
     <div className="meal-list">
       <div className="meal-card">
@@ -38,7 +38,9 @@ const MealList = ({ mealName }) => {
         <button className="more">(...)</button>
         <MealRecipe mealArray={addition}></MealRecipe>
 
-        <button className="edit">📋</button>
+        <button className="edit" onClick={() => switchModal("modal")}>
+          📋
+        </button>
       </div>
     </div>
   );
@@ -81,13 +83,17 @@ const ShoppingListItem = ({ product }) => {
   );
 };
 
-const WeekPanel = ({ weekPart }) => {
+const WeekPanel = ({ weekPart, switchModal }) => {
   return (
     <div className="screen">
       {weekPart.map((day) => (
         <DayPanel key={day.dayName} dayName={day.dayName.toUpperCase()}>
           {day.meals.map((meal) => (
-            <MealList key={meal.title} mealName={meal.title}></MealList>
+            <MealList
+              key={meal.title}
+              mealName={meal.title}
+              switchModal={switchModal}
+            ></MealList>
           ))}
         </DayPanel>
       ))}
@@ -114,12 +120,12 @@ const WeekPanel = ({ weekPart }) => {
   );
 };
 
-const Modal = () => {
+const Modal = ({ switchModal }) => {
   return (
     <div id="modal" className="modal">
       <div className="content">
         <div className="navigation">
-          <h3></h3> <button>✖</button>
+          <h3></h3> <button onClick={() => switchModal("weekPanel")}>✖</button>
         </div>
 
         <div className="columns">
@@ -159,10 +165,12 @@ function App() {
           </button>
         </div>
       </nav>
-      <button onClick={() => switchModal("modal")}> DUUUPA </button>
-      {view === "modal" ? <Modal></Modal> : null}
+      {view === "modal" ? <Modal switchModal={switchModal}></Modal> : null}
       {view === "weekPanel" ? (
-        <WeekPanel weekPart={weekPartMenu}></WeekPanel>
+        <WeekPanel
+          weekPart={weekPartMenu}
+          switchModal={switchModal}
+        ></WeekPanel>
       ) : null}
     </>
   );
