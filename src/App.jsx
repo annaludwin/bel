@@ -4,6 +4,8 @@ import "./mealBase";
 import { useState } from "react";
 import mealBase from "./mealBase";
 
+import { Tabs } from "./tabs";
+
 // tymczasowe, będzie dynamicznie zmieniane:
 const addition = mealBase.dodatki[8];
 const mainCourse = mealBase.sniadanie.owsianki[1];
@@ -21,10 +23,6 @@ const DayPanel = ({ dayName, children }) => {
     </section>
   );
 };
-
-// console.log(mealSatMon);
-// console.log(meals);
-// console.log(mealSatMon[0].dayName);
 
 const MealList = ({ mealName }) => {
   return (
@@ -116,8 +114,37 @@ const WeekPanel = ({ weekPart }) => {
   );
 };
 
+const Modal = () => {
+  return (
+    <div id="modal" className="modal">
+      <div className="content">
+        <div className="navigation">
+          <h3></h3> <button>✖</button>
+        </div>
+
+        <div className="columns">
+          <div className="stack --gap-0">
+            <select defaultValue="title">
+              <option value="title" disabled>
+                www
+              </option>
+            </select>
+            <div className="list"></div>
+          </div>
+          <div className="stack"></div>
+        </div>
+      </div>
+    </div>
+  );
+};
+
 function App() {
   const [weekPartMenu, setWeekPartMenu] = useState(mealTueFri);
+  const [view, setView] = useState("weekPanel");
+
+  function switchModal(view) {
+    setView(view);
+  }
 
   return (
     <>
@@ -132,8 +159,11 @@ function App() {
           </button>
         </div>
       </nav>
-
-      <WeekPanel weekPart={weekPartMenu}></WeekPanel>
+      <button onClick={() => switchModal("modal")}> DUUUPA </button>
+      {view === "modal" ? <Modal></Modal> : null}
+      {view === "weekPanel" ? (
+        <WeekPanel weekPart={weekPartMenu}></WeekPanel>
+      ) : null}
     </>
   );
 }
@@ -173,7 +203,6 @@ function makeDay(dayName, mainCourse = {}, addition = []) {
 
 /*
 todo:
- podpiac handler pod guzik tworzenia listy i stworzyc listę
-
+ poprawic liste shoppingList tak by zbierałą dane z state a nie zaślepki
 */
 export default App;
