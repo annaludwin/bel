@@ -247,8 +247,6 @@ function makeDay(dayName, mainCourse = {}, addition = []) {
   };
 }
 
-/*
-todo: w modalu ma mi wyświetać anzwy kategorii (l.149-150)
- poprawic liste shoppingList tak by zbierałą dane z state a nie zaślepki
-*/
+/* todo:  klikając podkategorie na modalu tworzy mi liste przepisów z tej podkategorii
+ */
 export default App;
