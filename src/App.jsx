@@ -24,7 +24,7 @@ const DayPanel = ({ dayName, children }) => {
   );
 };
 
-const MealList = ({ mealName, switchModal }) => {
+const MealList = ({ mealName, openModalAndLoadData }) => {
   return (
     <div className="meal-list">
       <div className="meal-card">
@@ -38,7 +38,12 @@ const MealList = ({ mealName, switchModal }) => {
         <button className="more">(...)</button>
         <MealRecipe mealArray={addition}></MealRecipe>
 
-        <button className="edit" onClick={() => switchModal("modal", mealName)}>
+        <button
+          className="edit"
+          onClick={() => {
+            openModalAndLoadData("modal", mealName);
+          }}
+        >
           📋
         </button>
       </div>
@@ -49,7 +54,7 @@ const MealList = ({ mealName, switchModal }) => {
 const MealContent = ({ mealArray }) => {
   return (
     <div className="content">
-      <p className="title">{mealArray.title}</p>
+      <p className="title">{mealArray.name}</p>
       <h5>Składniki</h5>
       <ul>
         {mealArray.ingredients.map((ingredient, index) => (
@@ -83,7 +88,7 @@ const ShoppingListItem = ({ product }) => {
   );
 };
 
-const WeekPanel = ({ weekPart, switchModal }) => {
+const WeekPanel = ({ weekPart, openModalAndLoadData }) => {
   return (
     <div className="screen">
       {weekPart.map((day) => (
@@ -92,7 +97,7 @@ const WeekPanel = ({ weekPart, switchModal }) => {
             <MealList
               key={meal.title}
               mealName={meal.title}
-              switchModal={switchModal}
+              openModalAndLoadData={openModalAndLoadData}
             ></MealList>
           ))}
         </DayPanel>
@@ -120,12 +125,12 @@ const WeekPanel = ({ weekPart, switchModal }) => {
   );
 };
 
-const Modal = ({ switchModal, mealName }) => {
+const Modal = ({ switchModal, mealName, mealBase }) => {
   return (
     <div id="modal" className="modal">
       <div className="content">
         <div className="navigation">
-          <h3>Dodaj {mealName.toLowerCase()}</h3>{" "}
+          <h3>Dodaj {mealName.mealName.toLowerCase()}</h3>
           <button onClick={() => switchModal("weekPanel", { mealName })}>
             ✖
           </button>
@@ -133,10 +138,11 @@ const Modal = ({ switchModal, mealName }) => {
 
         <div className="columns">
           <div className="stack --gap-0">
-            <select defaultValue="title">
-              <option value="title" disabled>
+            <select defaultValue="name">
+              <option value="name" disabled>
                 Wybierz kategorię posiłku
               </option>
+              {/*{mealBase[category].map(() => "duuuuupa")}*/}
             </select>
             <div className="list"></div>
           </div>
@@ -150,11 +156,22 @@ const Modal = ({ switchModal, mealName }) => {
 function App() {
   const [weekPartMenu, setWeekPartMenu] = useState(mealTueFri);
   const [view, setView] = useState("weekPanel");
-  const [selectedMeal, setSelectedMeal] = useState(null);
+  const [selectedMeal, setSelectedMeal] = useState({
+    mealName: null,
+    category: null,
+  });
 
-  function switchModal(view, selectedMeal = null) {
+  function switchModal(view) {
     setView(view);
-    setSelectedMeal(selectedMeal);
+  }
+
+  function getMealName(mealName = null, category = null) {
+    setSelectedMeal({ mealName, category });
+  }
+
+  function openModalAndLoadData(view, selectedMeal) {
+    switchModal(view);
+    getMealName(selectedMeal);
   }
 
   return (
@@ -171,12 +188,16 @@ function App() {
         </div>
       </nav>
       {view === "modal" ? (
-        <Modal switchModal={switchModal} mealName={selectedMeal}></Modal>
+        <Modal
+          switchModal={switchModal}
+          mealName={selectedMeal}
+          mealBase={mealBase}
+        ></Modal>
       ) : null}
       {view === "weekPanel" ? (
         <WeekPanel
           weekPart={weekPartMenu}
-          switchModal={switchModal}
+          openModalAndLoadData={openModalAndLoadData}
         ></WeekPanel>
       ) : null}
     </>
@@ -189,26 +210,31 @@ function makeDay(dayName, mainCourse = {}, addition = []) {
     meals: [
       {
         title: "Śniadanie",
+        category: "sniadanie",
         mainCourse: mainCourse,
         addition: addition,
       },
       {
         title: "2-gie śniadanie",
+        category: "drugieSniadanie",
         mainCourse: mainCourse,
         addition: addition,
       },
       {
         title: "Obiad",
+        category: "obiad",
         mainCourse: mainCourse,
         addition: addition,
       },
       {
         title: "Podwieczorek",
+        category: "podwieczorek",
         mainCourse: mainCourse,
         addition: addition,
       },
       {
         title: "Kolacja",
+        category: "kolacja",
         mainCourse: mainCourse,
         addition: addition,
       },
