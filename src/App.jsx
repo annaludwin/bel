@@ -25,7 +25,7 @@ const DayPanel = ({ dayName, children }) => {
 };
 
 const MealList = ({ meal, openModalAndLoadData }) => {
-  console.log(meal);
+  // console.log(meal);
 
   return (
     <div className="meal-list">
@@ -128,7 +128,7 @@ const WeekPanel = ({ weekPart, openModalAndLoadData }) => {
 };
 
 const Modal = ({ switchModal, mealName, mealBase }) => {
-  console.log(mealBase.dinner.ziemniaki[0].title);
+  console.log(Object.keys(mealBase.breakfast));
 
   return (
     <div id="modal" className="modal">
@@ -146,9 +146,9 @@ const Modal = ({ switchModal, mealName, mealBase }) => {
               <option value="name" disabled>
                 Wybierz kategorię posiłku
               </option>
-              <option value="name" disabled>
-                {mealBase.dinner.ziemniaki[0].title}
-              </option>
+              {Object.keys(mealBase.breakfast).map((category) => {
+                <option value="name">{category}</option>;
+              })}
             </select>
             <div className="list"></div>
           </div>
@@ -176,7 +176,7 @@ function App() {
     setSelectedMeal({ mealName, category });
   }
 
-  console.log(selectedMeal);
+  // console.log(selectedMeal);
   return (
     <>
       <nav>
@@ -231,13 +231,13 @@ function makeDay(dayName, mainCourse = {}, addition = []) {
       },
       {
         title: "Podwieczorek",
-        category: "podwieczorek",
+        category: "snack",
         mainCourse: mainCourse,
         addition: addition,
       },
       {
         title: "Kolacja",
-        category: "kolacja",
+        category: "supper",
         mainCourse: mainCourse,
         addition: addition,
       },
@@ -246,7 +246,7 @@ function makeDay(dayName, mainCourse = {}, addition = []) {
 }
 
 /*
-todo:
+todo: w modalu ma mi wyświetać anzwy kategorii (l.149-150)
  poprawic liste shoppingList tak by zbierałą dane z state a nie zaślepki
 */
 export default App;
