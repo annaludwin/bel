@@ -43,7 +43,7 @@ const MealList = ({ meal, openModalAndLoadData }) => {
         <button
           className="edit"
           onClick={() => {
-            openModalAndLoadData("modal", meal.title);
+            openModalAndLoadData("modal", meal.title, meal.category);
           }}
         >
           📋
@@ -128,7 +128,7 @@ const WeekPanel = ({ weekPart, openModalAndLoadData }) => {
 };
 
 const Modal = ({ switchModal, meal, mealBase }) => {
-  console.log(Object.keys(meal));
+  console.log(meal);
 
   return (
     <div id="modal" className="modal">
@@ -146,8 +146,10 @@ const Modal = ({ switchModal, meal, mealBase }) => {
               <option value="name" disabled>
                 Wybierz kategorię posiłku
               </option>
-              {Object.keys(mealBase.breakfast).map((category) => (
-                <option value="name">{category}</option>
+              {Object.keys(mealBase[meal.category]).map((category, index) => (
+                <option value="name" key={category + index}>
+                  {category}
+                </option>
               ))}
             </select>
             <div className="list"></div>
