@@ -59,4 +59,5 @@ function App() {
   );
 }
 
+// todo zrobic wyswitlanie przepisu w modalu (analogia do wyswietlania listy / zrobic sobie komponent przepis)
 export default App;
