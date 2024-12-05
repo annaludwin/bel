@@ -127,17 +127,27 @@ const WeekPanel = ({ weekPart, openModalAndLoadData }) => {
   );
 };
 
-const Modal = ({ switchModal, meal, mealBase }) => {
-  console.log(meal);
+const Modal = ({
+  setView,
+  meal,
+  mealBase,
+  subcategoryRecipeList,
+  setSubcategoryRecipeList,
+}) => {
+  // todo to mami wskoczyc do listy tylko zparametryzowane
+  console.log(mealBase.dinner.kasza[0].title);
+  console.log(mealBase.dinner.kasza[1].title);
+  console.log(mealBase.dinner.kasza[2].title);
+  console.log(mealBase.dinner.ziemniaki[0].title);
+  console.log(mealBase.dinner.ziemniaki[1].title);
+  console.log(mealBase.dinner.ziemniaki[2].title);
 
   return (
     <div id="modal" className="modal">
       <div className="content">
         <div className="navigation">
           <h3>Dodaj {meal.mealName.toLowerCase()}</h3>
-          <button onClick={() => switchModal("weekPanel", { mealName: meal })}>
-            ✖
-          </button>
+          <button onClick={() => setView("weekPanel")}>✖</button>
         </div>
 
         <div className="columns">
@@ -168,13 +178,11 @@ function App() {
     mealName: null,
     category: null,
   });
-
-  function switchModal(view) {
-    setView(view);
-  }
+  // todo mam state dla subcategory
+  const [subcategoryRecipeList, setSubcategoryRecipeList] = useState(null);
 
   function openModalAndLoadData(view, mealName, category) {
-    switchModal(view);
+    setView(view);
     setSelectedMeal({ mealName, category });
   }
 
@@ -194,7 +202,7 @@ function App() {
       </nav>
       {view === "modal" ? (
         <Modal
-          switchModal={switchModal}
+          setView={setView}
           meal={selectedMeal}
           mealBase={mealBase}
         ></Modal>
@@ -247,6 +255,6 @@ function makeDay(dayName, mainCourse = {}, addition = []) {
   };
 }
 
-/* todo:  klikając podkategorie na modalu tworzy mi liste przepisów z tej podkategorii
+/* todo:  klikając podkategorie na modalu tworzy mi liste przepisów z tej podkategorii (182, 156)
  */
 export default App;
