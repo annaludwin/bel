@@ -32,7 +32,7 @@ export const Modal = ({ meal, mealBase, setView }) => {
             </select>
             <div className="list">
               {subcategory !== ""
-                ? mealBase[meal.category][subcategory].map((recipe, index) => (
+                ? mealBase[meal.category][subcategory].map((recipe) => (
                     <button>{recipe.title}</button>
                   ))
                 : null}
