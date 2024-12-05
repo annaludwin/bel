@@ -19,7 +19,7 @@ export const Modal = ({ meal, mealBase, setView }) => {
               defaultValue=""
               onChange={(e) => setSubcategory(e.target.value)}
             >
-              <option value="name" disabled>
+              <option value="" disabled>
                 Wybierz kategorię posiłku
               </option>
               {Object.keys(mealBase[meal.category]).map(
