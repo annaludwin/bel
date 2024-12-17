@@ -5,15 +5,12 @@ export const WeekPanel = ({ weekPart, openModalAndLoadData }) => {
   return (
     <div className="screen">
       {weekPart.map((day) => (
-        <DayPanel key={day.dayName} dayName={day.dayName.toUpperCase()}>
-          {day.meals.map((meal) => (
-            <MealList
-              key={meal.title}
-              meal={meal}
-              openModalAndLoadData={openModalAndLoadData}
-            ></MealList>
-          ))}
-        </DayPanel>
+        <DayPanel
+          meal={day.meals}
+          openModalAndLoadData={openModalAndLoadData}
+          key={day.dayName}
+          dayName={day.dayName.toUpperCase()}
+        ></DayPanel>
       ))}
 
       <section className="day-panel dark">
@@ -39,11 +36,17 @@ export const WeekPanel = ({ weekPart, openModalAndLoadData }) => {
 };
 
 // utils:
-const DayPanel = ({ dayName, children }) => {
+const DayPanel = ({ meal, openModalAndLoadData, dayName }) => {
   return (
     <section className="day-panel">
       <h3>{dayName}</h3>
-      {children}
+      {meal.map((meal) => (
+        <MealList
+          key={meal.title}
+          meal={meal}
+          openModalAndLoadData={openModalAndLoadData}
+        ></MealList>
+      ))}{" "}
     </section>
   );
 };
