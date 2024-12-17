@@ -4,7 +4,7 @@ import mealBase from "../mealBase";
 const addition = mealBase.additions[8];
 const mainCourse = mealBase.breakfast.owsianki[1];
 
-// exported components:
+// exported component:
 export const WeekPanel = ({ weekPart, openModalAndLoadData }) => {
   return (
     <div className="screen">

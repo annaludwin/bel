@@ -1,8 +1,7 @@
 import { useState } from "react";
 
+// exported component:
 export const Modal = ({ meal, mealBase, setView }) => {
-  console.log(mealBase[meal.category]["owsianki"]);
-
   const [subcategory, setSubcategory] = useState("");
 
   return (
@@ -38,9 +37,39 @@ export const Modal = ({ meal, mealBase, setView }) => {
                 : null}
             </div>
           </div>
-          <div className="stack"></div>
+          <div className="stack">
+            <div className="display">
+              <Recipe></Recipe>
+              <div className="button-rail rail">
+                <button className="success2">DODATKI +</button>
+                <button className="success">ZAPISZ</button>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
+  );
+};
+
+// utils:
+const Recipe = ({ meal }) => {
+  return (
+    <>
+      <h3>Tytul</h3>
+      <p>"666 kcal"</p>
+      <hr></hr>
+      <h4>Składniki</h4>
+      <ul>
+        <li>1</li>
+        <li>2</li>
+      </ul>
+      <div style={{ height: "12px" }}></div>
+      <h4>Przygotowanie</h4>
+      <ol>
+        <li>a</li>
+        <li>b</li>
+      </ol>
+    </>
   );
 };
