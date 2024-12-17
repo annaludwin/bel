@@ -8,7 +8,7 @@ export function makeDay(dayName, mainCourse = {}, addition = []) {
         mainCourse: {
           calories: "222",
           ingredients: ["dcfsd", "ghgh"],
-          recipe: [],
+          recipe: ["cdsd", "vfgbfgbf"],
           title: "nazwa",
         },
         addition: { calories: "", ingredients: [], recipe: [], title: "" },

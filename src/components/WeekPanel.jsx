@@ -54,7 +54,6 @@ const DayPanel = ({ meal, openModalAndLoadData, dayName }) => {
 const MealList = ({ meal, openModalAndLoadData, dayName }) => {
   console.log(meal.mainCourse.title);
 
-  // todo dokonczyc
   return (
     <div className="meal-list">
       <div className="meal-card">
@@ -101,7 +100,7 @@ const MealContent = ({ mealArray }) => {
 };
 
 const MealRecipe = ({ mealArray }) => {
-  return mealArray.recipe === [] ? (
+  return mealArray.recipe !== [] ? (
     <div className="recipe">
       <h5>Przepis</h5>
       <ol>
