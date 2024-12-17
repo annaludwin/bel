@@ -58,5 +58,7 @@ function App() {
   );
 }
 
-// todo zrobic wyswitlanie przepisu w modalu (analogia do wyswietlania listy / zrobic sobie komponent przepis)
+// todo usunac zbedne napisy w widoku ogolnym
+// todo zrobic drugi modal
+// todo przekazac dane
 export default App;

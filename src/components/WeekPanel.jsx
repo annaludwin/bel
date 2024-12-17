@@ -52,22 +52,27 @@ const DayPanel = ({ meal, openModalAndLoadData, dayName }) => {
 };
 
 const MealList = ({ meal, openModalAndLoadData, dayName }) => {
-  // console.log(meal);
+  console.log(meal.mainCourse.title);
 
   // todo dokonczyc
-  return meal.mainCourse.ingredients !== [] ? (
+  return (
     <div className="meal-list">
       <div className="meal-card">
         <h4>{meal.title}</h4>
-
-        <MealContent mealArray={meal.mainCourse}></MealContent>
-        <button className="more">(...)</button>
-        <MealRecipe mealArray={meal.mainCourse}></MealRecipe>
-
-        <MealContent mealArray={meal.addition}></MealContent>
-        <button className="more">(...)</button>
-        <MealRecipe mealArray={meal.addition}></MealRecipe>
-
+        {meal.mainCourse.title !== "" ? (
+          <>
+            <MealContent mealArray={meal.mainCourse}></MealContent>
+            <button className="more">(...)</button>
+            <MealRecipe mealArray={meal.mainCourse}></MealRecipe>
+          </>
+        ) : null}
+        {meal.addition.title !== "" ? (
+          <>
+            <MealContent mealArray={meal.addition}></MealContent>
+            <button className="more">(...)</button>
+            <MealRecipe mealArray={meal.addition}></MealRecipe>
+          </>
+        ) : null}
         <button
           className="edit"
           onClick={() => {
@@ -78,13 +83,13 @@ const MealList = ({ meal, openModalAndLoadData, dayName }) => {
         </button>
       </div>
     </div>
-  ) : null;
+  );
 };
 
 const MealContent = ({ mealArray }) => {
-  return (
+  return mealArray.title ? (
     <div className="content">
-      <p className="title">{mealArray.name}</p>
+      <p className="title">{mealArray.title}</p>
       <h5>Składniki</h5>
       <ul>
         {mealArray.ingredients.map((ingredient, index) => (
@@ -92,11 +97,11 @@ const MealContent = ({ mealArray }) => {
         ))}
       </ul>
     </div>
-  );
+  ) : null;
 };
 
 const MealRecipe = ({ mealArray }) => {
-  return (
+  return mealArray.recipe === [] ? (
     <div className="recipe">
       <h5>Przepis</h5>
       <ol>
@@ -106,7 +111,7 @@ const MealRecipe = ({ mealArray }) => {
       </ol>
       <button className="less">mniej</button>
     </div>
-  );
+  ) : null;
 };
 
 const ShoppingListItem = ({ product }) => {
