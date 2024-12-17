@@ -3,6 +3,8 @@ import { useState } from "react";
 // exported component:
 export const Modal = ({ meal, mealBase, setView }) => {
   const [subcategory, setSubcategory] = useState("");
+  const [recipe, setRecipe] = useState("");
+  // console.log(recipe);
 
   return (
     <div id="modal" className="modal">
@@ -11,7 +13,6 @@ export const Modal = ({ meal, mealBase, setView }) => {
           <h3>Dodaj {meal.mealName.toLowerCase()}</h3>
           <button onClick={() => setView("weekPanel")}>✖</button>
         </div>
-
         <div className="columns">
           <div className="stack --gap-0">
             <select
@@ -21,6 +22,7 @@ export const Modal = ({ meal, mealBase, setView }) => {
               <option value="" disabled>
                 Wybierz kategorię posiłku
               </option>
+
               {Object.keys(mealBase[meal.category]).map(
                 (subcategory, index) => (
                   <option value={subcategory} key={subcategory + index}>
@@ -29,21 +31,21 @@ export const Modal = ({ meal, mealBase, setView }) => {
                 ),
               )}
             </select>
+
             <div className="list">
               {subcategory !== ""
                 ? mealBase[meal.category][subcategory].map((recipe) => (
-                    <button>{recipe.title}</button>
+                    <button onClick={(e) => setRecipe(recipe)}>
+                      {recipe.title}
+                    </button>
                   ))
                 : null}
             </div>
           </div>
+
           <div className="stack">
             <div className="display">
-              <Recipe></Recipe>
-              <div className="button-rail rail">
-                <button className="success2">DODATKI +</button>
-                <button className="success">ZAPISZ</button>
-              </div>
+              <Recipe data={recipe}></Recipe>
             </div>
           </div>
         </div>
@@ -53,23 +55,31 @@ export const Modal = ({ meal, mealBase, setView }) => {
 };
 
 // utils:
-const Recipe = ({ meal }) => {
-  return (
+const Recipe = ({ data }) => {
+  console.log(data);
+
+  return data !== "" ? (
     <>
-      <h3>Tytul</h3>
-      <p>"666 kcal"</p>
+      <h3>{data.title}</h3>
+      <p>{data.calories}</p>
       <hr></hr>
-      <h4>Składniki</h4>
+      <h4>{data.ingredients ? "Składniki" : null}</h4>
       <ul>
-        <li>1</li>
-        <li>2</li>
+        {data.ingredients
+          ? data.ingredients.map((ingredient, index) => <li>{ingredient}</li>)
+          : null}
       </ul>
       <div style={{ height: "12px" }}></div>
-      <h4>Przygotowanie</h4>
+      <h4>{data.recipe ? "Przygotowanie" : null} </h4>
       <ol>
-        <li>a</li>
-        <li>b</li>
+        {data.recipe
+          ? data.recipe.map((recipeStep, index) => <li>{recipeStep}</li>)
+          : null}
       </ol>
+      <div className="button-rail rail">
+        <button className="success2">DODATKI +</button>
+        <button className="success">ZAPISZ</button>
+      </div>
     </>
-  );
+  ) : null;
 };
