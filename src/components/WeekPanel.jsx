@@ -1,9 +1,5 @@
 import mealBase from "../mealBase";
 
-// tymczasowe, będzie dynamicznie zmieniane:
-const addition = mealBase.additions[8];
-const mainCourse = mealBase.breakfast.owsianki[1];
-
 // exported component:
 export const WeekPanel = ({ weekPart, openModalAndLoadData }) => {
   return (
@@ -52,33 +48,34 @@ const DayPanel = ({ dayName, children }) => {
   );
 };
 
-const MealList = ({ meal, openModalAndLoadData }) => {
+const MealList = ({ meal, openModalAndLoadData, dayName }) => {
   // console.log(meal);
 
-  return (
+  // todo dokonczyc
+  return meal.mainCourse.ingredients !== [] ? (
     <div className="meal-list">
       <div className="meal-card">
         <h4>{meal.title}</h4>
 
-        <MealContent mealArray={mainCourse}></MealContent>
+        <MealContent mealArray={meal.mainCourse}></MealContent>
         <button className="more">(...)</button>
-        <MealRecipe mealArray={mainCourse}></MealRecipe>
+        <MealRecipe mealArray={meal.mainCourse}></MealRecipe>
 
-        <MealContent mealArray={addition}></MealContent>
+        <MealContent mealArray={meal.addition}></MealContent>
         <button className="more">(...)</button>
-        <MealRecipe mealArray={addition}></MealRecipe>
+        <MealRecipe mealArray={meal.addition}></MealRecipe>
 
         <button
           className="edit"
           onClick={() => {
-            openModalAndLoadData("modal", meal.title, meal.category);
+            openModalAndLoadData("modal", meal.title, meal.category, dayName);
           }}
         >
           📋
         </button>
       </div>
     </div>
-  );
+  ) : null;
 };
 
 const MealContent = ({ mealArray }) => {

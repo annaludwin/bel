@@ -1,10 +1,14 @@
 import { useState } from "react";
+import { makeDay } from "../utils";
 
 // exported component:
-export const Modal = ({ meal, mealBase, setView }) => {
+export const Modal = ({ meal, mealBase, setView, setWeekPartMenu }) => {
   const [subcategory, setSubcategory] = useState("");
   const [recipe, setRecipe] = useState("");
-  // console.log(recipe);
+
+  console.log(meal);
+  console.log(subcategory);
+  console.log(recipe);
 
   return (
     <div id="modal" className="modal">
@@ -34,8 +38,11 @@ export const Modal = ({ meal, mealBase, setView }) => {
 
             <div className="list">
               {subcategory !== ""
-                ? mealBase[meal.category][subcategory].map((recipe) => (
-                    <button onClick={(e) => setRecipe(recipe)}>
+                ? mealBase[meal.category][subcategory].map((recipe, index) => (
+                    <button
+                      key={recipe + index}
+                      onClick={() => setRecipe(recipe)}
+                    >
                       {recipe.title}
                     </button>
                   ))
@@ -56,7 +63,7 @@ export const Modal = ({ meal, mealBase, setView }) => {
 
 // utils:
 const Recipe = ({ data }) => {
-  console.log(data);
+  // console.log(data);
 
   return data !== "" ? (
     <>
@@ -66,20 +73,33 @@ const Recipe = ({ data }) => {
       <h4>{data.ingredients ? "Składniki" : null}</h4>
       <ul>
         {data.ingredients
-          ? data.ingredients.map((ingredient, index) => <li>{ingredient}</li>)
+          ? data.ingredients.map((ingredient, index) => (
+              <li key={ingredient + index}>{ingredient}</li>
+            ))
           : null}
       </ul>
       <div style={{ height: "12px" }}></div>
       <h4>{data.recipe ? "Przygotowanie" : null} </h4>
       <ol>
         {data.recipe
-          ? data.recipe.map((recipeStep, index) => <li>{recipeStep}</li>)
+          ? data.recipe.map((recipeStep, index) => (
+              <li key={recipeStep + index}>{recipeStep}</li>
+            ))
           : null}
       </ol>
       <div className="button-rail rail">
         <button className="success2">DODATKI +</button>
-        <button className="success">ZAPISZ</button>
+        <button
+          className="success"
+          // onClick={() => setWeekPartMenu(updateDay())}
+        >
+          ZAPISZ
+        </button>
       </div>
     </>
   ) : null;
+};
+
+const updateDay = (day) => {
+  "aaaaa";
 };

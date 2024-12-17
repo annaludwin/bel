@@ -6,14 +6,10 @@ import { Modal } from "./components/Modal";
 import { WeekPanel } from "./components/WeekPanel";
 import { makeDay } from "./utils";
 
-// tymczasowe, będzie dynamicznie zmieniane:
-const addition = mealBase.additions[8];
-const mainCourse = mealBase.breakfast.owsianki[1];
-
 const daysSatMon = ["Sobota", "Niedziela", "Poniedziałek"];
 const daysTueFri = ["Wtorek", "Środa", "Czwartek", "Piątek"];
-const mealSatMon = daysSatMon.map((day) => makeDay(day, mainCourse, addition));
-const mealTueFri = daysTueFri.map((day) => makeDay(day, mainCourse, addition));
+const mealSatMon = daysSatMon.map((day) => makeDay(day));
+const mealTueFri = daysTueFri.map((day) => makeDay(day));
 
 function App() {
   const [weekPartMenu, setWeekPartMenu] = useState(mealTueFri);
@@ -21,11 +17,12 @@ function App() {
   const [selectedMeal, setSelectedMeal] = useState({
     mealName: null,
     category: null,
+    dayName: null,
   });
 
-  function openModalAndLoadData(view, mealName, category) {
+  function openModalAndLoadData(view, mealName, category, dayName) {
     setView(view);
-    setSelectedMeal({ mealName, category });
+    setSelectedMeal({ mealName, category, dayName });
   }
 
   // console.log(selectedMeal);
@@ -47,6 +44,8 @@ function App() {
           meal={selectedMeal}
           mealBase={mealBase}
           setView={setView}
+          // todo to bedzie mi otzrebne do podmiany danych w widoku głównym
+          setWeekPartMenu={setWeekPartMenu}
         ></Modal>
       ) : null}
       {view === "weekPanel" ? (
