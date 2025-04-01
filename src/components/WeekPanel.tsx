@@ -52,8 +52,6 @@ const DayPanel = ({ meal, openModalAndLoadData, dayName }) => {
 };
 
 const MealList = ({ meal, openModalAndLoadData, dayName }) => {
-  console.log(meal.mainCourse.title);
-
   return (
     <div className="meal-list">
       <div className="meal-card">

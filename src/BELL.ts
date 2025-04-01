@@ -4,7 +4,7 @@
     zapisywanie do LS
 */
 
-import mealBase from "./mealBase.js";
+import mealBase from "./mealBase";
 
 const satMonButton = document.getElementById("satMonButton");
 const tueFriButton = document.getElementById("tueFriButton");
